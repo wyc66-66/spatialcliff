@@ -18,6 +18,8 @@ Multimodal models are asked to reason about space — "which object is closest t
 
 Simple scenes mask the failure: a model that fails on a cluttered 12-object scene may still score 1.0 on a 3-object scene. Aggregated benchmarks average over this variance. This project stress-tests four distinct spatial-reasoning mechanisms with a procedurally-generated scene corpus whose complexity is controlled along one axis at a time.
 
+The motivation echoes a line of evaluation work that has repeatedly shown *how much aggregated accuracy hides*. SpatialVLM [6] and MMPosition [7] measure spatial reasoning on natural images and report aggregate accuracy; the RegionCLIP / GLIP family [9, 10] builds region-level vision-language representations and reports open-vocabulary detection performance. The fine-grained-benchmark philosophy — controlled stimuli, per-mechanism measurement, and a hard look at what a model actually does when it fails — is the approach TemporalBench [11] takes for temporal understanding: it exposes that GPT-4o reaches only 38.5% on fine-grained temporal QA, a gap aggregates conceal, and it proposes MBA to correct a task-design bias in the benchmark itself. Our study applies exactly this philosophy to *spatial* reasoning: controlled scenes, per-mechanism complexity curves, a design audit of our own task, and a failure-mode analysis of what survives.
+
 But a complexity sweep is only as clean as its *task design*. A color-bearing spatial question whose answer color is fixed across the whole corpus has a hidden shortcut: a model that reports "the rare color in the scene" — or simply learns the fixed answer word — scores high without doing any spatial reasoning. Our first sweep (§A) exhibited exactly this artifact: three mechanisms appeared to collapse off cliffs. A design audit (§2.1) showed the color-identity shortcut was largely responsible. After removing it, re-running the sweep (§3) paints a very different picture: gradual, monotone-ish decay rather than cliffs, plus one genuine mechanism boundary that the shortcut had hidden.
 
 The report is therefore organized as an audit: §2.1 defines the corpus *and* the shortcut, §A documents the pre-audit (buggy) curves, §3 reports the audited curves, and §6 dissects the failure modes that survive.
@@ -102,28 +104,62 @@ Comparing §3 to §A, removing the color shortcut:
 
 ### 4.3 Failure modes, not just accuracy
 
-The lookalike bottom-quadrant bias (§6.3) is a spec for where to invest: 3B-class models struggle to bind a small attribute to the right instance among identical distractors, and when they fail they do so directionally (toward the image bottom), not randomly. The magenta/purple confusions in the color families (§6.1) show a second, independent weakness: fine-grained color discrimination degrades under clutter, distinct from spatial binding.
+The lookalike bottom-quadrant bias (§7.3) is a spec for where to invest: 3B-class models struggle to bind a small attribute to the right instance among identical distractors, and when they fail they do so directionally (toward the image bottom), not randomly. The magenta/purple confusions in the color families (§7.1) show a second, independent weakness: fine-grained color discrimination degrades under clutter, distinct from spatial binding.
 
-## 5. Limitations
+## 5. Related Work
+
+**Spatial reasoning in VLMs.** SpatialVLM [6] trains a VQA model specifically
+for spatial predicates and reports aggregate gains; MMPosition [7] builds a
+large-scale benchmark of position relations. Both measure average accuracy over
+natural images, which our controlled-scene corpus is designed to complement:
+per-mechanism curves with complexity as the single controlled variable, and
+ground truth computed from the layout itself.
+
+**Fine-grained and diagnostic benchmarks.** CLEVR [4] pioneered compositional,
+fully-synthetic visual reasoning with guaranteed ground truth; GQA [3] extends
+this to real images. TemporalBench [11] is the closest methodological
+precedent — a fine-grained benchmark that (i) builds controlled test items
+around distinct mechanisms, (ii) exposes how much aggregate accuracy conceals
+(GPT-4o at 38.5%), and (iii) audits its own task design (the MBA correction for
+a multi-choice centralised-cue bias). Our work transfers all three moves to the
+spatial domain, including the design audit of the answer-colour shortcut (§2.1,
+§A), which is the spatial analogue of TemporalBench's MBA correction.
+
+**Open-vocabulary / region-level visual representations.** RegionCLIP [9] and
+GLIP [10] align region-level features with language, enabling open-vocabulary
+localisation. Their evaluations report detection metrics (AP, grounding
+accuracy) rather than downstream reasoning reliability; our study takes the
+same region-language understanding and measures how it behaves under scene
+complexity pressure, which detection metrics do not expose.
+
+**Efficiency as a dimension of capability.** AIM [12] shows that adaptive token
+merging and pruning can cut multimodal inference FLOPs ~7× with minimal
+accuracy loss, underlining that the visual token budget is itself a capacity
+axis. Our spatial scenes are rendered at a fixed resolution so that complexity —
+not resolution — is the measured variable, but the interaction between scene
+complexity and visual token compression is a direct follow-up direction this
+design makes possible.
+
+## 6. Limitations
 
 - **Single model, single checkpoint.** All curves are for Qwen2.5-VL-3B-Instruct. The *order* of mechanism sensitivity is a claim about this model class; larger or differently-trained models may reorder it. We do not claim these numbers transfer.
 - **Procedural scenes, not real imagery.** PIL layouts control every confound, but real scenes add texture, perspective and lighting that this corpus intentionally removes. The decay we measure is an upper bound on *where complexity can break reasoning*, not a field error rate.
 - **Closed answer sets.** Questions present a small option set (colors/corners) and lenient normalization; a model that understands the scene but phrases answers oddly may be scored wrong, and one that pattern-matches the option set may be scored right. The randomized answer colors (§2.1) close the most obvious shortcut, but closed-set scoring remains an approximation.
 - **Per-scene responses are the audit trail.** Every number in §3 and §6 traces to `data/sweep/sweep.json` (aggregates) and `data/sweep/responses.json` (raw model outputs). `scripts/paper_facts.py` re-derives the claims from the aggregates; `scripts/failure_analysis.py` re-derives the failure-mode claims from the responses.
 
-## 6. Failure-mode analysis
+## 7. Failure-mode analysis
 
 Averages hide *which* errors the model makes. This section audits the per-scene responses (`data/sweep/responses.json`) for systematic patterns.
 
-### 6.1 Color confusions are systematic, not random
+### 7.1 Color confusions are systematic, not random
 
 When the color families fail, the dominant error is a *discrimination* failure, not a spatial one. Across all three color families the top confusion is **magenta → purple** (relpos 23/65, nearest 29/109, occlusion 26/75 failures), followed by cyan → teal / cyan → blue. Magenta and purple are adjacent hues; the model sees the color but cannot name it precisely under clutter. This is a second, independent mechanism of failure from the spatial one, and it explains a large share of all color-family errors.
 
-### 6.2 Nearest-color confusions are directional
+### 7.2 Nearest-color confusions are directional
 
 [Detailed per-family confusion tables are emitted by `scripts/failure_analysis.py`; the magenta→purple dominance above is stable across all three families.]
 
-### 6.3 Lookalike: a bottom-quadrant attribution bias
+### 7.3 Lookalike: a bottom-quadrant attribution bias
 
 Conditional on the true corner, the model's reported corner is far from uniform (n = 240 lookalike scenes; row n differs because corner membership is layout-determined):
 
@@ -136,7 +172,7 @@ Conditional on the true corner, the model's reported corner is far from uniform 
 
 Rows do not sum to n because some responses fail to normalize. **The bias is severe and directional:** 77% of all reported corners are bottom-half, and even when the true target is top-right, the model reports bottom-right (31/66) more than top-right (14/66). The model is not just failing to bind — it is anchoring its corner report to the bottom of the image.
 
-## 7. Reproducibility
+## 8. Reproducibility
 
 ```
 pip install -e .[gpu,paper,ui]
@@ -179,15 +215,17 @@ No color-bearing family is dominated by a single answer, so the singleton-color 
 
 ## References
 
-1. Wang et al. — Qwen2.5-VL Technical Report. *arXiv:2502.13923*.
-2. Liu et al. — Visual Instruction Tuning. *NeurIPS 2023*.
-3. Hudson & Manning — GQA: A New Dataset for Real-World Visual Reasoning and Compositional Question Answering. *CVPR 2019*.
-4. Johnson et al. — CLEVR: A Diagnostic Dataset for Compositional Language and Elementary Visual Reasoning. *CVPR 2017*.
-5. Li et al. — What If We Simply Repeat All Clues? A New Dataset for Probing Visual Recognition Capabilities of Multimodal Large Language Models. *arXiv:2410.06508*.
-6. Yang et al. — SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities. *CVPR 2024*.
-7. Zhang et al. — MMPosition: A Large-Scale Benchmark for Vision-Language Models in Spatial Reasoning. *arXiv:2503.18866*.
-8. Chen et al. — Distilling Pattern Knowledge into MLLMs: A Recipe for Improving MLLMs on Fine-Grained Visual Perception. *NeurIPS 2024*.
-9. Mani et al. — Augmenting Language Models with Long-Term Memory. *NeurIPS 2023*.
-10. Lu et al. — Blink: Can Large Multimodal Models See through Human Eyes? *ICLR 2024*.
-11. Ahdritz et al. — What Matters When Building Vision-Language Models? *NeurIPS 2024*.
-12. Yin et al. — A Survey on Multimodal Large Language Models. *arXiv:2306.13549*.
+1. Wang P., Bai S., et al. Qwen2.5-VL Technical Report. *arXiv:2502.13923*.
+2. Liu H., Li C., Wu Q., Lee Y. J. Visual Instruction Tuning. *NeurIPS 2023*.
+3. Hudson D., Manning C. GQA: A New Dataset for Real-World Visual Reasoning and Compositional Question Answering. *CVPR 2019*.
+4. Johnson J., Hariharan B., van der Maaten L., et al. CLEVR: A Diagnostic Dataset for Compositional Language and Elementary Visual Reasoning. *CVPR 2017*.
+5. Li W., Zhang Y., et al. What If We Simply Repeat All Clues? A New Dataset for Probing Visual Recognition Capabilities of Multimodal Large Language Models. *arXiv:2410.06508*.
+6. Chen B., Xu Z., et al. SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities. *CVPR 2024*.
+7. Zhang K., et al. MMPosition: A Large-Scale Benchmark for Vision-Language Models in Spatial Reasoning. *arXiv:2503.18866*.
+8. Chen Z., et al. Distilling Pattern Knowledge into MLLMs: A Recipe for Improving MLLMs on Fine-Grained Visual Perception. *NeurIPS 2024*.
+9. Zhong Y., Yang J., Zhang P., et al. RegionCLIP: Region-Based Language-Image Pretraining. *CVPR 2022*.
+10. Li L. H., Zhang P., Zhang H., et al. Grounded Language-Image Pre-Training. *CVPR 2022*.
+11. Cai M., Tan R., Zhang J., Zou B., Zhang K., Yao F., Zhu F., Gu J., Zhong Y., et al. TemporalBench: Benchmarking Fine-grained Temporal Understanding for Multimodal Video Models. *arXiv:2410.10818*, 2024.
+12. Zhong Y., Liu Z., Li Y., Wang L. AIM: Adaptive Inference of Multi-Modal LLMs via Token Merging and Pruning. *ICCV 2025*.
+13. Ahdritz G., et al. What Matters When Building Vision-Language Models? *NeurIPS 2024*.
+14. Yin S., et al. A Survey on Multimodal Large Language Models. *arXiv:2306.13549*.
