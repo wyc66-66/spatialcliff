@@ -62,3 +62,8 @@ scripts/         build, sweep, figures, paper facts
 data/            scenes/, sweep/
 docs/            figures + technical report
 ```
+---
+
+## Live report
+
+The technical report, figures and every number are served at **[https://wyc66-66.github.io/spatialcliff/](https://wyc66-66.github.io/spatialcliff/)**.
