@@ -21,7 +21,7 @@ def main() -> None:
 
     print("== per-family summary ==")
     for fam, s in result.summary().items():
-        print(f"  {fam}: best={s['best_acc']:.3f} worst={s['worst_acc']:.3f} range={s['range']:.3f}")
+        print(f"  {fam}: best={s['best_acc']:.3f} worst={s['worst_acc']:.3f} range={s['range']:.3f} trend={s['trend']:+.3f}")
         if s["falloff"]:
             f = s["falloff"]
             print(f"    falloff at {f['at']} (acc {f['acc_before']:.3f} -> {f['acc_after']:.3f}, drop {f['drop']:.3f})")

@@ -7,10 +7,12 @@ Core objects:
   axis (d0 = simplest .. d5 = hardest) with Wilson 95% CIs.
 - ``Falloff``: the difficulty step at which accuracy drops by more than a
   fixed margin (the "breakpoint"), with the drop magnitude.
+- ``trend``: Pearson correlation of accuracy vs difficulty, a monotonicity
+  proxy that survives noisy per-point estimates.
 
 A family is *complexity sensitive* if its curve falls with the difficulty
 axis, and *complexity robust* if the curve is flat. The falloff detector
-flags the former.
+flags sharp single-step breaks; the trend captures gradual decay.
 
 This is deliberately a small, dependency-light implementation (numpy only) so
 the whole analysis is auditable. No GPU, no model code: it consumes the JSON
@@ -76,6 +78,18 @@ class ComplexityCurve:
             prev = a
         return None
 
+    def trend(self) -> float:
+        """Pearson correlation of accuracy vs normalized complexity.
+
+        A strongly negative value means accuracy decays monotonically-ish with
+        complexity; ~0 means complexity-insensitive; positive means the model
+        *improves* on harder scenes (which can happen after shortcut removal).
+        """
+        if len(self.acc) < 3:
+            return 0.0
+        r = np.corrcoef(self.complexity, self.acc)[0, 1]
+        return float(r) if not np.isnan(r) else 0.0
+
 
 @dataclass
 class SweepResult:
@@ -100,6 +114,7 @@ class SweepResult:
                 "worst_acc": min(c.acc),
                 "range": max(c.acc) - min(c.acc),
                 "falloff": fo,
+                "trend": c.trend(),
                 "n_difficulties": len(c.acc),
             }
         return out

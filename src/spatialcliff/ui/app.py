@@ -48,8 +48,9 @@ def create_app() -> FastAPI:
         if not sweep_path.is_file():
             raise HTTPException(status_code=404, detail="sweep results missing — run scripts/run_sweep.py")
         result = SweepResult.load(sweep_path)
+        summary = result.summary()
         return {
-            "summary": result.summary(),
+            "summary": summary,
             "families": sorted(result.curves),
             "curves": {
                 fam: {
@@ -59,6 +60,7 @@ def create_app() -> FastAPI:
                     "ci_lo": c.ci_lo,
                     "ci_hi": c.ci_hi,
                     "falloff": c.falloff(),
+                    "trend": summary[fam]["trend"],
                 }
                 for fam, c in result.curves.items()
             },

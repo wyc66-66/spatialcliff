@@ -1,4 +1,4 @@
-{
+﻿{
  "by_family": {
   "lookalike": [
    {
@@ -6,48 +6,48 @@
     "difficulty": 0,
     "label": "d0",
     "complexity": 0.0,
-    "correct": 20,
-    "total": 40
+    "correct": 7,
+    "total": 20
    },
    {
     "family": "lookalike",
     "difficulty": 1,
     "label": "d1",
     "complexity": 0.2,
-    "correct": 26,
-    "total": 40
+    "correct": 10,
+    "total": 20
    },
    {
     "family": "lookalike",
     "difficulty": 2,
     "label": "d2",
     "complexity": 0.4,
-    "correct": 22,
-    "total": 40
+    "correct": 13,
+    "total": 20
    },
    {
     "family": "lookalike",
     "difficulty": 3,
     "label": "d3",
     "complexity": 0.6,
-    "correct": 20,
-    "total": 40
+    "correct": 12,
+    "total": 20
    },
    {
     "family": "lookalike",
     "difficulty": 4,
     "label": "d4",
     "complexity": 0.8,
-    "correct": 22,
-    "total": 40
+    "correct": 8,
+    "total": 20
    },
    {
     "family": "lookalike",
     "difficulty": 5,
     "label": "d5",
     "complexity": 1.0,
-    "correct": 17,
-    "total": 40
+    "correct": 9,
+    "total": 20
    }
   ],
   "nearest": [
@@ -56,48 +56,48 @@
     "difficulty": 0,
     "label": "d0",
     "complexity": 0.0,
-    "correct": 28,
-    "total": 40
+    "correct": 14,
+    "total": 20
    },
    {
     "family": "nearest",
     "difficulty": 1,
     "label": "d1",
     "complexity": 0.2,
-    "correct": 26,
-    "total": 40
+    "correct": 14,
+    "total": 20
    },
    {
     "family": "nearest",
     "difficulty": 2,
     "label": "d2",
     "complexity": 0.4,
-    "correct": 22,
-    "total": 40
+    "correct": 7,
+    "total": 20
    },
    {
     "family": "nearest",
     "difficulty": 3,
     "label": "d3",
     "complexity": 0.6,
-    "correct": 19,
-    "total": 40
+    "correct": 4,
+    "total": 20
    },
    {
     "family": "nearest",
     "difficulty": 4,
     "label": "d4",
     "complexity": 0.8,
-    "correct": 14,
-    "total": 40
+    "correct": 2,
+    "total": 20
    },
    {
     "family": "nearest",
     "difficulty": 5,
     "label": "d5",
     "complexity": 1.0,
-    "correct": 22,
-    "total": 40
+    "correct": 1,
+    "total": 20
    }
   ],
   "occlusion": [
@@ -106,48 +106,48 @@
     "difficulty": 0,
     "label": "d0",
     "complexity": 0.0,
-    "correct": 31,
-    "total": 40
+    "correct": 20,
+    "total": 20
    },
    {
     "family": "occlusion",
     "difficulty": 1,
     "label": "d1",
     "complexity": 0.2,
-    "correct": 30,
-    "total": 40
+    "correct": 18,
+    "total": 20
    },
    {
     "family": "occlusion",
     "difficulty": 2,
     "label": "d2",
     "complexity": 0.4,
-    "correct": 33,
-    "total": 40
+    "correct": 19,
+    "total": 20
    },
    {
     "family": "occlusion",
     "difficulty": 3,
     "label": "d3",
     "complexity": 0.6,
-    "correct": 26,
-    "total": 40
+    "correct": 15,
+    "total": 20
    },
    {
     "family": "occlusion",
     "difficulty": 4,
     "label": "d4",
     "complexity": 0.8,
-    "correct": 25,
-    "total": 40
+    "correct": 15,
+    "total": 20
    },
    {
     "family": "occlusion",
     "difficulty": 5,
     "label": "d5",
     "complexity": 1.0,
-    "correct": 20,
-    "total": 40
+    "correct": 11,
+    "total": 20
    }
   ],
   "relpos": [
@@ -156,48 +156,48 @@
     "difficulty": 0,
     "label": "d0",
     "complexity": 0.0,
-    "correct": 37,
-    "total": 40
+    "correct": 20,
+    "total": 20
    },
    {
     "family": "relpos",
     "difficulty": 1,
     "label": "d1",
     "complexity": 0.2,
-    "correct": 27,
-    "total": 40
+    "correct": 17,
+    "total": 20
    },
    {
     "family": "relpos",
     "difficulty": 2,
     "label": "d2",
     "complexity": 0.4,
-    "correct": 25,
-    "total": 40
+    "correct": 13,
+    "total": 20
    },
    {
     "family": "relpos",
     "difficulty": 3,
     "label": "d3",
     "complexity": 0.6,
-    "correct": 32,
-    "total": 40
+    "correct": 13,
+    "total": 20
    },
    {
     "family": "relpos",
     "difficulty": 4,
     "label": "d4",
     "complexity": 0.8,
-    "correct": 31,
-    "total": 40
+    "correct": 12,
+    "total": 20
    },
    {
     "family": "relpos",
     "difficulty": 5,
     "label": "d5",
     "complexity": 1.0,
-    "correct": 23,
-    "total": 40
+    "correct": 9,
+    "total": 20
    }
   ]
  },
@@ -209,5 +209,5 @@
   "4": 0.8,
   "5": 1.0
  },
- "n_scenes": 960
+ "n_scenes": 480
 }

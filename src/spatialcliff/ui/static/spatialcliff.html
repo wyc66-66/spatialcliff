@@ -72,7 +72,7 @@
   <p>How scene complexity breaks spatial reasoning in an open VLM (Qwen2.5-VL-3B).
   We stress four reasoning mechanisms — <b>relative position</b>, <b>occlusion</b>,
   <b>lookalike binding</b>, <b>nearest-neighbor</b> — across six complexity levels,
-  and find where accuracy falls off a cliff.</p>
+  audit the task design for answer-color shortcuts, and map what survives.</p>
 </header>
 
 <main>
@@ -116,10 +116,10 @@
 
   <section>
     <h2>Mechanism sensitivity ranking</h2>
-    <p class="note">Difference between simplest- and hardest-scene accuracy, aggregated across seeds. Mechanisms that require per-object binding under distractors should sit higher (fragile); coarse relational judgments should sit near 0 (robust).</p>
+    <p class="note">Range = simplest minus hardest accuracy. Trend r = Pearson correlation of accuracy vs. complexity (negative = decays as scenes get harder). A mechanism is <i>fragile</i> if it has a single-step falloff, <i>decaying</i> if it decays steadily without a cliff, <i>robust</i> if it is complexity-insensitive.</p>
     <div class="panel">
       <table>
-        <thead><tr><th>Mechanism</th><th>Range</th><th>Simplest acc</th><th>Hardest acc</th><th>Falloff</th><th>Verdict</th></tr></thead>
+        <thead><tr><th>Mechanism</th><th>Range</th><th>Trend r</th><th>Simplest acc</th><th>Hardest acc</th><th>Falloff</th><th>Verdict</th></tr></thead>
         <tbody id="rankBody"></tbody>
       </table>
     </div>
@@ -130,6 +130,8 @@
     <p class="note">Verifiable statements drawn from <code>data/sweep/sweep.json</code>.</p>
     <div class="panel" id="facts"></div>
   </section>
+
+  <p id="status"></p>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
@@ -169,7 +171,7 @@ function renderCards() {
   let frag = 0, robust = 0;
   for (const f of fams) {
     if (sum[f].falloff) frag++;
-    else if (sum[f].range < 0.15) robust++;
+    else if (Math.abs(sum[f].trend || 0) < 0.15) robust++;
   }
   document.getElementById("fragileCount").textContent = frag;
   document.getElementById("robustCount").textContent = robust;
@@ -256,10 +258,11 @@ function renderRanking() {
   tbody.innerHTML = "";
   for (const r of rows) {
     const tr = document.createElement("tr");
-    const verdict = r.range >= 0.15 && r.falloff
+    const t = r.trend || 0;
+    const verdict = r.falloff
       ? '<span class="tag fragile">fragile</span>'
-      : r.range >= 0.15
-        ? '<span class="tag mixed">mixed</span>'
+      : t <= -0.6
+        ? '<span class="tag mixed">decaying</span>'
         : '<span class="tag robust">robust</span>';
     const foTxt = r.falloff
       ? `${r.falloff.at} (${(r.falloff.drop * 100).toFixed(0)}pt drop)`
@@ -267,6 +270,7 @@ function renderRanking() {
     tr.innerHTML = `
       <td><b>${FAMILY_NAMES[r.fam] || r.fam}</b> <span class="badge">${r.fam}</span></td>
       <td>${(r.range * 100).toFixed(0)} pts</td>
+      <td>${r.trend !== undefined ? (r.trend > 0 ? "+" : "") + r.trend.toFixed(2) : "—"}</td>
       <td>${(r.best_acc * 100).toFixed(0)}%</td>
       <td>${(r.worst_acc * 100).toFixed(0)}%</td>
       <td>${foTxt}</td>
@@ -278,13 +282,15 @@ function renderRanking() {
 function renderFacts() {
   const sum = decayData.summary;
   const facts = [];
-  const fragile = Object.keys(sum).filter(f => sum[f].falloff);
-  if (fragile.length) {
-    facts.push(`Falloff detected in <b>${fragile.length}</b> mechanism(s): <b>${fragile.map(f => FAMILY_NAMES[f] || f).join(", ")}</b>.`);
+  const falloffs = Object.keys(sum).filter(f => sum[f].falloff);
+  if (falloffs.length) {
+    facts.push(`Falloff detected in <b>${falloffs.length}</b> mechanism(s): <b>${falloffs.map(f => FAMILY_NAMES[f] || f).join(", ")}</b> — the rest decay gradually after the answer-color audit.`);
+  } else {
+    facts.push(`No single-step falloff survives the answer-color audit — decay is gradual, not cliff-like.`);
   }
-  const robust = Object.keys(sum).filter(f => !sum[f].falloff && sum[f].range < 0.15);
-  if (robust.length) {
-    facts.push(`Complexity-robust mechanism(s): <b>${robust.map(f => FAMILY_NAMES[f] || f).join(", ")}</b> stay within ±15 points across the full range.`);
+  const strong = Object.keys(sum).filter(f => (sum[f].trend || 0) <= -0.6);
+  if (strong.length) {
+    facts.push(`Strongest monotone decay: <b>${strong.map(f => FAMILY_NAMES[f] || f).join(", ")}</b> (trend r ≤ −0.6).`);
   }
   const el = document.getElementById("facts");
   el.innerHTML = facts.map(f => `<p style="margin:6px 0">${f}</p>`).join("");

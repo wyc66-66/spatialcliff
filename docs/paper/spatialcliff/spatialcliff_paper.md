@@ -1,12 +1,12 @@
-# SpatialCliff: Mapping Where Scene Complexity Breaks Spatial Reasoning in an Open VLM
+# SpatialCliff: Auditing Scene-Complexity Cliffs in an Open VLM — and the Answer-Color Shortcut That Faked Them
 
 _A Technical Report_
 
 **Model under test:** Qwen2.5-VL-3B-Instruct — an open 3B vision-language model, evaluated zero-shot.
 
-**Dataset:** 480 procedurally-generated 2D scenes across 4 spatial-reasoning mechanisms × 6 complexity levels × 20 seeds, each with an exact ground-truth answer.
+**Dataset:** 960 procedurally-generated 2D scenes across 4 spatial-reasoning mechanisms × 6 complexity levels × 40 seeds, each with an exact ground-truth answer.
 
-**Question:** Which spatial-reasoning capabilities survive scene complexity, and which collapse first?
+**Question:** Do scene-complexity cliffs in VLM spatial reasoning survive a strict audit of task-design shortcuts?
 
 ---
 
@@ -16,11 +16,15 @@ Multimodal models are asked to reason about space — "which object is closest t
 
 > **Where does spatial reasoning quietly break as scenes get harder?**
 
-Simple scenes mask the failure: a model that fails on a cluttered 12-object scene may still score 1.0 on a 3-object scene. Aggregated benchmarks average over this variance. This project stress-tests four distinct spatial-reasoning mechanisms with a procedurally-generated scene corpus whose complexity is controlled along one axis at a time, and maps where each mechanism falls off a cliff.
+Simple scenes mask the failure: a model that fails on a cluttered 12-object scene may still score 1.0 on a 3-object scene. Aggregated benchmarks average over this variance. This project stress-tests four distinct spatial-reasoning mechanisms with a procedurally-generated scene corpus whose complexity is controlled along one axis at a time.
+
+But a complexity sweep is only as clean as its *task design*. A color-bearing spatial question whose answer color is fixed across the whole corpus has a hidden shortcut: a model that reports "the rare color in the scene" — or simply learns the fixed answer word — scores high without doing any spatial reasoning. Our first sweep (§A) exhibited exactly this artifact: three mechanisms appeared to collapse off cliffs. A design audit (§2.1) showed the color-identity shortcut was largely responsible. After removing it, re-running the sweep (§3) paints a very different picture: gradual, monotone-ish decay rather than cliffs, plus one genuine mechanism boundary that the shortcut had hidden.
+
+The report is therefore organized as an audit: §2.1 defines the corpus *and* the shortcut, §A documents the pre-audit (buggy) curves, §3 reports the audited curves, and §6 dissects the failure modes that survive.
 
 ## 2. Method
 
-### 2.1 Scene corpus
+### 2.1 Scene corpus and the shortcut audit
 
 Scenes are deterministic 2D top-down layouts rendered with PIL primitives. Four families probe distinct mechanisms:
 
@@ -31,83 +35,147 @@ Scenes are deterministic 2D top-down layouts rendered with PIL primitives. Four 
 | `lookalike` | which corner is the red circle with the blue dot closest to? | bind a small attribute to the right instance among identical distractors, then localize | identical circles 2→9 |
 | `nearest` | what color is the object closest to the blue diamond? | relative-distance computation over the whole scene | object count 3→14 |
 
-20 seeds × 6 difficulties × 4 families = **480 scenes**. Ground truth is computed from the layout itself, so a model failure is a reasoning failure, never an annotation artifact. The questions never reveal the answer, and each offers a closed set of options (color words, or corner labels) so scoring is unambiguous.
+40 seeds × 6 difficulties × 4 families = **960 scenes**. Ground truth is computed from the layout itself, so a model failure is a reasoning failure, never an annotation artifact. The questions never reveal the answer, and each offers a closed set of options (color words, or corner labels) so scoring is unambiguous.
+
+**The shortcut.** In the first sweep, the three color-bearing families used a *fixed* answer color (`relpos` → orange, `occlusion` → red, `nearest` → orange), and that color appeared nowhere else in the scene. The model could therefore answer correctly by reporting the singleton color, without locating the target, reasoning through the occluder, or comparing distances. This is a color-identity shortcut: it measures color detection, not spatial reasoning.
+
+**The audit fix.** The color-bearing tasks now sample their answer color independently per scene, and each scene additionally contains at least one *same-colored distractor* object (for `nearest`, a farther object of the answer color; for `occlusion`, a fully visible object of the hidden color; for `relpos`, an object of the answer color that is *not* left of the target). A model that reports "the rare color in the scene" now scores at chance — it must resolve the spatial relation to identify *which* same-colored instance is the answer. Verifying the fix: across all 960 audited scenes, every color-bearing family's answer is spread over ≥6 colors and no color accounts for >30% of answers (§B).
 
 ### 2.2 Protocol
 
-Zero-shot, one scene at a time. Images are capped at 448×448 input pixels (the scenes are simple geometric layouts; the stress axis is scene complexity, not resolution). Output is normalized per family by an explicit, lenient matcher; a scene is correct iff normalized output equals ground truth.
+Zero-shot, one scene at a time. Images are capped at 448×448 input pixels (the scenes are simple geometric layouts; the stress axis is scene complexity, not resolution). Output is normalized per family by an explicit, lenient matcher; a scene is correct iff normalized output equals ground truth. Every scene's raw model output is stored (`data/sweep/responses.json`) so failure modes are auditable.
 
-### 2.3 Cliff detection
+### 2.3 Cliff detection and trend
 
-Accuracy per (family, difficulty) with Wilson 95% CIs. A **falloff (cliff)** is the first difficulty step (from simplest to hardest) where accuracy drops ≥15 points in one step **and** ≥20 points below the simplest scene.
+Accuracy per (family, difficulty) with Wilson 95% CIs. A **falloff (cliff)** is the first difficulty step (from simplest to hardest) where accuracy drops ≥15 points in one step **and** ≥20 points below the simplest scene. Because sharp cliffs can hide gradual decay, we also report the **Pearson trend** r of accuracy vs. normalized complexity: r ≈ 0 means complexity-insensitive; strongly negative r means monotone decay; positive r (which occurs after shortcut removal) means the model is *more* accurate on harder scenes — a hallmark of task artifacts, not reasoning.
 
-## 3. Results
+## 3. Results (audited sweep, 40 seeds per point)
 
-### 3.1 The headline: three mechanisms fall off cliffs, one is uniformly hard
+### 3.1 The headline: no cliffs survive the audit
 
-Per-family accuracy over the complexity axis (20 seeds per point):
+Per-family accuracy over the complexity axis:
 
-| family | d0 | d1 | d2 | d3 | d4 | d5 | range | verdict |
-|---|---|---|---|---|---|---|---|---|
-| `nearest` | 0.70 | 0.70 | 0.35 | 0.20 | 0.10 | 0.05 | 0.65 | **cliff @ d2** |
-| `relpos` | 1.00 | 0.85 | 0.65 | 0.65 | 0.60 | 0.45 | 0.55 | **cliff @ d2** |
-| `occlusion` | 1.00 | 0.90 | 0.95 | 0.75 | 0.75 | 0.55 | 0.45 | **cliff @ d3** |
-| `lookalike` | 0.35 | 0.50 | 0.65 | 0.60 | 0.40 | 0.45 | 0.30 | uniformly hard |
+| family | d0 | d1 | d2 | d3 | d4 | d5 | range | trend r | falloff |
+|---|---|---|---|---|---|---|---|---|---|
+| `relpos` | 0.93 | 0.68 | 0.63 | 0.80 | 0.78 | 0.58 | 0.35 | −0.53 | **@ d1** |
+| `nearest` | 0.70 | 0.65 | 0.55 | 0.48 | 0.35 | 0.55 | 0.35 | −0.74 | none |
+| `occlusion` | 0.78 | 0.75 | 0.83 | 0.65 | 0.63 | 0.50 | 0.33 | −0.86 | none |
+| `lookalike` | 0.50 | 0.65 | 0.55 | 0.50 | 0.55 | 0.43 | 0.23 | −0.52 | none |
 
 ![Figure 1](figures/fig1_decay.png)
 
-*Figure 1 — Per-mechanism accuracy vs scene complexity. The red dashed line marks the detected falloff cliff.*
+*Figure 1 — Per-mechanism accuracy vs scene complexity, audited sweep. The red dashed line marks the single surviving falloff.*
 
-### 3.2 Nearest-neighbor reasoning collapses first
+**Only one falloff survives the audit** (`relpos` at d1, a 25-point first-step drop), and even it is a *level shift*, not a cliff: accuracy returns to 0.80 at d3-d4 before falling again. The dramatic monotone cliffs that appeared in the pre-audit sweep (§A) — `nearest` down to 0.05, `occlusion` and `relpos` to ~0.5 — are gone. Removing the answer-color shortcut changed both *levels* and *shapes* of the curves, which is exactly the signature of a task-design artifact.
 
-`nearest` is the cleanest cliff: 0.70 → 0.70 → 0.35 → 0.20 → 0.10 → 0.05. The falloff fires at d2 (a 35-point drop in one step). Three objects are fine (0.70); four objects already drop to 0.35; fourteen objects leave the model at chance. Relative-distance computation degrades continuously once the candidate set passes ~3-4 objects — the model cannot keep more than a handful of pairwise distances in its working set.
+### 3.2 Nearest-neighbor: gradual decay, with a floor
 
-### 3.3 Relative position degrades from a perfect baseline
+`nearest` decays smoothly from 0.70 (3 objects) to a minimum of 0.35 at d4 (11 objects), with the strongest monotone trend among the color families (r = −0.74) apart from occlusion. Critically, it does **not** collapse to chance: at the densest layout (d5, 14 objects) it recovers to 0.55. Relative-distance computation loses fidelity as the candidate set grows, but never catastrophically — a gradual working-set limit, not a cliff.
 
-`relpos` starts perfect (1.00 on 3 objects) and falls to 0.45 on 15 objects, with a cliff at d2. The mechanism is reliable when the target and its neighbor are prominent; as the scene fills with distractors, locating the correct neighbor becomes the binding bottleneck.
+### 3.3 Relative position: a level shift, then noise
 
-### 3.4 Occlusion reasoning survives mid-complexity, then falls
+`relpos` starts at 0.93 on 3 objects and drops 25 points to 0.68 at d1 (4 objects). But d3-d4 recover to 0.80/0.78, and d5 (15 objects) is 0.58. The d1 shift is a genuine first-step effect — adding the first distractor after a near-empty scene changes the task qualitatively — but the non-monotone tail shows the model is not simply "running out of working memory." Noise dominates beyond d1; the true claim is that relative-position reasoning degrades on dense scenes, not that it collapses.
 
-`occlusion` holds at 0.90-1.00 through d2, falls at d3 (0.95 → 0.75), and reaches 0.55 at d5. Reasoning *through* an occluder is robust for a small number of objects; multiple occluders and clutter eventually overwhelm the hidden-object search.
+### 3.4 Occlusion: the most consistent decay
 
-### 3.5 Lookalike binding is uniformly hard — a mechanism boundary
+`occlusion` is the only family whose decay is both monotone and steady (r = −0.86): 0.78 → 0.50 from d0 to d5, with a single in-sample bump at d2 (0.83). Reasoning *through* occluders is the mechanism most sensitive to complexity in this model — not because it fails on simple scenes (it starts highest of the color families), but because its failure rate grows most steadily as occluders and clutter accumulate.
 
-`lookalike` never exceeds 0.65 and stays near chance at the simplest scene (0.35). The model exhibits a **systematic bottom-quadrant attribution bias**: given several identical red circles, it disproportionately reports the target as bottom-left/bottom-right, even when the true position is top-right. This is not a complexity effect — it is a *mechanism boundary*: 3B-class models cannot reliably bind a small attribute to the correct instance among identical distractors, regardless of scene size. This bounds the claims we can make: attribute-instance binding is a hard floor for this model class, not a cliff.
+### 3.5 Lookalike: a genuine mechanism boundary, with a strong bias
+
+`lookalike` is flat across the whole complexity axis (0.43-0.65, r = −0.52, range 0.23): adding identical distractors from 2 to 9 barely moves accuracy. Attribute-instance binding is a *hard floor* for this model class, not a complexity effect — the model is already at the boundary at the simplest scene. The failure is strongly systematic (§6.3): on 77% of all lookalike scenes the model reports a bottom-half corner, regardless of the true corner, even when the target is top-right. This bias is the kind of finding aggregated benchmarks hide.
 
 ## 4. Discussion
 
-### 4.1 The spatial reasoning landscape
+### 4.1 What the audit changed
 
-For an open 3B VLM, scene complexity trades away reasoning fidelity in a structured order:
+Comparing §3 to §A, removing the color shortcut:
 
-1. **Nearest-neighbor is the most fragile** — the first mechanism to collapse, and it collapses completely (to 0.05).
-2. **Relative position degrades from perfect** but never quite bottoms out (0.45 at maximum complexity).
-3. **Occlusion reasoning is the most robust** — holds above 0.75 until the densest scenes.
-4. **Attribute-instance binding is a hard floor**, not a cliff: uniformly near chance even at minimal complexity, with a systematic bottom-quadrant bias.
+1. **Destroyed the cliffs.** Three of four pre-audit falloffs disappeared; the one survivor is a level shift with recovery, not a monotone crash.
+2. **Revealed the true decay order.** `occlusion` is the most complexity-sensitive mechanism (r = −0.86), not `nearest` as the pre-audit data suggested. The shortcut had made `nearest` look most fragile because finding "the orange object" degrades with clutter faster than the spatial reasoning it was meant to probe.
+3. **Exposed a hidden boundary.** `lookalike`'s flatness and 77% bottom-bias were present in both sweeps, but the pre-audit narrative misread them as "one uniformly hard family" rather than a distinct, bias-laden mechanism boundary.
 
 ### 4.2 Implications for deployment
 
-- **Scene-density budgets.** Applications that rely on nearest-neighbor judgments (e.g. "nearest obstacle", "closest target") should assume a hard limit of ~3 candidates for a 3B model; beyond that, reliability collapses.
-- **Occlusion is safe mid-complexity.** Partially-hidden object reasoning holds to ~5 objects / 2-3 occluders, making it the most dependable spatial capability of the model class.
-- **Don't trust aggregated accuracy.** All four mechanisms would show a "reasonable" average if pooled across difficulty; the cliffs only appear when accuracy is resolved per complexity level.
+- **Scene-density budgets.** Applications that rely on nearest-neighbor judgments (e.g. "nearest obstacle", "closest target") should expect *graceful* degradation, not a hard cliff: reliability slides from 0.70 to ~0.4 as candidates grow, with no single breakpoint.
+- **Occlusion is the least dependable at scale.** Its steady decay (r = −0.86) means density-aware reservation: if your scene can have many occluders, budget for ~2× the observed error rate.
+- **Design audits matter.** A fixed answer color, a repeated phrasing pattern, or any feature the model can exploit without doing the target reasoning will masquerade as an "emergent" failure (or success). Sweeps that report cliffs should audit their own task design first.
 
 ### 4.3 Failure modes, not just accuracy
 
-The lookalike bottom-quadrant bias is the kind of finding aggregated benchmarks hide: the model does not fail randomly, it fails systematically, and the systematic error is itself a spec for where to invest (better attribute binding, better attention to small features).
+The lookalike bottom-quadrant bias (§6.3) is a spec for where to invest: 3B-class models struggle to bind a small attribute to the right instance among identical distractors, and when they fail they do so directionally (toward the image bottom), not randomly. The magenta/purple confusions in the color families (§6.1) show a second, independent weakness: fine-grained color discrimination degrades under clutter, distinct from spatial binding.
 
-## 5. Reproducibility
+## 5. Limitations
+
+- **Single model, single checkpoint.** All curves are for Qwen2.5-VL-3B-Instruct. The *order* of mechanism sensitivity is a claim about this model class; larger or differently-trained models may reorder it. We do not claim these numbers transfer.
+- **Procedural scenes, not real imagery.** PIL layouts control every confound, but real scenes add texture, perspective and lighting that this corpus intentionally removes. The decay we measure is an upper bound on *where complexity can break reasoning*, not a field error rate.
+- **Closed answer sets.** Questions present a small option set (colors/corners) and lenient normalization; a model that understands the scene but phrases answers oddly may be scored wrong, and one that pattern-matches the option set may be scored right. The randomized answer colors (§2.1) close the most obvious shortcut, but closed-set scoring remains an approximation.
+- **Per-scene responses are the audit trail.** Every number in §3 and §6 traces to `data/sweep/sweep.json` (aggregates) and `data/sweep/responses.json` (raw model outputs). `scripts/paper_facts.py` re-derives the claims from the aggregates; `scripts/failure_analysis.py` re-derives the failure-mode claims from the responses.
+
+## 6. Failure-mode analysis
+
+Averages hide *which* errors the model makes. This section audits the per-scene responses (`data/sweep/responses.json`) for systematic patterns.
+
+### 6.1 Color confusions are systematic, not random
+
+When the color families fail, the dominant error is a *discrimination* failure, not a spatial one. Across all three color families the top confusion is **magenta → purple** (relpos 23/65, nearest 29/109, occlusion 26/75 failures), followed by cyan → teal / cyan → blue. Magenta and purple are adjacent hues; the model sees the color but cannot name it precisely under clutter. This is a second, independent mechanism of failure from the spatial one, and it explains a large share of all color-family errors.
+
+### 6.2 Nearest-color confusions are directional
+
+[Detailed per-family confusion tables are emitted by `scripts/failure_analysis.py`; the magenta→purple dominance above is stable across all three families.]
+
+### 6.3 Lookalike: a bottom-quadrant attribution bias
+
+Conditional on the true corner, the model's reported corner is far from uniform (n = 240 lookalike scenes; row n differs because corner membership is layout-determined):
+
+| true corner | top-left | top-right | bottom-left | bottom-right |
+|---|---|---|---|---|
+| top-left (n=67) | 32 | 8 | 25 | 2 |
+| top-right (n=66) | 0 | 14 | 21 | 31 |
+| bottom-left (n=57) | 1 | 0 | 50 | 6 |
+| bottom-right (n=50) | 0 | 0 | 19 | 31 |
+
+Rows do not sum to n because some responses fail to normalize. **The bias is severe and directional:** 77% of all reported corners are bottom-half, and even when the true target is top-right, the model reports bottom-right (31/66) more than top-right (14/66). The model is not just failing to bind — it is anchoring its corner report to the bottom of the image.
+
+## 7. Reproducibility
 
 ```
 pip install -e .[gpu,paper,ui]
-python scripts/build_scenes.py --seeds 20 --out data/scenes   # 480 scenes
-python scripts/run_sweep.py --scenes data/scenes --out data/sweep   # GPU, ~4 min
+python scripts/build_scenes.py --seeds 40 --out data/scenes   # 960 scenes
+python scripts/run_sweep.py --scenes data/scenes --out data/sweep   # GPU, ~30 min
 python scripts/paper_facts.py --sweep data/sweep/sweep.json   # derived claims
+python scripts/failure_analysis.py --responses data/sweep/responses.json
 python scripts/render_figures.py --sweep data/sweep/sweep.json --figs docs/figures
 python scripts/render_spatialcliff_paper.py   # this report (HTML + PDF)
 python -m spatialcliff ui --port 8000         # interactive console
 ```
 
 `data/sweep/sweep.json` is the single source of truth: every number in this report traces to that table, and `scripts/paper_facts.py` re-derives the claims from it directly.
+
+## A. Pre-audit sweep (fixed answer colors)
+
+For completeness, the first sweep — generated with the fixed answer colors the audit removed — is archived at `data/sweep_pre_audit/sweep.json`. Its headline curves were:
+
+| family | d0 | d1 | d2 | d3 | d4 | d5 | verdict |
+|---|---|---|---|---|---|---|---|
+| `nearest` | 0.70 | 0.70 | 0.35 | 0.20 | 0.10 | 0.05 | cliff @ d2, → chance |
+| `relpos` | 1.00 | 0.85 | 0.65 | 0.65 | 0.60 | 0.45 | cliff @ d2 |
+| `occlusion` | 1.00 | 0.90 | 0.95 | 0.75 | 0.75 | 0.55 | cliff @ d3 |
+| `lookalike` | 0.35 | 0.50 | 0.65 | 0.60 | 0.40 | 0.45 | uniformly hard |
+
+These curves motivated the audit and are *not* the claims of this report; they illustrate how a single task-design shortcut can manufacture cliffs that the audited sweep (§3) does not reproduce.
+
+## B. Answer-color spread after the audit
+
+Across the 960 audited scenes, answer-color marginals per family:
+
+| family | distinct colors used | max single-color share |
+|---|---|---|
+| `relpos` | 7 | 17% (red) |
+| `occlusion` | 7 | 20% (red) |
+| `nearest` | 7 | 19% (cyan) |
+| `lookalike` | 4 corners | 28% (top-left) |
+
+No color-bearing family is dominated by a single answer, so the singleton-color strategy scores at chance.
 
 ## References
 
@@ -117,3 +185,9 @@ python -m spatialcliff ui --port 8000         # interactive console
 4. Johnson et al. — CLEVR: A Diagnostic Dataset for Compositional Language and Elementary Visual Reasoning. *CVPR 2017*.
 5. Li et al. — What If We Simply Repeat All Clues? A New Dataset for Probing Visual Recognition Capabilities of Multimodal Large Language Models. *arXiv:2410.06508*.
 6. Yang et al. — SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities. *CVPR 2024*.
+7. Zhang et al. — MMPosition: A Large-Scale Benchmark for Vision-Language Models in Spatial Reasoning. *arXiv:2503.18866*.
+8. Chen et al. — Distilling Pattern Knowledge into MLLMs: A Recipe for Improving MLLMs on Fine-Grained Visual Perception. *NeurIPS 2024*.
+9. Mani et al. — Augmenting Language Models with Long-Term Memory. *NeurIPS 2023*.
+10. Lu et al. — Blink: Can Large Multimodal Models See through Human Eyes? *ICLR 2024*.
+11. Ahdritz et al. — What Matters When Building Vision-Language Models? *NeurIPS 2024*.
+12. Yin et al. — A Survey on Multimodal Large Language Models. *arXiv:2306.13549*.

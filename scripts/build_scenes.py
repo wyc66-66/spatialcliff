@@ -14,7 +14,7 @@ from spatialcliff.scenes import build_scene_set  # noqa: E402
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--seeds", type=int, default=20)
+    ap.add_argument("--seeds", type=int, default=40)
     ap.add_argument("--out", default="data/scenes", type=Path)
     args = ap.parse_args()
 

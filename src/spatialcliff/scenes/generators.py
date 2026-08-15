@@ -47,8 +47,6 @@ COLOR_RGB = {
     "magenta": (200, 60, 160),
 }
 SHAPES = ["circle", "square", "triangle", "diamond"]
-ANSWER_COLOR = "orange"
-NON_ANSWER_COLORS = [c for c in COLOR_NAMES if c != ANSWER_COLOR]
 
 
 # ---- layout helpers --------------------------------------------------------
@@ -98,23 +96,29 @@ def _add_clutter(draw: ImageDraw.ImageDraw, rng: random.Random, n: int) -> None:
 
 
 def _pick_color(rng: random.Random, exclude: set[str]) -> str:
-    pool = [c for c in NON_ANSWER_COLORS if c not in exclude]
+    pool = [c for c in COLOR_NAMES if c not in exclude]
     if not pool:
-        pool = NON_ANSWER_COLORS
+        pool = list(COLOR_NAMES)
     return rng.choice(pool)
 
 
 # ---- family 1: relative position -------------------------------------------
 
 def gen_relpos(seed: int, difficulty: int) -> tuple[Image.Image, str]:
-    """The blue square is the target; exactly one orange circle is entirely to
-    its LEFT. All other objects are not entirely to the left. The model must
-    find the object to the left and report its color."""
+    """The blue square is the target; exactly one other object is entirely to
+    its LEFT. The model must find the object to the left and report its color.
+
+    The answer color is randomized per scene and at least one *same-colored
+    distractor* is placed outside the left region, so a model cannot solve the
+    task by reporting the rarest color — it has to bind the spatial relation
+    first.
+    """
     rng = random.Random(seed)
     n_obj = {0: 3, 1: 4, 2: 6, 3: 8, 4: 11, 5: 15}[difficulty]
     r = {0: 34, 1: 30, 2: 26, 3: 22, 4: 18, 5: 15}[difficulty]
+    n_same = {0: 1, 1: 1, 2: 2, 3: 2, 4: 3, 5: 3}[difficulty]  # extra same-color distractors
 
-    for _attempt in range(40):
+    for _attempt in range(80):
         placed = _place_nonoverlap(rng, n_obj, r, r + 14)
         if len(placed) < n_obj:
             continue
@@ -128,6 +132,15 @@ def gen_relpos(seed: int, difficulty: int) -> tuple[Image.Image, str]:
             continue
         answer_idx = left_of[0]
 
+        # randomized answer color (never the target blue); other colors may
+        # repeat, so color identity alone never identifies the answer
+        answer_color = rng.choice([c for c in COLOR_NAMES if c != "blue"])
+
+        # choose same-color distractors among non-target, non-answer objects
+        candidates = [i for i in range(len(placed)) if i not in (target_idx, answer_idx)]
+        n_same_actual = min(n_same, len(candidates))
+        same_idx = set(rng.sample(candidates, n_same_actual)) if n_same_actual else set()
+
         img = Image.new("RGB", (W, H), (245, 245, 240))
         draw = ImageDraw.Draw(img)
         used_colors: set[str] = set()
@@ -135,14 +148,18 @@ def gen_relpos(seed: int, difficulty: int) -> tuple[Image.Image, str]:
             if i == target_idx:
                 shape, color = "square", "blue"
             elif i == answer_idx:
-                shape, color = "circle", ANSWER_COLOR
+                shape = rng.choice(SHAPES)
+                color = answer_color
+            elif i in same_idx:
+                shape = rng.choice(SHAPES)
+                color = answer_color
             else:
                 shape = rng.choice(SHAPES)
                 color = _pick_color(rng, used_colors)
                 used_colors.add(color)
             _draw_shape(draw, cx, cy, pr, shape, COLOR_RGB[color])
         _add_clutter(draw, rng, {0: 0, 1: 6, 2: 12, 3: 20, 4: 30, 5: 42}[difficulty])
-        return img, ANSWER_COLOR
+        return img, answer_color
     # extremely unlikely fallback: last scene wins
     return gen_relpos(seed + 10000, difficulty)
 
@@ -156,19 +173,25 @@ def _q_relpos() -> str:
 # ---- family 2: occlusion ----------------------------------------------------
 
 def gen_occlusion(seed: int, difficulty: int) -> tuple[Image.Image, str]:
-    """A red circle is partially hidden behind one gray square; extra gray
+    """One colored object is partially hidden behind a gray square; extra gray
     squares act as occluder distractors. The model must find the partially
-    hidden colored object and report its color."""
+    hidden colored object and report its color.
+
+    The hidden object's color is randomized per scene and the same color
+    appears on at least one fully visible object, so reporting a rare color is
+    not a solution — the model must identify *which* instance is occluded.
+    """
     rng = random.Random(seed)
     occl_r = {0: 40, 1: 36, 2: 32, 3: 28, 4: 24, 5: 20}[difficulty]
     n_gray = {0: 1, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5}[difficulty]
     n_other = {0: 1, 1: 2, 2: 2, 3: 3, 4: 4, 5: 5}[difficulty]
+    n_same = {0: 1, 1: 1, 2: 2, 3: 2, 4: 3, 5: 3}[difficulty]  # visible same-color distractors
 
-    for _attempt in range(40):
+    for _attempt in range(80):
         # main occluder near center
         cx, cy = W // 2 + rng.randint(-50, 50), H // 2 + rng.randint(-50, 50)
         occluder_r = occl_r + 14
-        # hidden red circle offset so part of it sticks out
+        # hidden colored circle offset so part of it sticks out
         off = rng.randint(occluder_r - 8, occluder_r + 6)
         hidden = (cx - off, cy + rng.randint(-10, 10), occl_r)
 
@@ -177,25 +200,33 @@ def gen_occlusion(seed: int, difficulty: int) -> tuple[Image.Image, str]:
         if len(others) < n_gray + n_other - 1:
             continue
 
+        hidden_color = rng.choice([c for c in COLOR_NAMES if c != "blue"])
+
         img = Image.new("RGB", (W, H), (245, 245, 240))
         draw = ImageDraw.Draw(img)
-        # hidden red circle first
-        _draw_shape(draw, hidden[0], hidden[1], occl_r, "circle", COLOR_RGB["red"])
+        # hidden colored circle first
+        _draw_shape(draw, hidden[0], hidden[1], occl_r, "circle", COLOR_RGB[hidden_color])
         # main occluder on top
         _draw_shape(draw, cx, cy, occluder_r, "square", (150, 150, 150))
         gray_used = 1
         used_colors: set[str] = set()
+        visible_colored = [i for i in range(len(others)) if i >= n_gray - 1]
+        n_same_actual = min(n_same, len(visible_colored))
+        same_idx = set(rng.sample(visible_colored, n_same_actual)) if n_same_actual else set()
         for i, (ox, oy, pr) in enumerate(others):
             if i < n_gray - 1:
                 _draw_shape(draw, ox, oy, pr, "square", (150, 150, 150))
                 gray_used += 1
+            elif i in same_idx:
+                shape = rng.choice(SHAPES)
+                _draw_shape(draw, ox, oy, pr, shape, COLOR_RGB[hidden_color])
             else:
                 shape = rng.choice(SHAPES)
                 color = _pick_color(rng, used_colors)
                 used_colors.add(color)
                 _draw_shape(draw, ox, oy, pr, shape, COLOR_RGB[color])
         _add_clutter(draw, rng, {0: 0, 1: 8, 2: 16, 3: 24, 4: 34, 5: 46}[difficulty])
-        return img, "red"
+        return img, hidden_color
     return gen_occlusion(seed + 10000, difficulty)
 
 
@@ -263,13 +294,19 @@ def _q_lookalike() -> str:
 # ---- family 4: nearest neighbor ----------------------------------------------
 
 def gen_nearest(seed: int, difficulty: int) -> tuple[Image.Image, str]:
-    """A blue diamond is the anchor. The nearest object is forced to be an
-    orange circle; the model must find the nearest object and report its color."""
+    """A blue diamond is the anchor. The nearest object is the answer; the model
+    must find the nearest object and report its color.
+
+    The answer color is randomized per scene and at least one same-colored
+    distractor sits farther away, so reporting a rare color is not a solution —
+    the model must actually compute the nearest neighbor.
+    """
     rng = random.Random(seed)
     n_obj = {0: 3, 1: 4, 2: 6, 3: 8, 4: 11, 5: 14}[difficulty]
     r = {0: 30, 1: 27, 2: 24, 3: 21, 4: 18, 5: 15}[difficulty]
+    n_same = {0: 1, 1: 1, 2: 2, 3: 2, 4: 3, 5: 3}[difficulty]  # farther same-color distractors
 
-    for _attempt in range(40):
+    for _attempt in range(80):
         placed = _place_nonoverlap(rng, n_obj, r, r + 8)
         if len(placed) < n_obj:
             continue
@@ -279,6 +316,15 @@ def gen_nearest(seed: int, difficulty: int) -> tuple[Image.Image, str]:
             (i for i in range(len(placed)) if i != anchor_idx),
             key=lambda i: math.hypot(placed[i][0] - ax, placed[i][1] - ay),
         )
+        if nearest_idx == anchor_idx:
+            continue
+
+        answer_color = rng.choice([c for c in COLOR_NAMES if c != "blue"])
+
+        # same-color distractors among non-anchor, non-nearest objects
+        candidates = [i for i in range(len(placed)) if i not in (anchor_idx, nearest_idx)]
+        n_same_actual = min(n_same, len(candidates))
+        same_idx = set(rng.sample(candidates, n_same_actual)) if n_same_actual else set()
 
         img = Image.new("RGB", (W, H), (245, 245, 240))
         draw = ImageDraw.Draw(img)
@@ -287,14 +333,18 @@ def gen_nearest(seed: int, difficulty: int) -> tuple[Image.Image, str]:
             if i == anchor_idx:
                 shape, color = "diamond", "blue"
             elif i == nearest_idx:
-                shape, color = "circle", ANSWER_COLOR
+                shape = rng.choice(SHAPES)
+                color = answer_color
+            elif i in same_idx:
+                shape = rng.choice(SHAPES)
+                color = answer_color
             else:
                 shape = rng.choice(SHAPES)
                 color = _pick_color(rng, used_colors)
                 used_colors.add(color)
             _draw_shape(draw, cx, cy, pr, shape, COLOR_RGB[color])
         _add_clutter(draw, rng, {0: 0, 1: 6, 2: 14, 3: 22, 4: 32, 5: 44}[difficulty])
-        return img, ANSWER_COLOR
+        return img, answer_color
     return gen_nearest(seed + 10000, difficulty)
 
 
