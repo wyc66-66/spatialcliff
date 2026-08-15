@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SpatialCliff · scene complexity vs spatial reasoning</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --panel: #161b22;
+    --panel2: #1c2430;
+    --ink: #e6edf3;
+    --muted: #8b949e;
+    --line: #2d3744;
+    --accent: #58a6ff;
+    --warn: #d29922;
+    --fragile: #f85149;
+    --robust: #3fb950;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 15px/1.55 -apple-system, "Segoe UI", system-ui, sans-serif;
+  }
+  header {
+    background: linear-gradient(180deg, #0d1117 0%, #131a24 100%);
+    border-bottom: 1px solid var(--line);
+    padding: 36px 40px 28px;
+  }
+  header .kicker {
+    font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 8px;
+  }
+  header h1 { margin: 0; font-size: 28px; font-weight: 650; letter-spacing: -0.2px; }
+  header p { margin: 10px 0 0; color: var(--muted); max-width: 900px; font-size: 14.5px; }
+  main { max-width: 1200px; margin: 0 auto; padding: 28px 24px 80px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; }
+  .card h3 { margin: 0 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); font-weight: 600; }
+  .card .big { font-size: 27px; font-weight: 700; margin-top: 2px; font-variant-numeric: tabular-nums; }
+  .card .sub { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+  section { margin-top: 36px; }
+  section h2 { font-size: 19px; margin: 0 0 6px; }
+  section .note { color: var(--muted); font-size: 13px; margin: 0 0 16px; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; }
+  .controls { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 14px; }
+  select, button {
+    font: inherit; padding: 6px 12px; border: 1px solid var(--line);
+    border-radius: 6px; background: var(--panel2); color: var(--ink); cursor: pointer;
+  }
+  button { background: var(--accent); color: #0d1117; border-color: var(--accent); font-weight: 600; }
+  button:hover { filter: brightness(1.1); }
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12.5px; color: var(--muted); margin-bottom: 10px; }
+  .legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: baseline; }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+  .tag.robust { background: rgba(63,185,80,0.15); color: var(--robust); }
+  .tag.fragile { background: rgba(248,81,73,0.15); color: var(--fragile); }
+  .tag.mixed { background: rgba(210,153,34,0.15); color: var(--warn); }
+  .badge { font-size: 12px; color: var(--muted); }
+  .falloff-detail { font-size: 13px; color: var(--ink); background: rgba(210,153,34,0.08); border: 1px dashed var(--warn); padding: 8px 12px; border-radius: 6px; margin-top: 10px; }
+  #status { font-size: 12.5px; color: var(--muted); }
+  #status.error { color: var(--fragile); }
+</style>
+</head>
+<body>
+<header>
+  <p class="kicker">Research artifact · spatial reasoning stress test</p>
+  <h1>SpatialCliff</h1>
+  <p>How scene complexity breaks spatial reasoning in an open VLM (Qwen2.5-VL-3B).
+  We stress four reasoning mechanisms — <b>relative position</b>, <b>occlusion</b>,
+  <b>lookalike binding</b>, <b>nearest-neighbor</b> — across six complexity levels,
+  and find where accuracy falls off a cliff.</p>
+</header>
+
+<main>
+  <div class="cards">
+    <div class="card">
+      <h3>Scene families</h3>
+      <div class="big" id="famCount">–</div>
+      <div class="sub">relpos / occlusion / lookalike / nearest</div>
+    </div>
+    <div class="card">
+      <h3>Complexity levels</h3>
+      <div class="big" id="diffCount">–</div>
+      <div class="sub">per family, d0 → d5</div>
+    </div>
+    <div class="card">
+      <h3>Fragile mechanisms</h3>
+      <div class="big" id="fragileCount">–</div>
+      <div class="sub">with a detected falloff</div>
+    </div>
+    <div class="card">
+      <h3>Robust mechanisms</h3>
+      <div class="big" id="robustCount">–</div>
+      <div class="sub">flat across complexity</div>
+    </div>
+  </div>
+
+  <section>
+    <h2>Complexity-decay curves</h2>
+    <p class="note">Accuracy vs scene complexity (d0 simplest → d5 hardest), one line per difficulty bucket. A dashed line marks a detected falloff (first step where accuracy drops ≥15 points and ≥20 points below the simplest scene).</p>
+    <div class="panel">
+      <div class="controls">
+        <select id="familySelect"></select>
+        <button id="resetBtn">reset zoom</button>
+        <span class="badge" id="familyMeta"></span>
+      </div>
+      <div class="legend" id="diffLegend"></div>
+      <div id="decayChart" class="chart-box"></div>
+      <div id="falloffBox" class="falloff-detail"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Mechanism sensitivity ranking</h2>
+    <p class="note">Difference between simplest- and hardest-scene accuracy, aggregated across seeds. Mechanisms that require per-object binding under distractors should sit higher (fragile); coarse relational judgments should sit near 0 (robust).</p>
+    <div class="panel">
+      <table>
+        <thead><tr><th>Mechanism</th><th>Range</th><th>Simplest acc</th><th>Hardest acc</th><th>Falloff</th><th>Verdict</th></tr></thead>
+        <tbody id="rankBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Claims</h2>
+    <p class="note">Verifiable statements drawn from <code>data/sweep/sweep.json</code>.</p>
+    <div class="panel" id="facts"></div>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script>
+const FAMILY_NAMES = {
+  relpos: "relative position", occlusion: "occlusion",
+  lookalike: "lookalike binding", nearest: "nearest neighbor",
+};
+const FAMILY_COLORS = {
+  relpos: "#58a6ff", occlusion: "#f85149",
+  lookalike: "#d29922", nearest: "#3fb950",
+};
+
+let sweepData = null, decayData = null, familyChart = null;
+
+async function load() {
+  const status = document.getElementById("status");
+  try {
+    const [s, d] = await Promise.all([
+      fetch("/api/spatialcliff/sweep.json").then(r => r.json()),
+      fetch("/api/spatialcliff/decay.json").then(r => r.json()),
+    ]);
+    sweepData = s; decayData = d;
+    renderCards(); renderFamilySelect(); renderRanking(); renderFacts();
+  } catch (e) {
+    status.textContent = "Could not load sweep data — run scripts/run_sweep.py first.";
+    status.className = "error";
+  }
+}
+
+function renderCards() {
+  const fams = Object.keys(decayData.curves);
+  document.getElementById("famCount").textContent = fams.length;
+  const first = decayData.curves[fams[0]];
+  document.getElementById("diffCount").textContent = Object.keys(first).length;
+  const sum = decayData.summary;
+  let frag = 0, robust = 0;
+  for (const f of fams) {
+    if (sum[f].falloff) frag++;
+    else if (sum[f].range < 0.15) robust++;
+  }
+  document.getElementById("fragileCount").textContent = frag;
+  document.getElementById("robustCount").textContent = robust;
+}
+
+function renderFamilySelect() {
+  const sel = document.getElementById("familySelect");
+  sel.innerHTML = "";
+  for (const fam of Object.keys(decayData.curves).sort()) {
+    const opt = document.createElement("option");
+    opt.value = fam;
+    opt.textContent = `${FAMILY_NAMES[fam] || fam} (${fam})`;
+    sel.appendChild(opt);
+  }
+  sel.onchange = () => renderDecay(sel.value);
+  renderDecay(sel.value);
+}
+
+function renderDecay(fam) {
+  const curve = decayData.curves[fam];
+  const sum = decayData.summary[fam];
+  const col = FAMILY_COLORS[fam] || "#58a6ff";
+
+  const lg = document.getElementById("diffLegend");
+  lg.innerHTML = `<span style="color:${col}"><span style="background:${col}"></span>accuracy (all seeds pooled)</span>`;
+
+  const box = document.getElementById("falloffBox");
+  if (sum.falloff) {
+    const f = sum.falloff;
+    box.innerHTML = `<b>Falloff:</b> accuracy drops ${(f.drop * 100).toFixed(0)} points (${(f.acc_before * 100).toFixed(0)}% → ${(f.acc_after * 100).toFixed(0)}%) at complexity <b>${f.at}</b>.`;
+  } else {
+    box.innerHTML = `<b>No falloff detected</b> — the mechanism stays within ±15 points across the whole complexity range.`;
+  }
+  document.getElementById("familyMeta").textContent =
+    `difficulty levels: ${curve.labels.length} · simplest-to-hardest range ${(sum.range * 100).toFixed(0)} pts`;
+
+  if (familyChart) familyChart.destroy();
+  const datasets = [{
+    label: FAMILY_NAMES[fam] || fam,
+    data: curve.complexity.map((x, i) => ({ x, y: curve.acc[i] })),
+    borderColor: col,
+    backgroundColor: col,
+    borderWidth: 2.2,
+    pointRadius: 4.5, pointHoverRadius: 6.5,
+    tension: 0.15,
+  }];
+  if (curve.falloff) {
+    const idx = curve.labels.indexOf(curve.falloff.at);
+    if (idx >= 0) {
+      datasets.push({
+        label: "falloff",
+        data: [{ x: curve.complexity[idx], y: 0 }, { x: curve.complexity[idx], y: 1 }],
+        borderColor: "#f85149", borderDash: [6, 4], borderWidth: 1.5, pointRadius: 0,
+      });
+    }
+  }
+  familyChart = new Chart(document.getElementById("decayChart"), {
+    type: "scatter",
+    data: { datasets },
+    options: {
+      responsive: true,
+      scales: {
+        x: {
+          type: "linear",
+          title: { display: true, text: "scene complexity (d0 → d5)" },
+          min: 0, max: 1,
+          ticks: { stepSize: 0.2 },
+        },
+        y: { min: 0, max: 1, title: { display: true, text: "accuracy" } },
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: c => `${(c.parsed.y * 100).toFixed(0)}% @ complexity ${c.parsed.x}` } },
+      },
+    },
+  });
+}
+
+function renderRanking() {
+  const sum = decayData.summary;
+  const rows = Object.keys(sum).map(fam => ({ fam, ...sum[fam] }))
+    .sort((a, b) => b.range - a.range);
+  const tbody = document.getElementById("rankBody");
+  tbody.innerHTML = "";
+  for (const r of rows) {
+    const tr = document.createElement("tr");
+    const verdict = r.range >= 0.15 && r.falloff
+      ? '<span class="tag fragile">fragile</span>'
+      : r.range >= 0.15
+        ? '<span class="tag mixed">mixed</span>'
+        : '<span class="tag robust">robust</span>';
+    const foTxt = r.falloff
+      ? `${r.falloff.at} (${(r.falloff.drop * 100).toFixed(0)}pt drop)`
+      : "—";
+    tr.innerHTML = `
+      <td><b>${FAMILY_NAMES[r.fam] || r.fam}</b> <span class="badge">${r.fam}</span></td>
+      <td>${(r.range * 100).toFixed(0)} pts</td>
+      <td>${(r.best_acc * 100).toFixed(0)}%</td>
+      <td>${(r.worst_acc * 100).toFixed(0)}%</td>
+      <td>${foTxt}</td>
+      <td>${verdict}</td>`;
+    tbody.appendChild(tr);
+  }
+}
+
+function renderFacts() {
+  const sum = decayData.summary;
+  const facts = [];
+  const fragile = Object.keys(sum).filter(f => sum[f].falloff);
+  if (fragile.length) {
+    facts.push(`Falloff detected in <b>${fragile.length}</b> mechanism(s): <b>${fragile.map(f => FAMILY_NAMES[f] || f).join(", ")}</b>.`);
+  }
+  const robust = Object.keys(sum).filter(f => !sum[f].falloff && sum[f].range < 0.15);
+  if (robust.length) {
+    facts.push(`Complexity-robust mechanism(s): <b>${robust.map(f => FAMILY_NAMES[f] || f).join(", ")}</b> stay within ±15 points across the full range.`);
+  }
+  const el = document.getElementById("facts");
+  el.innerHTML = facts.map(f => `<p style="margin:6px 0">${f}</p>`).join("");
+}
+
+document.getElementById("resetBtn").onclick = () => renderDecay(document.getElementById("familySelect").value);
+window.addEventListener("DOMContentLoaded", load);
+</script>
+</body>
+</html>
