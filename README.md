@@ -27,6 +27,10 @@ replaced by gradual decay (trend r as low as −0.86 for occlusion) and one
 genuine mechanism boundary (`lookalike` binding) with a strong bottom-quadrant
 attribution bias (77% of reported corners are bottom-half).
 
+**Scale:** 4 mechanisms × 6 complexity levels × 40 seeds = **960 scenes**, each
+with a ground-truth answer computed from the layout itself; every raw model
+response is archived for audit (`data/sweep/responses.json`).
+
 ## Research question
 
 > **Which spatial-reasoning capabilities of an open VLM survive scene
