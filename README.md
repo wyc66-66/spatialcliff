@@ -69,6 +69,18 @@ python -m spatialcliff ui --port 8000
 The pre-audit (fixed answer-color) sweep is archived at
 `data/sweep_pre_audit/sweep.json`; the report discusses both in appendix A.
 
+## Tests
+
+```bash
+python -m pytest -q        # 22 tests: audit-standard data guards, Wilson CI,
+                           # falloff/trend, paired McNemar
+```
+
+The data guards are the point: they re-verify from `data/sweep/responses.json`
+that the answer-colour shortcut the report says it removed is actually gone
+(≥6 answer colours per family, no single colour >30%, balanced corners). CI
+(`.github/workflows/ci.yml`) runs the suite on every push to `main`.
+
 ## Layout
 
 ```

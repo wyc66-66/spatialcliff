@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import json
 from dataclasses import dataclass, field
+from math import comb
 
 import numpy as np
 
@@ -89,6 +90,30 @@ class ComplexityCurve:
             return 0.0
         r = np.corrcoef(self.complexity, self.acc)[0, 1]
         return float(r) if not np.isnan(r) else 0.0
+
+
+def paired_mcnemar(first_correct: list[bool], second_correct: list[bool]) -> dict:
+    """Exact (binomial) McNemar test for paired binary outcomes.
+
+    Used to test whether the accuracy change between two difficulty levels on
+    the *same* seeds is real rather than sampling noise. b = pairs that went
+    wrong (first correct -> second incorrect), c = pairs that improved. The
+    exact two-sided p-value is the probability of observing a discordant split
+    at least as extreme as min(b, c) under a fair coin on the b+c discordant
+    pairs; with tiny discordant counts this is the correct test, and it is
+    what a reader can reproduce by hand from the 2x2 table.
+    """
+    if len(first_correct) != len(second_correct):
+        raise ValueError("paired outcomes must have equal length")
+    b = sum(1 for x, y in zip(first_correct, second_correct) if x and not y)
+    c = sum(1 for x, y in zip(first_correct, second_correct) if not x and y)
+    n_disc = b + c
+    if n_disc == 0:
+        return {"b": 0, "c": 0, "n_discordant": 0, "p": 1.0}
+    k = min(b, c)
+    two_sided = sum(comb(n_disc, i) * (0.5 ** n_disc) for i in range(0, k + 1))
+    two_sided = min(1.0, 2.0 * two_sided)
+    return {"b": b, "c": c, "n_discordant": n_disc, "p": two_sided}
 
 
 @dataclass
