@@ -10,6 +10,14 @@ mechanisms (relative position, occlusion, lookalike binding, nearest neighbor),
 each stepped through six complexity levels — and then **audits the task design
 itself**.
 
+The methodology follows the fine-grained-diagnostic-benchmark philosophy of
+TemporalBench: controlled stimuli, per-mechanism measurement, and a hard look at
+what the model actually does when it fails. TemporalBench showed that aggregated
+accuracy hides fine-grained temporal failures (GPT-4o reaches only 38.5% on
+fine-grained temporal QA), and its MBA correction showed that a benchmark's own
+task design can manufacture a failure. This project applies the same philosophy
+to *spatial* reasoning — and the same self-audit.
+
 The audit found and removed a color-identity shortcut in the first sweep
 (§2.1): the three color-bearing families used a fixed answer color, so a model
 could answer correctly by reporting the singleton color without doing any
