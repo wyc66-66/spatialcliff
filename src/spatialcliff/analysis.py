@@ -99,7 +99,7 @@ class SweepResult:
 
     @classmethod
     def load(cls, path) -> "SweepResult":
-        data = json.loads(path.read_text(encoding="utf-8")) if hasattr(path, "read_text") else json.loads(path)
+        data = json.loads(path.read_text(encoding="utf-8-sig")) if hasattr(path, "read_text") else json.loads(path)
         curves: dict[str, ComplexityCurve] = {}
         for fam, rows in data["by_family"].items():
             curves[fam] = ComplexityCurve.from_rows(fam, rows)

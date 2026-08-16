@@ -5,9 +5,10 @@
 Multimodal models answer spatial questions — "which is left of the red cube?",
 "is the blue sphere occluded behind the cylinder?" — with confidence until the
 scene crosses a complexity threshold. This project stress-tests open VLM spatial
-reasoning with a procedurally-generated scene corpus whose complexity is
-controlled along four axes (object count, occlusion, lookalike distractors,
-background clutter) — and then **audits the task design itself**.
+reasoning with a procedurally-generated scene corpus: four spatial-reasoning
+mechanisms (relative position, occlusion, lookalike binding, nearest neighbor),
+each stepped through six complexity levels — and then **audits the task design
+itself**.
 
 The audit found and removed a color-identity shortcut in the first sweep
 (§2.1): the three color-bearing families used a fixed answer color, so a model
@@ -23,11 +24,19 @@ attribution bias (77% of reported corners are bottom-half).
 > **Which spatial-reasoning capabilities of an open VLM survive scene
 > complexity — and how much of an observed "cliff" is a task-design artifact?**
 
-The four axes probe distinct mechanisms:
-- *object count*: more candidates = more binding load for "which one is X?"
-- *occlusion*: reasoning about partially hidden geometry
-- *lookalikes*: same-shape / same-color distractors force attribute binding
-- *clutter*: background noise that is irrelevant but must be ignored
+The four mechanisms probe distinct capabilities:
+- *relative position*: binding a property of a spatially-related object, under
+  increasing candidate counts (3→15 objects)
+- *occlusion*: recovering a hidden property through an occluder, with more
+  occluders and objects (occluders 1→5, objects 3→11)
+- *lookalikes*: binding a small attribute to the right instance among identical
+  distractors (2→9 identical circles)
+- *nearest neighbor*: relative-distance computation over a growing scene (3→14
+  objects)
+
+Within each mechanism, a *harder scene* jointly raises object count, shrinks
+object scale, and adds background clutter (Table 2.1 of the report); the
+measured curves are the joint effect of scene density on that mechanism.
 
 ## Method
 
@@ -52,7 +61,7 @@ python scripts/build_scenes.py --seeds 40 --out data/scenes
 python scripts/run_sweep.py --scenes data/scenes --out data/sweep   # GPU
 python scripts/paper_facts.py --sweep data/sweep/sweep.json
 python scripts/failure_analysis.py --responses data/sweep/responses.json
-python scripts/render_figures.py --sweep data/sweep/sweep.json --figs docs/figures
+python scripts/render_figures.py --sweep data/sweep/sweep.json   # -> docs/paper/spatialcliff/figures/
 python scripts/render_spatialcliff_paper.py
 python -m spatialcliff ui --port 8000
 ```

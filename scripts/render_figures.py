@@ -91,14 +91,20 @@ def fig_sensitivity(result: SweepResult, out: Path) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--sweep", default="data/sweep/sweep.json", type=Path)
-    ap.add_argument("--figs", default="docs/figures", type=Path)
+    ap.add_argument(
+        "--figs",
+        default="docs/paper/spatialcliff/figures",
+        type=Path,
+        help="Output directory. Files are named fig1_decay.png / fig2_sensitivity.png "
+        "so the paper renderer (which inlines figures/figN_*.png) picks them up.",
+    )
     args = ap.parse_args()
 
     result = SweepResult.load(args.sweep)
     args.figs.mkdir(parents=True, exist_ok=True)
 
-    fig_decay(result, args.figs / "fig_decay.png")
-    fig_sensitivity(result, args.figs / "fig_sensitivity.png")
+    fig_decay(result, args.figs / "fig1_decay.png")
+    fig_sensitivity(result, args.figs / "fig2_sensitivity.png")
 
     print(json.dumps(result.summary(), indent=1))
 

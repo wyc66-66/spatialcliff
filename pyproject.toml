@@ -19,6 +19,7 @@ gpu = [
     "torch>=2.3",
     "safetensors",
     "accelerate",
+    "qwen-vl-utils",
 ]
 paper = [
     "matplotlib",

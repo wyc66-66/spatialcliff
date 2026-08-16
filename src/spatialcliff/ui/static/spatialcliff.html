@@ -166,7 +166,7 @@ function renderCards() {
   const fams = Object.keys(decayData.curves);
   document.getElementById("famCount").textContent = fams.length;
   const first = decayData.curves[fams[0]];
-  document.getElementById("diffCount").textContent = Object.keys(first).length;
+  document.getElementById("diffCount").textContent = first.labels.length;
   const sum = decayData.summary;
   let frag = 0, robust = 0;
   for (const f of fams) {

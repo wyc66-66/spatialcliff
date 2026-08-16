@@ -4,7 +4,7 @@ Wraps the standard HF Qwen2.5-VL processor + model flow with a minimal
 zero-shot QA interface. Image input is capped by ``max_pixels`` so each
 scene stays within a small number of vision tokens — the scenes are simple
 geometric layouts, and the stress axis is scene complexity, not image
-resolution. The cap also keeps inference fast enough for a 480-scene sweep
+resolution. The cap also keeps inference fast enough for a 960-scene sweep
 on a laptop GPU.
 """
 from __future__ import annotations
