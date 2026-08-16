@@ -144,10 +144,32 @@ complexity pressure, which detection metrics do not expose.
 **Efficiency as a dimension of capability.** AIM [10] shows that adaptive token
 merging and pruning can cut multimodal inference FLOPs ~7× with minimal
 accuracy loss, underlining that the visual token budget is itself a capacity
-axis. Our spatial scenes are rendered at a fixed resolution so that complexity —
-not resolution — is the measured variable, but the interaction between scene
-complexity and visual token compression is a direct follow-up direction this
-design makes possible.
+axis.
+
+### 5.1 Future work
+
+The audit settled which spatial mechanisms are fragile under scene complexity;
+the natural extension is to ask which other knobs move those curves, and where
+the answer matters for deployment.
+
+First, **the interaction between scene complexity and visual-token
+compression.** Our scenes are rendered at a fixed 448×448 so that complexity is
+the measured variable; a model that already fails to bind small attributes
+among identical distractors (`lookalike`, §7.3) is exactly the model class a
+token-merging scheme like AIM [10] targets — so the sharp question is whether
+compression *moves* the mechanism boundary, or only the error level around it.
+The corpus and protocol transfer to that experiment unchanged. Second,
+**re-run the audit on a model that has seen spatial reasoning in training.**
+Every curve here is zero-shot Qwen2.5-VL-3B; the audit method is the
+contribution that transfers, and measuring whether the `lookalike`
+bottom-quadrant bias survives in a spatially-tuned model (or a larger
+checkpoint) is what decides whether the bias is a 3B-class limitation or a
+general one. Third, **extend the corpus to dynamic scenes.** The mechanisms
+here are static; the same per-mechanism, complexity-stepped design applies to
+temporal spatial reasoning — where objects move and the query is about a past
+configuration — which is the gap TemporalBench's methodology [9] is built to
+probe. Each direction keeps the audit discipline: measure the mechanism, audit
+the task design, report what survives.
 
 ## 6. Limitations
 
