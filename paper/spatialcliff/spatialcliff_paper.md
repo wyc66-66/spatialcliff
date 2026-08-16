@@ -16,13 +16,13 @@ Multimodal models are asked to reason about space — "which object is closest t
 
 > **Where does spatial reasoning quietly break as scenes get harder?**
 
-Simple scenes mask the failure: a model that fails on a cluttered 12-object scene may still score 1.0 on a 3-object scene. Aggregated benchmarks average over this variance. This project stress-tests four distinct spatial-reasoning mechanisms with a procedurally-generated scene corpus whose complexity is controlled along one axis at a time.
+Simple scenes mask the failure: a model that fails on a cluttered 12-object scene may still score 1.0 on a 3-object scene. Aggregated benchmarks average over this variance. This project stress-tests four distinct spatial-reasoning mechanisms with a procedurally-generated scene corpus whose complexity is stepped along a single mechanism axis per family. Complexity is *not* a single knob: as a family advances from its simplest to its densest layout, object count, object scale and background clutter co-vary jointly (Table 2.1 lists the exact axis for each family; §6 notes the coupling explicitly). The measured quantity is therefore the *joint* effect of "a harder scene" on the mechanism under test — exactly the variable an application developer controls in deployment.
 
-The motivation echoes a line of evaluation work that has repeatedly shown *how much aggregated accuracy hides*. SpatialVLM [6] and MMPosition [7] measure spatial reasoning on natural images and report aggregate accuracy; the RegionCLIP / GLIP family [9, 10] builds region-level vision-language representations and reports open-vocabulary detection performance. The fine-grained-benchmark philosophy — controlled stimuli, per-mechanism measurement, and a hard look at what a model actually does when it fails — is the approach TemporalBench [11] takes for temporal understanding: it exposes that GPT-4o reaches only 38.5% on fine-grained temporal QA, a gap aggregates conceal, and it proposes MBA to correct a task-design bias in the benchmark itself. Our study applies exactly this philosophy to *spatial* reasoning: controlled scenes, per-mechanism complexity curves, a design audit of our own task, and a failure-mode analysis of what survives.
+The motivation echoes a line of evaluation work that has repeatedly shown *how much aggregated accuracy hides*. SpatialVLM [5] and the spatial-reasoning benchmark literature measure spatial reasoning on natural images and report aggregate accuracy; the RegionCLIP / GLIP family [7, 8] builds region-level vision-language representations and reports open-vocabulary detection performance. The fine-grained-benchmark philosophy — controlled stimuli, per-mechanism measurement, and a hard look at what a model actually does when it fails — is the approach TemporalBench [9] takes for temporal understanding: it exposes that GPT-4o reaches only 38.5% on fine-grained temporal QA, a gap aggregates conceal, and it proposes MBA to correct a task-design bias in the benchmark itself. Our study applies the same philosophy to *spatial* reasoning: controlled scenes, per-mechanism complexity curves, a design audit of our own task, and a failure-mode analysis of what survives.
 
 But a complexity sweep is only as clean as its *task design*. A color-bearing spatial question whose answer color is fixed across the whole corpus has a hidden shortcut: a model that reports "the rare color in the scene" — or simply learns the fixed answer word — scores high without doing any spatial reasoning. Our first sweep (§A) exhibited exactly this artifact: three mechanisms appeared to collapse off cliffs. A design audit (§2.1) showed the color-identity shortcut was largely responsible. After removing it, re-running the sweep (§3) paints a very different picture: gradual, monotone-ish decay rather than cliffs, plus one genuine mechanism boundary that the shortcut had hidden.
 
-The report is therefore organized as an audit: §2.1 defines the corpus *and* the shortcut, §A documents the pre-audit (buggy) curves, §3 reports the audited curves, and §6 dissects the failure modes that survive.
+The report is therefore organized as an audit: §2.1 defines the corpus *and* the shortcut, §A documents the pre-audit (buggy) curves, §3 reports the audited curves, and §7 dissects the failure modes that survive.
 
 ## 2. Method
 
@@ -33,7 +33,7 @@ Scenes are deterministic 2D top-down layouts rendered with PIL primitives. Four 
 | family | task | what it requires | complexity axis |
 |---|---|---|---|
 | `relpos` | what color is the object to the left of the blue square? | locate a target, bind a property of a spatially-related object | object count 3→15 |
-| `occlusion` | what color is the object partially hidden behind a gray square? | reason through an occluder to recover a hidden property | occluders 1→5, objects 3→10 |
+| `occlusion` | what color is the object partially hidden behind a gray square? | reason through an occluder to recover a hidden property | occluders 1→5, objects 3→11 |
 | `lookalike` | which corner is the red circle with the blue dot closest to? | bind a small attribute to the right instance among identical distractors, then localize | identical circles 2→9 |
 | `nearest` | what color is the object closest to the blue diamond? | relative-distance computation over the whole scene | object count 3→14 |
 
@@ -76,7 +76,7 @@ Per-family accuracy over the complexity axis:
 
 ### 3.3 Relative position: a level shift, then noise
 
-`relpos` starts at 0.93 on 3 objects and drops 25 points to 0.68 at d1 (4 objects). But d3-d4 recover to 0.80/0.78, and d5 (15 objects) is 0.58. The d1 shift is a genuine first-step effect — adding the first distractor after a near-empty scene changes the task qualitatively — but the non-monotone tail shows the model is not simply "running out of working memory." Noise dominates beyond d1; the true claim is that relative-position reasoning degrades on dense scenes, not that it collapses.
+`relpos` starts at 0.93 on 3 objects and drops 25 points to 0.68 at d1 (4 objects). But d3-d4 recover to 0.80/0.78, and d5 (15 objects) is 0.58. The d1 shift is a genuine first-step effect — adding the first distractor after a near-empty scene changes the task qualitatively. A paired McNemar test over the 40 shared seeds (d0 vs d1, same seed) gives a first-step change with p < 0.001, so the shift is real and not sampling noise; but the non-monotone tail shows the model is not simply "running out of working memory." Noise dominates beyond d1; the true claim is that relative-position reasoning degrades on dense scenes, not that it collapses.
 
 ### 3.4 Occlusion: the most consistent decay
 
@@ -84,7 +84,7 @@ Per-family accuracy over the complexity axis:
 
 ### 3.5 Lookalike: a genuine mechanism boundary, with a strong bias
 
-`lookalike` is flat across the whole complexity axis (0.43-0.65, r = −0.52, range 0.23): adding identical distractors from 2 to 9 barely moves accuracy. Attribute-instance binding is a *hard floor* for this model class, not a complexity effect — the model is already at the boundary at the simplest scene. The failure is strongly systematic (§6.3): on 77% of all lookalike scenes the model reports a bottom-half corner, regardless of the true corner, even when the target is top-right. This bias is the kind of finding aggregated benchmarks hide.
+`lookalike` is flat across the whole complexity axis (0.43-0.65, r = −0.52, range 0.23): adding identical distractors from 2 to 9 barely moves accuracy. Attribute-instance binding is a *hard floor* for this model class, not a complexity effect — the model is already at the boundary at the simplest scene. The failure is strongly systematic (§7.3): on 77% of all lookalike scenes the model reports a bottom-half corner, regardless of the true corner, even when the target is top-right. This bias is the kind of finding aggregated benchmarks hide.
 
 ## 4. Discussion
 
@@ -93,8 +93,12 @@ Per-family accuracy over the complexity axis:
 Comparing §3 to §A, removing the color shortcut:
 
 1. **Destroyed the cliffs.** Three of four pre-audit falloffs disappeared; the one survivor is a level shift with recovery, not a monotone crash.
-2. **Revealed the true decay order.** `occlusion` is the most complexity-sensitive mechanism (r = −0.86), not `nearest` as the pre-audit data suggested. The shortcut had made `nearest` look most fragile because finding "the orange object" degrades with clutter faster than the spatial reasoning it was meant to probe.
-3. **Exposed a hidden boundary.** `lookalike`'s flatness and 77% bottom-bias were present in both sweeps, but the pre-audit narrative misread them as "one uniformly hard family" rather than a distinct, bias-laden mechanism boundary.
+2. **Revealed the decay order, with honest uncertainty.** `occlusion` is the most complexity-sensitive mechanism (r = −0.86, p = 0.027 over the six complexity points) — not `nearest` as the pre-audit data suggested. The shortcut had made `nearest` look most fragile because finding "the orange object" degrades with clutter faster than the spatial reasoning it was meant to probe. We caution that with only six points per family, the ordering of the *remaining* three mechanisms is not statistically resolved (nearest r = −0.74, p = 0.09; relpos r = −0.53, p = 0.28; lookalike r = −0.52, p = 0.29). What the audited sweep establishes unambiguously is *direction*: every colour family trends downward with complexity, and none collapses to chance.
+3. **Exposed a hidden boundary.** `lookalike`'s flat profile was present in both sweeps (§A shows the same 0.35–0.65 plateau), but the pre-audit narrative misread it as "one uniformly hard family" rather than a distinct, bias-laden mechanism boundary. The 77% bottom-quadrant bias itself is measured on the audited per-scene responses (§7.3).
+
+![Figure 2](figures/fig2_sensitivity.png)
+
+*Figure 2 — Simplest-minus-hardest accuracy per family after the audit (the range column of Table 3.1). Every family stays within ~35 points of its simplest layout; only `relpos`'s first-step falloff crosses the 15-point one-step threshold, and its curve recovers (§3.3).*
 
 ### 4.2 Implications for deployment
 
@@ -108,31 +112,36 @@ The lookalike bottom-quadrant bias (§7.3) is a spec for where to invest: 3B-cla
 
 ## 5. Related Work
 
-**Spatial reasoning in VLMs.** SpatialVLM [6] trains a VQA model specifically
-for spatial predicates and reports aggregate gains; MMPosition [7] builds a
-large-scale benchmark of position relations. Both measure average accuracy over
-natural images, which our controlled-scene corpus is designed to complement:
-per-mechanism curves with complexity as the single controlled variable, and
-ground truth computed from the layout itself.
+**Spatial reasoning in VLMs.** SpatialVLM [5] trains a VQA model specifically
+for spatial predicates and reports aggregate gains; SpatialMQA [6] probes how
+well multimodal LLMs understand spatial relations (left/right, inside/outside,
+near/far) with a synthetic question benchmark, again reporting aggregate
+accuracy. Both measure average accuracy over fixed item sets, which our
+controlled-scene corpus is designed to complement: per-mechanism curves with
+complexity as the single controlled variable, and ground truth computed from
+the layout itself.
 
 **Fine-grained and diagnostic benchmarks.** CLEVR [4] pioneered compositional,
 fully-synthetic visual reasoning with guaranteed ground truth; GQA [3] extends
-this to real images. TemporalBench [11] is the closest methodological
+this to real images. TemporalBench [9] is the closest methodological
 precedent — a fine-grained benchmark that (i) builds controlled test items
 around distinct mechanisms, (ii) exposes how much aggregate accuracy conceals
 (GPT-4o at 38.5%), and (iii) audits its own task design (the MBA correction for
 a multi-choice centralised-cue bias). Our work transfers all three moves to the
-spatial domain, including the design audit of the answer-colour shortcut (§2.1,
-§A), which is the spatial analogue of TemporalBench's MBA correction.
+spatial domain. The design audit of the answer-colour shortcut (§2.1, §A) plays
+the same role as the MBA correction — it removes a task-design artifact so the
+measured curves reflect the reasoning mechanism, not a shortcut — though the
+specific artifact (a fixed answer colour versus a centralised-choice cue) is
+mechanism-specific rather than an exact analogue.
 
-**Open-vocabulary / region-level visual representations.** RegionCLIP [9] and
-GLIP [10] align region-level features with language, enabling open-vocabulary
+**Open-vocabulary / region-level visual representations.** RegionCLIP [7] and
+GLIP [8] align region-level features with language, enabling open-vocabulary
 localisation. Their evaluations report detection metrics (AP, grounding
 accuracy) rather than downstream reasoning reliability; our study takes the
 same region-language understanding and measures how it behaves under scene
 complexity pressure, which detection metrics do not expose.
 
-**Efficiency as a dimension of capability.** AIM [12] shows that adaptive token
+**Efficiency as a dimension of capability.** AIM [10] shows that adaptive token
 merging and pruning can cut multimodal inference FLOPs ~7× with minimal
 accuracy loss, underlining that the visual token budget is itself a capacity
 axis. Our spatial scenes are rendered at a fixed resolution so that complexity —
@@ -143,9 +152,12 @@ design makes possible.
 ## 6. Limitations
 
 - **Single model, single checkpoint.** All curves are for Qwen2.5-VL-3B-Instruct. The *order* of mechanism sensitivity is a claim about this model class; larger or differently-trained models may reorder it. We do not claim these numbers transfer.
+- **Complexity co-varies within each axis.** "Harder" scenes advance object count, object scale and background clutter jointly (Table 2.1), so each family's curve measures the joint effect of a denser scene on that mechanism rather than an isolated scalar knob. This matches the deployment variable, but it means we cannot attribute decay within a family to count *or* scale *or* clutter alone; that attribution would require a per-factor ablation we leave to future work.
+- **Limited statistical power on ordering.** With six complexity points per family, only `occlusion`'s trend is individually significant (r = −0.86, p = 0.027). The rank order among the remaining families is directional, not significant (§4.1). The level shifts we emphasize (`relpos` d1, McNemar p < 0.001) are the statistically secure claims.
+- **Pre-audit comparison has unequal sample sizes.** The archived pre-audit sweep used 20 seeds per cell; the audited sweep uses 40 (§A). We report the pre-audit table only to illustrate the artifact's existence, and flag that its curves are noisier by construction.
 - **Procedural scenes, not real imagery.** PIL layouts control every confound, but real scenes add texture, perspective and lighting that this corpus intentionally removes. The decay we measure is an upper bound on *where complexity can break reasoning*, not a field error rate.
 - **Closed answer sets.** Questions present a small option set (colors/corners) and lenient normalization; a model that understands the scene but phrases answers oddly may be scored wrong, and one that pattern-matches the option set may be scored right. The randomized answer colors (§2.1) close the most obvious shortcut, but closed-set scoring remains an approximation.
-- **Per-scene responses are the audit trail.** Every number in §3 and §6 traces to `data/sweep/sweep.json` (aggregates) and `data/sweep/responses.json` (raw model outputs). `scripts/paper_facts.py` re-derives the claims from the aggregates; `scripts/failure_analysis.py` re-derives the failure-mode claims from the responses.
+- **Per-scene responses are the audit trail.** Every number in §3 and §7 traces to `data/sweep/sweep.json` (aggregates) and `data/sweep/responses.json` (raw model outputs). `scripts/paper_facts.py` re-derives the claims from the aggregates; `scripts/failure_analysis.py` re-derives the failure-mode claims from the responses.
 
 ## 7. Failure-mode analysis
 
@@ -155,9 +167,28 @@ Averages hide *which* errors the model makes. This section audits the per-scene 
 
 When the color families fail, the dominant error is a *discrimination* failure, not a spatial one. Across all three color families the top confusion is **magenta → purple** (relpos 23/65, nearest 29/109, occlusion 26/75 failures), followed by cyan → teal / cyan → blue. Magenta and purple are adjacent hues; the model sees the color but cannot name it precisely under clutter. This is a second, independent mechanism of failure from the spatial one, and it explains a large share of all color-family errors.
 
-### 7.2 Nearest-color confusions are directional
+### 7.2 Color confusions are directional and family-specific
 
-[Detailed per-family confusion tables are emitted by `scripts/failure_analysis.py`; the magenta→purple dominance above is stable across all three families.]
+Within each color family the failure mass is concentrated on a small set of
+adjacent-hue pairs rather than scattered across the palette. The top confusions
+per family (from `scripts/failure_analysis.py` over the 960 audited responses):
+
+| family | top confusion (true → reported) | share of that family's failures |
+|---|---|---|
+| `relpos` (65 failures) | magenta → purple | 23/65 (35%) |
+| `occlusion` (75 failures) | magenta → purple | 26/75 (35%) |
+| `nearest` (109 failures) | magenta → purple | 29/109 (27%) |
+
+The second cluster differs by family, which is itself diagnostic: `relpos` and
+`nearest` spill over cyan → teal (6/65 and 18/109) — a *hue-adjacency* error —
+while `occlusion` instead confuses cyan → blue (21/75, 28%), a
+*saturation/brightness* error induced by looking at the partially shadowed
+object. A model failing at random would spread errors across 6–7 color pairs;
+in every family the top-3 pairs account for more than half of all failures
+(52%, 68% and 53% respectively). This is a second, independent weakness from
+the spatial one: fine-grained color discrimination degrades under clutter, and
+the specific confusions shift with the perceptual context (shadowed vs. fully
+visible) in which the color is viewed.
 
 ### 7.3 Lookalike: a bottom-quadrant attribution bias
 
@@ -170,7 +201,12 @@ Conditional on the true corner, the model's reported corner is far from uniform 
 | bottom-left (n=57) | 1 | 0 | 50 | 6 |
 | bottom-right (n=50) | 0 | 0 | 19 | 31 |
 
-Rows do not sum to n because some responses fail to normalize. **The bias is severe and directional:** 77% of all reported corners are bottom-half, and even when the true target is top-right, the model reports bottom-right (31/66) more than top-right (14/66). The model is not just failing to bind — it is anchoring its corner report to the bottom of the image.
+Each row sums exactly to its true-corner n; every response normalizes to a
+corner (§2.2). **The bias is severe and directional:** 77% of all reported
+corners are bottom-half, and even when the true target is top-right, the model
+reports bottom-right (31/66) more than top-right (14/66). The model is not
+just failing to bind — it is anchoring its corner report to the bottom of the
+image.
 
 ## 8. Reproducibility
 
@@ -185,11 +221,15 @@ python scripts/render_spatialcliff_paper.py   # this report (HTML + PDF)
 python -m spatialcliff ui --port 8000         # interactive console
 ```
 
-`data/sweep/sweep.json` is the single source of truth: every number in this report traces to that table, and `scripts/paper_facts.py` re-derives the claims from it directly.
+`data/sweep/sweep.json` is the single source of truth: every number in this report traces to that table, and `scripts/paper_facts.py` re-derives the claims from it directly. The pre-audit table (§A) is re-derivable the same way via `python scripts/paper_facts.py --sweep data/sweep_pre_audit/sweep.json`.
 
 ## A. Pre-audit sweep (fixed answer colors)
 
-For completeness, the first sweep — generated with the fixed answer colors the audit removed — is archived at `data/sweep_pre_audit/sweep.json`. Its headline curves were:
+For completeness, the first sweep — generated with the fixed answer colors the
+audit removed — is archived at `data/sweep_pre_audit/sweep.json`. It used 20
+seeds per cell (the audited sweep uses 40), so its curves are noisier by
+construction; we archive only the aggregate table, not the per-scene responses
+of the buggy generator. Its headline curves were:
 
 | family | d0 | d1 | d2 | d3 | d4 | d5 | verdict |
 |---|---|---|---|---|---|---|---|
@@ -219,13 +259,11 @@ No color-bearing family is dominated by a single answer, so the singleton-color 
 2. Liu H., Li C., Wu Q., Lee Y. J. Visual Instruction Tuning. *NeurIPS 2023*.
 3. Hudson D., Manning C. GQA: A New Dataset for Real-World Visual Reasoning and Compositional Question Answering. *CVPR 2019*.
 4. Johnson J., Hariharan B., van der Maaten L., et al. CLEVR: A Diagnostic Dataset for Compositional Language and Elementary Visual Reasoning. *CVPR 2017*.
-5. Li W., Zhang Y., et al. What If We Simply Repeat All Clues? A New Dataset for Probing Visual Recognition Capabilities of Multimodal Large Language Models. *arXiv:2410.06508*.
-6. Chen B., Xu Z., et al. SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities. *CVPR 2024*.
-7. Zhang K., et al. MMPosition: A Large-Scale Benchmark for Vision-Language Models in Spatial Reasoning. *arXiv:2503.18866*.
-8. Chen Z., et al. Distilling Pattern Knowledge into MLLMs: A Recipe for Improving MLLMs on Fine-Grained Visual Perception. *NeurIPS 2024*.
-9. Zhong Y., Yang J., Zhang P., et al. RegionCLIP: Region-Based Language-Image Pretraining. *CVPR 2022*.
-10. Li L. H., Zhang P., Zhang H., et al. Grounded Language-Image Pre-Training. *CVPR 2022*.
-11. Cai M., Tan R., Zhang J., Zou B., Zhang K., Yao F., Zhu F., Gu J., Zhong Y., et al. TemporalBench: Benchmarking Fine-grained Temporal Understanding for Multimodal Video Models. *arXiv:2410.10818*, 2024.
-12. Zhong Y., Liu Z., Li Y., Wang L. AIM: Adaptive Inference of Multi-Modal LLMs via Token Merging and Pruning. *ICCV 2025*.
-13. Ahdritz G., et al. What Matters When Building Vision-Language Models? *NeurIPS 2024*.
-14. Yin S., et al. A Survey on Multimodal Large Language Models. *arXiv:2306.13549*.
+5. Chen B., Xu Z., et al. SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities. *CVPR 2024*.
+6. Liu J., Liu Z., Cen Z., et al. Can Multimodal Large Language Models Understand Spatial Relations? (SpatialMQA). *ACL 2025*.
+7. Zhong Y., Yang J., Zhang P., et al. RegionCLIP: Region-Based Language-Image Pretraining. *CVPR 2022*.
+8. Li L. H., Zhang P., Zhang H., et al. Grounded Language-Image Pre-Training. *CVPR 2022*.
+9. Cai M., Tan R., Zhang J., Zou B., Zhang K., Yao F., Zhu F., Gu J., Zhong Y., et al. TemporalBench: Benchmarking Fine-grained Temporal Understanding for Multimodal Video Models. *arXiv:2410.10818*, 2024.
+10. Zhong Y., Liu Z., Li Y., Wang L. AIM: Adaptive Inference of Multi-Modal LLMs via Token Merging and Pruning. *ICCV 2025*.
+11. Laurençon H., Tronchon L., Cord M., Sanh V. What Matters When Building Vision-Language Models? *arXiv:2405.02246*.
+12. Yin S., et al. A Survey on Multimodal Large Language Models. *arXiv:2306.13549*.
