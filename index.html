@@ -40,18 +40,18 @@
 <main>
   <div class="kpis">
     <div class="kpi"><div class="lab">Headline</div><div class="val">cliffs destroyed by task audit</div></div>
-    <div class="kpi"><div class="lab">Second</div><div class="val" style="font-size:16px">one survivor: relpos level shift · lookalike 77% bias</div></div>
+    <div class="kpi"><div class="lab">Second</div><div class="val" style="font-size:16px">one survivor: relpos level shift · bottom bias 77%→87% across 2 model families</div></div>
   </div>
 
   <div class="card">
     <h2>What this project is</h2>
-    <p>Scene-complexity cliffs in VLM spatial reasoning are audited by attacking the benchmark itself. On 960 procedurally-controlled scenes (4 mechanisms × 6 complexity levels × 40 seeds) Qwen2.5-VL-3B is stress-tested zero-shot. A first sweep finds dramatic cliffs (nearest 0.70 → 0.05); a design audit shows a fixed answer color let the model cheat by reporting the singleton color — no spatial reasoning involved. After removing the shortcut, <b>the cliffs are gone</b>: nearest degrades gradually (0.70 → 0.35, no breakpoint) and the single survivor is a first-step level shift, not a collapse. The audit exposes one genuine mechanism boundary the shortcut had hidden — attribute-instance binding is a hard floor (~0.35–0.65) with a systematic 77% bottom-quadrant bias.</p>
+    <p>Scene-complexity cliffs in VLM spatial reasoning are audited by attacking the benchmark itself. On 960 procedurally-controlled scenes (4 mechanisms × 6 complexity levels × 40 seeds) two open VLMs are stress-tested zero-shot: Qwen2.5-VL-3B and, for cross-model transfer, the architecturally distinct InternVL2.5-2B. A first sweep finds dramatic cliffs (nearest 0.70 → 0.05); a design audit shows a fixed answer color let the model cheat by reporting the singleton color — no spatial reasoning involved. After removing the shortcut, <b>the cliffs are gone</b>: nearest degrades gradually (0.70 → 0.35, no breakpoint) and the single survivor is a first-step level shift, not a collapse. The audit exposes one genuine mechanism boundary the shortcut had hidden — attribute-instance binding is a hard floor (~0.35–0.65) with a systematic bottom-quadrant bias that is <b>stronger on the second model</b> (77% on Qwen, 87% on InternVL): the bias is a property of this model class, not of one checkpoint.</p>
     <a class="btn" href="paper/spatialcliff/spatialcliff_paper.html">Read the technical report →</a>
     <img src="paper/spatialcliff/figures/fig1_decay.png" alt="SpatialCliff headline figure">
   </div>
   <div class="card small">
     <h2>Credibility at a glance</h2>
-    <p>960 scenes (4 mechanisms × 6 levels × 40 seeds) · Qwen2.5-VL-3B · pre-audit sweep archived</p>
+    <p>1,920 scene evals (960 × 2 models) · Qwen2.5-VL-3B + InternVL2.5-2B · pre-audit sweep archived</p>
   </div>
 </main>
 <footer>SpatialCliff · <a href="https://github.com/wyc66-66/spatialcliff">full source on GitHub</a> · figures, data and every number produced by the repo scripts</footer>

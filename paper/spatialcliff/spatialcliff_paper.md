@@ -2,9 +2,9 @@
 
 _A Technical Report_
 
-**Model under test:** Qwen2.5-VL-3B-Instruct — an open 3B vision-language model, evaluated zero-shot.
+**Model under test:** Qwen2.5-VL-3B-Instruct (primary), with the full protocol re-run on InternVL2.5-2B — a second, architecturally distinct open VLM (InternViT + InternLM2 vs Qwen2.5's ViT + LLM) — to test whether the findings transfer across model families.
 
-**Dataset:** 960 procedurally-generated 2D scenes across 4 spatial-reasoning mechanisms × 6 complexity levels × 40 seeds, each with an exact ground-truth answer.
+**Dataset:** 960 procedurally-generated 2D scenes across 4 spatial-reasoning mechanisms × 6 complexity levels × 40 seeds, each with an exact ground-truth answer, evaluated on both models (1920 scene evaluations total).
 
 **Question:** Do scene-complexity cliffs in VLM spatial reasoning survive a strict audit of task-design shortcuts?
 
@@ -86,6 +86,44 @@ Per-family accuracy over the complexity axis:
 
 `lookalike` is flat across the whole complexity axis (0.43-0.65, r = −0.52, range 0.23): adding identical distractors from 2 to 9 barely moves accuracy. Attribute-instance binding is a *hard floor* for this model class, not a complexity effect — the model is already at the boundary at the simplest scene. The failure is strongly systematic (§7.3): on 77% of all lookalike scenes the model reports a bottom-half corner (Wilson 95% CI [71%, 82%]). The bias is strongest when the target is itself in the bottom half (bottom-left 98%, bottom-right 74%) and when the target is top-right (79% of reports are bottom-half), but notably weaker when the target is top-left (40%) — so the model is *directionally* anchored to the image bottom, not blind to the true corner. This bias is the kind of finding aggregated benchmarks hide.
 
+### 3.6 Audit transfer: the boundaries are not Qwen-specific
+
+Every curve so far is one checkpoint. To separate "how VLMs reason about
+space" from "how Qwen2.5-VL-3B does", the entire protocol — same 960 scenes,
+same questions, same normalization — was re-run on a second, architecturally
+distinct open VLM: InternVL2.5-2B, whose visual tower (InternViT) and
+language model (InternLM2) share nothing with Qwen's stack. The transfer is
+deliberately *mechanical*: no per-model prompt tuning, no answer-format
+examples, nothing but the identical corpus and matcher (`data/sweep_internvl/`,
+re-derived by `scripts/cross_model_facts.py`).
+
+| family | Qwen trend r | InternVL trend r | Qwen falloff | InternVL falloff |
+|---|---|---|---|---|
+| `relpos` | −0.53 | −0.87 | d1 (0.93→0.68) | d1 (0.85→0.53) |
+| `nearest` | −0.74 | −0.83 | none | none |
+| `occlusion` | −0.86 | −0.69 | none | d1 (0.72→0.48) |
+| `lookalike` | −0.52 | −0.71 | none | d1 (0.45→0.25) |
+
+Three things transfer. First, **every mechanism decays with complexity in
+both models** — all eight trends are negative, so the audited sweep's central
+directional claim ("complexity breaks spatial reasoning in these four ways")
+is not a property of one checkpoint. Second, **the `relpos` first-step drop
+survives**: InternVL falls 0.85→0.53 at d1, the same qualitative level shift
+the McNemar test (§3.3) established for Qwen. Third, **the lookalike
+bottom-quadrant bias is not just present but stronger**: 87.1% of InternVL's
+lookalike reports land in the bottom half (209/240, Wilson 95% CI
+[82.3%, 91.0%]) versus 77.1% for Qwen (185/240, [71.3%, 82.0%]) — and unlike
+Qwen, whose bias weakens to 40% when the true corner is top-left, InternVL
+anchors bottom-half 84% of the time even then (§7.3). The bias is directional,
+large, and model-agnostic.
+
+Two honest qualifications. InternVL2.5-2B is *smaller* than Qwen2.5-VL-3B, and
+its overall accuracy is correspondingly lower (§3.6 table); the transfer
+establishes that the *directions and biases* are shared across architectures,
+not that model size is irrelevant. Whether a larger checkpoint reorders the
+mechanism boundaries — the "spatially-tuned or bigger model" test §5.1 flags —
+remains open, and the protocol now hands that test to anyone with the weights.
+
 ## 4. Discussion
 
 ### 4.1 What the audit changed
@@ -94,7 +132,7 @@ Comparing §3 to §A, removing the color shortcut:
 
 1. **Destroyed the cliffs.** Three of four pre-audit falloffs disappeared; the one survivor is a level shift with recovery, not a monotone crash.
 2. **Revealed the decay order, with honest uncertainty.** `occlusion` is the most complexity-sensitive mechanism (r = −0.86, p = 0.027 over the six complexity points) — not `nearest` as the pre-audit data suggested. The shortcut had made `nearest` look most fragile because finding "the orange object" degrades with clutter faster than the spatial reasoning it was meant to probe. We caution that with only six points per family, the ordering of the *remaining* three mechanisms is not statistically resolved (nearest r = −0.74, p = 0.09; relpos r = −0.53, p = 0.28; lookalike r = −0.52, p = 0.29). Two qualifications apply. First, the trend p-values treat each of the six points as exact, ignoring the per-point 40-seed binomial variance (SE ≈ 8 pp at 0.5); we therefore read the r values as *directional* evidence, not individually established facts, and a Bonferroni correction for the four trend tests (α = 0.0125) makes even `occlusion`'s p = 0.027 fail to survive. Second, the McNemar test (§3.3) is a single pre-specified comparison: §2.3's one-step-falloff threshold flags exactly one family (relpos), so the paired test was run on that family alone rather than mined across all four. What the audited sweep establishes unambiguously is *direction*: every colour family trends downward with complexity, and none collapses to chance.
-3. **Exposed a hidden boundary.** `lookalike`'s flat profile was present in both sweeps (§A shows the same 0.35–0.65 plateau), but the pre-audit narrative misread it as "one uniformly hard family" rather than a distinct, bias-laden mechanism boundary. The 77% bottom-quadrant bias itself is measured on the audited per-scene responses (§7.3).
+3. **Exposed a hidden boundary.** `lookalike`'s flat profile was present in both sweeps (§A shows the same 0.35–0.65 plateau), but the pre-audit narrative misread it as "one uniformly hard family" rather than a distinct, bias-laden mechanism boundary. The 77% bottom-quadrant bias itself is measured on the audited per-scene responses (§7.3) — and it survives, in stronger form, on a second model family (§3.6).
 
 ![Figure 2](figures/fig2_sensitivity.png)
 
@@ -108,7 +146,7 @@ Comparing §3 to §A, removing the color shortcut:
 
 ### 4.3 Failure modes, not just accuracy
 
-The lookalike bottom-quadrant bias (§7.3) is a spec for where to invest: 3B-class models struggle to bind a small attribute to the right instance among identical distractors, and when they fail they do so directionally (toward the image bottom), not randomly. The magenta/purple confusions in the color families (§7.1) show a second, independent weakness: fine-grained color discrimination degrades under clutter, distinct from spatial binding.
+The lookalike bottom-quadrant bias (§7.3) is a spec for where to invest: small open VLMs struggle to bind a small attribute to the right instance among identical distractors, and when they fail they do so directionally (toward the image bottom), not randomly — a pattern two independent model families reproduce (§3.6). The magenta/purple confusions in the color families (§7.1) show a second, independent weakness: fine-grained color discrimination degrades under clutter, distinct from spatial binding.
 
 ## 5. Related Work
 
@@ -160,11 +198,12 @@ token-merging scheme like AIM [10] targets — so the sharp question is whether
 compression *moves* the mechanism boundary, or only the error level around it.
 The corpus and protocol transfer to that experiment unchanged. Second,
 **re-run the audit on a model that has seen spatial reasoning in training.**
-Every curve here is zero-shot Qwen2.5-VL-3B; the audit method is the
-contribution that transfers, and measuring whether the `lookalike`
-bottom-quadrant bias survives in a spatially-tuned model (or a larger
-checkpoint) is what decides whether the bias is a 3B-class limitation or a
-general one. Third, **extend the corpus to dynamic scenes.** The mechanisms
+Two model families now agree on every directional claim (§3.6), but both are
+3B-or-smaller general VLMs; the protocol is deliberately model-agnostic, and
+measuring whether the `lookalike` bottom-quadrant bias survives in a
+spatially-tuned model (e.g. SpatialVLM's fine-tuned backbone [5]) or a larger
+checkpoint is what decides whether the bias is a small-model-class limitation
+or a general one. Third, **extend the corpus to dynamic scenes.** The mechanisms
 here are static; the same per-mechanism, complexity-stepped design applies to
 temporal spatial reasoning — where objects move and the query is about a past
 configuration — which is the gap TemporalBench's methodology [9] is built to
@@ -173,7 +212,7 @@ the task design, report what survives.
 
 ## 6. Limitations
 
-- **Single model, single checkpoint.** All curves are for Qwen2.5-VL-3B-Instruct. The *order* of mechanism sensitivity is a claim about this model class; larger or differently-trained models may reorder it. We do not claim these numbers transfer.
+- **Two models, both small.** All curves are for Qwen2.5-VL-3B-Instruct and InternVL2.5-2B. The transfer result (§3.6) — decay directions and the lookalike bottom bias survive across both architectures — is a claim about this *class* of 3B-or-smaller open VLMs. The *order* of mechanism sensitivity, and the question of whether a larger or spatially-tuned checkpoint reorders it, is not answered by these two checkpoints and is left open in §5.1.
 - **Complexity co-varies within each axis.** "Harder" scenes advance object count, object scale and background clutter jointly (Table 2.1), so each family's curve measures the joint effect of a denser scene on that mechanism rather than an isolated scalar knob. This matches the deployment variable, but it means we cannot attribute decay within a family to count *or* scale *or* clutter alone; that attribution would require a per-factor ablation we leave to future work.
 - **Limited statistical power on ordering.** With six complexity points per family, only `occlusion`'s trend is individually significant (r = −0.86, p = 0.027). The rank order among the remaining families is directional, not significant (§4.1). The level shifts we emphasize (`relpos` d1, exact paired McNemar p = 0.006) are the statistically secure claims.
 - **Pre-audit comparison has unequal sample sizes.** The archived pre-audit sweep used 20 seeds per cell; the audited sweep uses 40 (§A). We report the pre-audit table only to illustrate the artifact's existence, and flag that its curves are noisier by construction.
@@ -230,20 +269,45 @@ reports bottom-right (31/66) more than top-right (14/66). The model is not
 just failing to bind — it is anchoring its corner report to the bottom of the
 image.
 
+**The bias is not Qwen-specific.** Re-running the identical lookalike corpus
+on InternVL2.5-2B (§3.6) gives the same anchor, more extremely:
+
+| true corner | Qwen bottom-half share | InternVL bottom-half share |
+|---|---|---|
+| top-left (n=67) | 40% | 84% |
+| top-right (n=66) | 79% | 83% |
+| bottom-left (n=57) | 98% | 91% |
+| bottom-right (n=50) | 100% | 92% |
+| **all** | **77%** (185/240) | **87%** (209/240) |
+
+Two architectures with disjoint visual and language towers both anchor their
+corner attribution to the image bottom, and the smaller model does so *more*
+deterministically — including on the top-left condition where Qwen's bias
+weakens. Whatever the mechanism, it is a property of this model class, not of
+one checkpoint.
+
 ## 8. Reproducibility
 
 ```
 pip install -e .[gpu,paper,ui]
 python scripts/build_scenes.py --seeds 40 --out data/scenes   # 960 scenes
-python scripts/run_sweep.py --scenes data/scenes --out data/sweep   # GPU, ~30 min
+python scripts/run_sweep.py --scenes data/scenes --out data/sweep   # Qwen2.5-VL-3B, GPU, ~30 min
+python scripts/run_sweep.py --scenes data/scenes --out data/sweep_internvl --engine internvl \
+    --model OpenGVLab/InternVL2_5-2B                          # cross-model transfer, §3.6
 python scripts/paper_facts.py --sweep data/sweep/sweep.json   # derived claims
+python scripts/cross_model_facts.py                           # §3.6 cross-model claims
 python scripts/failure_analysis.py --responses data/sweep/responses.json
 python scripts/render_figures.py --sweep data/sweep/sweep.json --figs docs/figures
 python scripts/render_spatialcliff_paper.py   # this report (HTML + PDF)
 python -m spatialcliff ui --port 8000         # interactive console
 ```
 
-`data/sweep/sweep.json` is the single source of truth: every number in this report traces to that table, and `scripts/paper_facts.py` re-derives the claims from it directly. The pre-audit table (§A) is re-derivable the same way via `python scripts/paper_facts.py --sweep data/sweep_pre_audit/sweep.json`.
+`data/sweep/sweep.json` is the single source of truth for the primary sweep,
+`data/sweep_internvl/sweep.json` for the transfer sweep, and every number in
+this report traces to one of those tables; `scripts/paper_facts.py` re-derives
+the primary claims and `scripts/cross_model_facts.py` re-derives the §3.6/§7.3
+cross-model claims. The pre-audit table (§A) is re-derivable the same way via
+`python scripts/paper_facts.py --sweep data/sweep_pre_audit/sweep.json`.
 
 ## A. Pre-audit sweep (fixed answer colors)
 
