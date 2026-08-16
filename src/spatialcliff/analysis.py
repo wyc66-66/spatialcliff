@@ -88,6 +88,9 @@ class ComplexityCurve:
         """
         if len(self.acc) < 3:
             return 0.0
+        if np.std(self.acc) == 0 or np.std(self.complexity) == 0:
+            # zero variance -> correlation is undefined; report 0 (flat).
+            return 0.0
         r = np.corrcoef(self.complexity, self.acc)[0, 1]
         return float(r) if not np.isnan(r) else 0.0
 

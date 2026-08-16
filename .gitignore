@@ -13,4 +13,3 @@ data/sweep_cal2/
 .huggingface/
 .DS_Store
 *.log
-docs/figures/
