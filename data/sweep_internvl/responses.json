@@ -1,0 +1,9602 @@
+[
+ {
+  "id": "lookalike_s000_d0",
+  "family": "lookalike",
+  "seed": 0,
+  "difficulty": 0,
+  "answer": "top-right",
+  "raw": "The blue dot is in the center of the red circle. The red circle closest to the blue dot is at the bottom-left corner.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s000_d1",
+  "family": "lookalike",
+  "seed": 0,
+  "difficulty": 1,
+  "answer": "top-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s000_d2",
+  "family": "lookalike",
+  "seed": 0,
+  "difficulty": 2,
+  "answer": "top-right",
+  "raw": "The blue dot is closest to the bottom-left corner.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s000_d3",
+  "family": "lookalike",
+  "seed": 0,
+  "difficulty": 3,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s000_d4",
+  "family": "lookalike",
+  "seed": 0,
+  "difficulty": 4,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s000_d5",
+  "family": "lookalike",
+  "seed": 0,
+  "difficulty": 5,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s001_d0",
+  "family": "lookalike",
+  "seed": 1,
+  "difficulty": 0,
+  "answer": "bottom-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s001_d1",
+  "family": "lookalike",
+  "seed": 1,
+  "difficulty": 1,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is the one closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s001_d2",
+  "family": "lookalike",
+  "seed": 1,
+  "difficulty": 2,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s001_d3",
+  "family": "lookalike",
+  "seed": 1,
+  "difficulty": 3,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s001_d4",
+  "family": "lookalike",
+  "seed": 1,
+  "difficulty": 4,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s001_d5",
+  "family": "lookalike",
+  "seed": 1,
+  "difficulty": 5,
+  "answer": "top-left",
+  "raw": "To find the red circle with the small blue dot in its center, we need to look for the circle that is identical in color to the others but has a distinct blue dot on its center. \n\nUpon close inspection, the red circle with",
+  "normalized": null,
+  "correct": false
+ },
+ {
+  "id": "lookalike_s002_d0",
+  "family": "lookalike",
+  "seed": 2,
+  "difficulty": 0,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is the one closest to the top-left corner of the image.",
+  "normalized": "top-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s002_d1",
+  "family": "lookalike",
+  "seed": 2,
+  "difficulty": 1,
+  "answer": "bottom-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s002_d2",
+  "family": "lookalike",
+  "seed": 2,
+  "difficulty": 2,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s002_d3",
+  "family": "lookalike",
+  "seed": 2,
+  "difficulty": 3,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s002_d4",
+  "family": "lookalike",
+  "seed": 2,
+  "difficulty": 4,
+  "answer": "bottom-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s002_d5",
+  "family": "lookalike",
+  "seed": 2,
+  "difficulty": 5,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s003_d0",
+  "family": "lookalike",
+  "seed": 3,
+  "difficulty": 0,
+  "answer": "top-right",
+  "raw": "The circle with the blue dot in the center is the one at the top-right corner.",
+  "normalized": "top-right",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s003_d1",
+  "family": "lookalike",
+  "seed": 3,
+  "difficulty": 1,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is the one closest to the top-left corner of the image.",
+  "normalized": "top-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s003_d2",
+  "family": "lookalike",
+  "seed": 3,
+  "difficulty": 2,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s003_d3",
+  "family": "lookalike",
+  "seed": 3,
+  "difficulty": 3,
+  "answer": "bottom-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s003_d4",
+  "family": "lookalike",
+  "seed": 3,
+  "difficulty": 4,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s003_d5",
+  "family": "lookalike",
+  "seed": 3,
+  "difficulty": 5,
+  "answer": "top-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s004_d0",
+  "family": "lookalike",
+  "seed": 4,
+  "difficulty": 0,
+  "answer": "bottom-left",
+  "raw": "The blue dot is in the center of the bottom-left circle.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s004_d1",
+  "family": "lookalike",
+  "seed": 4,
+  "difficulty": 1,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s004_d2",
+  "family": "lookalike",
+  "seed": 4,
+  "difficulty": 2,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s004_d3",
+  "family": "lookalike",
+  "seed": 4,
+  "difficulty": 3,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s004_d4",
+  "family": "lookalike",
+  "seed": 4,
+  "difficulty": 4,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s004_d5",
+  "family": "lookalike",
+  "seed": 4,
+  "difficulty": 5,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s005_d0",
+  "family": "lookalike",
+  "seed": 5,
+  "difficulty": 0,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is the one closest to the top-left corner of the image.",
+  "normalized": "top-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s005_d1",
+  "family": "lookalike",
+  "seed": 5,
+  "difficulty": 1,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s005_d2",
+  "family": "lookalike",
+  "seed": 5,
+  "difficulty": 2,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s005_d3",
+  "family": "lookalike",
+  "seed": 5,
+  "difficulty": 3,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s005_d4",
+  "family": "lookalike",
+  "seed": 5,
+  "difficulty": 4,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s005_d5",
+  "family": "lookalike",
+  "seed": 5,
+  "difficulty": 5,
+  "answer": "bottom-right",
+  "raw": "To find the red circle with a small blue dot in its center, we need to look for the circle that is distinctly marked with a smaller blue dot in the center compared to the others. \n\nUpon examining the image, we notice that",
+  "normalized": null,
+  "correct": false
+ },
+ {
+  "id": "lookalike_s006_d0",
+  "family": "lookalike",
+  "seed": 6,
+  "difficulty": 0,
+  "answer": "bottom-left",
+  "raw": "The blue-centered circle is the smallest one, so it is closest to the bottom-left corner.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s006_d1",
+  "family": "lookalike",
+  "seed": 6,
+  "difficulty": 1,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s006_d2",
+  "family": "lookalike",
+  "seed": 6,
+  "difficulty": 2,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s006_d3",
+  "family": "lookalike",
+  "seed": 6,
+  "difficulty": 3,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s006_d4",
+  "family": "lookalike",
+  "seed": 6,
+  "difficulty": 4,
+  "answer": "bottom-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s006_d5",
+  "family": "lookalike",
+  "seed": 6,
+  "difficulty": 5,
+  "answer": "bottom-right",
+  "raw": "To find the red circle with a small blue dot in its center, we need to look for the circle that is neither too far from the top nor too far from the bottom or the left. \n\nLet's examine the image:\n\n- The",
+  "normalized": "top-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s007_d0",
+  "family": "lookalike",
+  "seed": 7,
+  "difficulty": 0,
+  "answer": "top-right",
+  "raw": "The blue-centered circle is the smallest, so it is closest to the bottom-left corner.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s007_d1",
+  "family": "lookalike",
+  "seed": 7,
+  "difficulty": 1,
+  "answer": "top-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s007_d2",
+  "family": "lookalike",
+  "seed": 7,
+  "difficulty": 2,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s007_d3",
+  "family": "lookalike",
+  "seed": 7,
+  "difficulty": 3,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s007_d4",
+  "family": "lookalike",
+  "seed": 7,
+  "difficulty": 4,
+  "answer": "top-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s007_d5",
+  "family": "lookalike",
+  "seed": 7,
+  "difficulty": 5,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s008_d0",
+  "family": "lookalike",
+  "seed": 8,
+  "difficulty": 0,
+  "answer": "top-right",
+  "raw": "The blue dot is in the top-left corner.",
+  "normalized": "top-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s008_d1",
+  "family": "lookalike",
+  "seed": 8,
+  "difficulty": 1,
+  "answer": "top-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s008_d2",
+  "family": "lookalike",
+  "seed": 8,
+  "difficulty": 2,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s008_d3",
+  "family": "lookalike",
+  "seed": 8,
+  "difficulty": 3,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s008_d4",
+  "family": "lookalike",
+  "seed": 8,
+  "difficulty": 4,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s008_d5",
+  "family": "lookalike",
+  "seed": 8,
+  "difficulty": 5,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s009_d0",
+  "family": "lookalike",
+  "seed": 9,
+  "difficulty": 0,
+  "answer": "top-right",
+  "raw": "The blue dot is in the top-right corner.",
+  "normalized": "top-right",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s009_d1",
+  "family": "lookalike",
+  "seed": 9,
+  "difficulty": 1,
+  "answer": "top-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s009_d2",
+  "family": "lookalike",
+  "seed": 9,
+  "difficulty": 2,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s009_d3",
+  "family": "lookalike",
+  "seed": 9,
+  "difficulty": 3,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s009_d4",
+  "family": "lookalike",
+  "seed": 9,
+  "difficulty": 4,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the **bottom-left** corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s009_d5",
+  "family": "lookalike",
+  "seed": 9,
+  "difficulty": 5,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s010_d0",
+  "family": "lookalike",
+  "seed": 10,
+  "difficulty": 0,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is the one closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s010_d1",
+  "family": "lookalike",
+  "seed": 10,
+  "difficulty": 1,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s010_d2",
+  "family": "lookalike",
+  "seed": 10,
+  "difficulty": 2,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s010_d3",
+  "family": "lookalike",
+  "seed": 10,
+  "difficulty": 3,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s010_d4",
+  "family": "lookalike",
+  "seed": 10,
+  "difficulty": 4,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s010_d5",
+  "family": "lookalike",
+  "seed": 10,
+  "difficulty": 5,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s011_d0",
+  "family": "lookalike",
+  "seed": 11,
+  "difficulty": 0,
+  "answer": "bottom-right",
+  "raw": "The blue-centered circle is the smallest, so it is closest to the bottom-left corner.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s011_d1",
+  "family": "lookalike",
+  "seed": 11,
+  "difficulty": 1,
+  "answer": "bottom-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s011_d2",
+  "family": "lookalike",
+  "seed": 11,
+  "difficulty": 2,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s011_d3",
+  "family": "lookalike",
+  "seed": 11,
+  "difficulty": 3,
+  "answer": "bottom-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s011_d4",
+  "family": "lookalike",
+  "seed": 11,
+  "difficulty": 4,
+  "answer": "bottom-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s011_d5",
+  "family": "lookalike",
+  "seed": 11,
+  "difficulty": 5,
+  "answer": "bottom-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s012_d0",
+  "family": "lookalike",
+  "seed": 12,
+  "difficulty": 0,
+  "answer": "top-left",
+  "raw": "The blue dot is in the top-left corner of the image.",
+  "normalized": "top-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s012_d1",
+  "family": "lookalike",
+  "seed": 12,
+  "difficulty": 1,
+  "answer": "bottom-left",
+  "raw": "The red circle with the blue dot in the center is the one closest to the top-left corner of the image.",
+  "normalized": "top-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s012_d2",
+  "family": "lookalike",
+  "seed": 12,
+  "difficulty": 2,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s012_d3",
+  "family": "lookalike",
+  "seed": 12,
+  "difficulty": 3,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s012_d4",
+  "family": "lookalike",
+  "seed": 12,
+  "difficulty": 4,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s012_d5",
+  "family": "lookalike",
+  "seed": 12,
+  "difficulty": 5,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s013_d0",
+  "family": "lookalike",
+  "seed": 13,
+  "difficulty": 0,
+  "answer": "bottom-left",
+  "raw": "The blue-centered circle is the smallest one. It is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s013_d1",
+  "family": "lookalike",
+  "seed": 13,
+  "difficulty": 1,
+  "answer": "top-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s013_d2",
+  "family": "lookalike",
+  "seed": 13,
+  "difficulty": 2,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s013_d3",
+  "family": "lookalike",
+  "seed": 13,
+  "difficulty": 3,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s013_d4",
+  "family": "lookalike",
+  "seed": 13,
+  "difficulty": 4,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s013_d5",
+  "family": "lookalike",
+  "seed": 13,
+  "difficulty": 5,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s014_d0",
+  "family": "lookalike",
+  "seed": 14,
+  "difficulty": 0,
+  "answer": "top-right",
+  "raw": "The blue-centered circle is the smallest, so it is closest to the bottom-left corner.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s014_d1",
+  "family": "lookalike",
+  "seed": 14,
+  "difficulty": 1,
+  "answer": "top-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s014_d2",
+  "family": "lookalike",
+  "seed": 14,
+  "difficulty": 2,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s014_d3",
+  "family": "lookalike",
+  "seed": 14,
+  "difficulty": 3,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s014_d4",
+  "family": "lookalike",
+  "seed": 14,
+  "difficulty": 4,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s014_d5",
+  "family": "lookalike",
+  "seed": 14,
+  "difficulty": 5,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s015_d0",
+  "family": "lookalike",
+  "seed": 15,
+  "difficulty": 0,
+  "answer": "top-right",
+  "raw": "The blue dot is in the bottom-right corner of the image.",
+  "normalized": "bottom-right",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s015_d1",
+  "family": "lookalike",
+  "seed": 15,
+  "difficulty": 1,
+  "answer": "bottom-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s015_d2",
+  "family": "lookalike",
+  "seed": 15,
+  "difficulty": 2,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s015_d3",
+  "family": "lookalike",
+  "seed": 15,
+  "difficulty": 3,
+  "answer": "top-left",
+  "raw": "The closest corner of the image to the circle with the blue dot is bottom-left.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s015_d4",
+  "family": "lookalike",
+  "seed": 15,
+  "difficulty": 4,
+  "answer": "top-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s015_d5",
+  "family": "lookalike",
+  "seed": 15,
+  "difficulty": 5,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s016_d0",
+  "family": "lookalike",
+  "seed": 16,
+  "difficulty": 0,
+  "answer": "top-left",
+  "raw": "The blue-centered circle is the smallest one, so it is closest to the bottom-left corner.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s016_d1",
+  "family": "lookalike",
+  "seed": 16,
+  "difficulty": 1,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s016_d2",
+  "family": "lookalike",
+  "seed": 16,
+  "difficulty": 2,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s016_d3",
+  "family": "lookalike",
+  "seed": 16,
+  "difficulty": 3,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s016_d4",
+  "family": "lookalike",
+  "seed": 16,
+  "difficulty": 4,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s016_d5",
+  "family": "lookalike",
+  "seed": 16,
+  "difficulty": 5,
+  "answer": "top-left",
+  "raw": "The red circle with the small blue dot in its center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s017_d0",
+  "family": "lookalike",
+  "seed": 17,
+  "difficulty": 0,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is the one closest to the top-left corner of the image.",
+  "normalized": "top-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s017_d1",
+  "family": "lookalike",
+  "seed": 17,
+  "difficulty": 1,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s017_d2",
+  "family": "lookalike",
+  "seed": 17,
+  "difficulty": 2,
+  "answer": "bottom-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s017_d3",
+  "family": "lookalike",
+  "seed": 17,
+  "difficulty": 3,
+  "answer": "bottom-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s017_d4",
+  "family": "lookalike",
+  "seed": 17,
+  "difficulty": 4,
+  "answer": "bottom-right",
+  "raw": "The blue dot is in the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s017_d5",
+  "family": "lookalike",
+  "seed": 17,
+  "difficulty": 5,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s018_d0",
+  "family": "lookalike",
+  "seed": 18,
+  "difficulty": 0,
+  "answer": "top-left",
+  "raw": "The blue dot is in the center of the top-left circle.",
+  "normalized": "top-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s018_d1",
+  "family": "lookalike",
+  "seed": 18,
+  "difficulty": 1,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is the one closest to the top-left corner of the image.",
+  "normalized": "top-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s018_d2",
+  "family": "lookalike",
+  "seed": 18,
+  "difficulty": 2,
+  "answer": "bottom-left",
+  "raw": "The red circle with the blue dot in the center is the one closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s018_d3",
+  "family": "lookalike",
+  "seed": 18,
+  "difficulty": 3,
+  "answer": "bottom-right",
+  "raw": "The blue dot is in the center of the red circle. The red circle closest to the center is at the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s018_d4",
+  "family": "lookalike",
+  "seed": 18,
+  "difficulty": 4,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s018_d5",
+  "family": "lookalike",
+  "seed": 18,
+  "difficulty": 5,
+  "answer": "bottom-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s019_d0",
+  "family": "lookalike",
+  "seed": 19,
+  "difficulty": 0,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s019_d1",
+  "family": "lookalike",
+  "seed": 19,
+  "difficulty": 1,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s019_d2",
+  "family": "lookalike",
+  "seed": 19,
+  "difficulty": 2,
+  "answer": "bottom-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s019_d3",
+  "family": "lookalike",
+  "seed": 19,
+  "difficulty": 3,
+  "answer": "bottom-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s019_d4",
+  "family": "lookalike",
+  "seed": 19,
+  "difficulty": 4,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s019_d5",
+  "family": "lookalike",
+  "seed": 19,
+  "difficulty": 5,
+  "answer": "bottom-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s020_d0",
+  "family": "lookalike",
+  "seed": 20,
+  "difficulty": 0,
+  "answer": "bottom-left",
+  "raw": "The blue-centered circle is the smallest, so it is closest to the top-left corner.",
+  "normalized": "top-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s020_d1",
+  "family": "lookalike",
+  "seed": 20,
+  "difficulty": 1,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s020_d2",
+  "family": "lookalike",
+  "seed": 20,
+  "difficulty": 2,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s020_d3",
+  "family": "lookalike",
+  "seed": 20,
+  "difficulty": 3,
+  "answer": "bottom-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s020_d4",
+  "family": "lookalike",
+  "seed": 20,
+  "difficulty": 4,
+  "answer": "bottom-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s020_d5",
+  "family": "lookalike",
+  "seed": 20,
+  "difficulty": 5,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s021_d0",
+  "family": "lookalike",
+  "seed": 21,
+  "difficulty": 0,
+  "answer": "top-left",
+  "raw": "The blue dot is in the center of the top-left circle.",
+  "normalized": "top-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s021_d1",
+  "family": "lookalike",
+  "seed": 21,
+  "difficulty": 1,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s021_d2",
+  "family": "lookalike",
+  "seed": 21,
+  "difficulty": 2,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s021_d3",
+  "family": "lookalike",
+  "seed": 21,
+  "difficulty": 3,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s021_d4",
+  "family": "lookalike",
+  "seed": 21,
+  "difficulty": 4,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s021_d5",
+  "family": "lookalike",
+  "seed": 21,
+  "difficulty": 5,
+  "answer": "bottom-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s022_d0",
+  "family": "lookalike",
+  "seed": 22,
+  "difficulty": 0,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is the one closest to the top-left corner of the image.",
+  "normalized": "top-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s022_d1",
+  "family": "lookalike",
+  "seed": 22,
+  "difficulty": 1,
+  "answer": "top-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s022_d2",
+  "family": "lookalike",
+  "seed": 22,
+  "difficulty": 2,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s022_d3",
+  "family": "lookalike",
+  "seed": 22,
+  "difficulty": 3,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s022_d4",
+  "family": "lookalike",
+  "seed": 22,
+  "difficulty": 4,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s022_d5",
+  "family": "lookalike",
+  "seed": 22,
+  "difficulty": 5,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s023_d0",
+  "family": "lookalike",
+  "seed": 23,
+  "difficulty": 0,
+  "answer": "top-right",
+  "raw": "The blue dot is in the top-right corner.",
+  "normalized": "top-right",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s023_d1",
+  "family": "lookalike",
+  "seed": 23,
+  "difficulty": 1,
+  "answer": "top-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s023_d2",
+  "family": "lookalike",
+  "seed": 23,
+  "difficulty": 2,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s023_d3",
+  "family": "lookalike",
+  "seed": 23,
+  "difficulty": 3,
+  "answer": "top-right",
+  "raw": "The blue dot is in the bottom-right corner.",
+  "normalized": "bottom-right",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s023_d4",
+  "family": "lookalike",
+  "seed": 23,
+  "difficulty": 4,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s023_d5",
+  "family": "lookalike",
+  "seed": 23,
+  "difficulty": 5,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s024_d0",
+  "family": "lookalike",
+  "seed": 24,
+  "difficulty": 0,
+  "answer": "bottom-left",
+  "raw": "The blue-centered circle is the smallest one, so it is closest to the top-left corner of the image.",
+  "normalized": "top-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s024_d1",
+  "family": "lookalike",
+  "seed": 24,
+  "difficulty": 1,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s024_d2",
+  "family": "lookalike",
+  "seed": 24,
+  "difficulty": 2,
+  "answer": "bottom-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s024_d3",
+  "family": "lookalike",
+  "seed": 24,
+  "difficulty": 3,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s024_d4",
+  "family": "lookalike",
+  "seed": 24,
+  "difficulty": 4,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s024_d5",
+  "family": "lookalike",
+  "seed": 24,
+  "difficulty": 5,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s025_d0",
+  "family": "lookalike",
+  "seed": 25,
+  "difficulty": 0,
+  "answer": "bottom-left",
+  "raw": "The blue-centered circle is the smallest one, so it is closest to the bottom-left corner.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s025_d1",
+  "family": "lookalike",
+  "seed": 25,
+  "difficulty": 1,
+  "answer": "bottom-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s025_d2",
+  "family": "lookalike",
+  "seed": 25,
+  "difficulty": 2,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s025_d3",
+  "family": "lookalike",
+  "seed": 25,
+  "difficulty": 3,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s025_d4",
+  "family": "lookalike",
+  "seed": 25,
+  "difficulty": 4,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s025_d5",
+  "family": "lookalike",
+  "seed": 25,
+  "difficulty": 5,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s026_d0",
+  "family": "lookalike",
+  "seed": 26,
+  "difficulty": 0,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is the one closest to the top-left corner of the image.",
+  "normalized": "top-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s026_d1",
+  "family": "lookalike",
+  "seed": 26,
+  "difficulty": 1,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s026_d2",
+  "family": "lookalike",
+  "seed": 26,
+  "difficulty": 2,
+  "answer": "bottom-left",
+  "raw": "The red circle with the blue dot in the center is the one closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s026_d3",
+  "family": "lookalike",
+  "seed": 26,
+  "difficulty": 3,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s026_d4",
+  "family": "lookalike",
+  "seed": 26,
+  "difficulty": 4,
+  "answer": "top-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s026_d5",
+  "family": "lookalike",
+  "seed": 26,
+  "difficulty": 5,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s027_d0",
+  "family": "lookalike",
+  "seed": 27,
+  "difficulty": 0,
+  "answer": "top-left",
+  "raw": "The blue dot is in the center of the red circle in the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s027_d1",
+  "family": "lookalike",
+  "seed": 27,
+  "difficulty": 1,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s027_d2",
+  "family": "lookalike",
+  "seed": 27,
+  "difficulty": 2,
+  "answer": "bottom-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s027_d3",
+  "family": "lookalike",
+  "seed": 27,
+  "difficulty": 3,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s027_d4",
+  "family": "lookalike",
+  "seed": 27,
+  "difficulty": 4,
+  "answer": "bottom-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s027_d5",
+  "family": "lookalike",
+  "seed": 27,
+  "difficulty": 5,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s028_d0",
+  "family": "lookalike",
+  "seed": 28,
+  "difficulty": 0,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is the one closest to the top-left corner of the image.",
+  "normalized": "top-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s028_d1",
+  "family": "lookalike",
+  "seed": 28,
+  "difficulty": 1,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is the one closest to the bottom-right corner.",
+  "normalized": "bottom-right",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s028_d2",
+  "family": "lookalike",
+  "seed": 28,
+  "difficulty": 2,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s028_d3",
+  "family": "lookalike",
+  "seed": 28,
+  "difficulty": 3,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s028_d4",
+  "family": "lookalike",
+  "seed": 28,
+  "difficulty": 4,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s028_d5",
+  "family": "lookalike",
+  "seed": 28,
+  "difficulty": 5,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s029_d0",
+  "family": "lookalike",
+  "seed": 29,
+  "difficulty": 0,
+  "answer": "bottom-left",
+  "raw": "The red circle with the blue dot in the center is the one closest to the top-left corner of the image.",
+  "normalized": "top-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s029_d1",
+  "family": "lookalike",
+  "seed": 29,
+  "difficulty": 1,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s029_d2",
+  "family": "lookalike",
+  "seed": 29,
+  "difficulty": 2,
+  "answer": "bottom-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s029_d3",
+  "family": "lookalike",
+  "seed": 29,
+  "difficulty": 3,
+  "answer": "bottom-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s029_d4",
+  "family": "lookalike",
+  "seed": 29,
+  "difficulty": 4,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s029_d5",
+  "family": "lookalike",
+  "seed": 29,
+  "difficulty": 5,
+  "answer": "bottom-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s030_d0",
+  "family": "lookalike",
+  "seed": 30,
+  "difficulty": 0,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is the one closest to the top-left corner of the image.",
+  "normalized": "top-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s030_d1",
+  "family": "lookalike",
+  "seed": 30,
+  "difficulty": 1,
+  "answer": "bottom-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s030_d2",
+  "family": "lookalike",
+  "seed": 30,
+  "difficulty": 2,
+  "answer": "bottom-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s030_d3",
+  "family": "lookalike",
+  "seed": 30,
+  "difficulty": 3,
+  "answer": "bottom-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s030_d4",
+  "family": "lookalike",
+  "seed": 30,
+  "difficulty": 4,
+  "answer": "bottom-left",
+  "raw": "The blue dot is in the center of the bottom-left red circle.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s030_d5",
+  "family": "lookalike",
+  "seed": 30,
+  "difficulty": 5,
+  "answer": "bottom-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s031_d0",
+  "family": "lookalike",
+  "seed": 31,
+  "difficulty": 0,
+  "answer": "bottom-left",
+  "raw": "The blue-centered circle is the smallest one, so it is closest to the top-left corner of the image.",
+  "normalized": "top-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s031_d1",
+  "family": "lookalike",
+  "seed": 31,
+  "difficulty": 1,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s031_d2",
+  "family": "lookalike",
+  "seed": 31,
+  "difficulty": 2,
+  "answer": "bottom-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s031_d3",
+  "family": "lookalike",
+  "seed": 31,
+  "difficulty": 3,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s031_d4",
+  "family": "lookalike",
+  "seed": 31,
+  "difficulty": 4,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s031_d5",
+  "family": "lookalike",
+  "seed": 31,
+  "difficulty": 5,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s032_d0",
+  "family": "lookalike",
+  "seed": 32,
+  "difficulty": 0,
+  "answer": "top-right",
+  "raw": "The circle with the blue dot in the center is the one closest to the top-left corner of the image.",
+  "normalized": "top-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s032_d1",
+  "family": "lookalike",
+  "seed": 32,
+  "difficulty": 1,
+  "answer": "bottom-left",
+  "raw": "The red circle with the blue dot in the center is the one closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s032_d2",
+  "family": "lookalike",
+  "seed": 32,
+  "difficulty": 2,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s032_d3",
+  "family": "lookalike",
+  "seed": 32,
+  "difficulty": 3,
+  "answer": "top-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s032_d4",
+  "family": "lookalike",
+  "seed": 32,
+  "difficulty": 4,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s032_d5",
+  "family": "lookalike",
+  "seed": 32,
+  "difficulty": 5,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s033_d0",
+  "family": "lookalike",
+  "seed": 33,
+  "difficulty": 0,
+  "answer": "bottom-left",
+  "raw": "The blue-centered circle is the smallest one, so it is closest to the bottom-left corner.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s033_d1",
+  "family": "lookalike",
+  "seed": 33,
+  "difficulty": 1,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s033_d2",
+  "family": "lookalike",
+  "seed": 33,
+  "difficulty": 2,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s033_d3",
+  "family": "lookalike",
+  "seed": 33,
+  "difficulty": 3,
+  "answer": "bottom-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s033_d4",
+  "family": "lookalike",
+  "seed": 33,
+  "difficulty": 4,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s033_d5",
+  "family": "lookalike",
+  "seed": 33,
+  "difficulty": 5,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s034_d0",
+  "family": "lookalike",
+  "seed": 34,
+  "difficulty": 0,
+  "answer": "bottom-right",
+  "raw": "The blue circle is closest to the top-left corner of the image.",
+  "normalized": "top-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s034_d1",
+  "family": "lookalike",
+  "seed": 34,
+  "difficulty": 1,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s034_d2",
+  "family": "lookalike",
+  "seed": 34,
+  "difficulty": 2,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s034_d3",
+  "family": "lookalike",
+  "seed": 34,
+  "difficulty": 3,
+  "answer": "bottom-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s034_d4",
+  "family": "lookalike",
+  "seed": 34,
+  "difficulty": 4,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s034_d5",
+  "family": "lookalike",
+  "seed": 34,
+  "difficulty": 5,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s035_d0",
+  "family": "lookalike",
+  "seed": 35,
+  "difficulty": 0,
+  "answer": "top-right",
+  "raw": "The blue circle with the dot is the one closest to the top-left corner of the image.",
+  "normalized": "top-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s035_d1",
+  "family": "lookalike",
+  "seed": 35,
+  "difficulty": 1,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s035_d2",
+  "family": "lookalike",
+  "seed": 35,
+  "difficulty": 2,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s035_d3",
+  "family": "lookalike",
+  "seed": 35,
+  "difficulty": 3,
+  "answer": "top-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s035_d4",
+  "family": "lookalike",
+  "seed": 35,
+  "difficulty": 4,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s035_d5",
+  "family": "lookalike",
+  "seed": 35,
+  "difficulty": 5,
+  "answer": "bottom-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s036_d0",
+  "family": "lookalike",
+  "seed": 36,
+  "difficulty": 0,
+  "answer": "top-right",
+  "raw": "The circle with the blue dot in the center is the one located in the top-right corner of the image.",
+  "normalized": "top-right",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s036_d1",
+  "family": "lookalike",
+  "seed": 36,
+  "difficulty": 1,
+  "answer": "top-left",
+  "raw": "top-left",
+  "normalized": "top-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s036_d2",
+  "family": "lookalike",
+  "seed": 36,
+  "difficulty": 2,
+  "answer": "top-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s036_d3",
+  "family": "lookalike",
+  "seed": 36,
+  "difficulty": 3,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s036_d4",
+  "family": "lookalike",
+  "seed": 36,
+  "difficulty": 4,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s036_d5",
+  "family": "lookalike",
+  "seed": 36,
+  "difficulty": 5,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s037_d0",
+  "family": "lookalike",
+  "seed": 37,
+  "difficulty": 0,
+  "answer": "bottom-left",
+  "raw": "The blue-centered circle is the smallest one, so it is closest to the bottom-left corner.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s037_d1",
+  "family": "lookalike",
+  "seed": 37,
+  "difficulty": 1,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s037_d2",
+  "family": "lookalike",
+  "seed": 37,
+  "difficulty": 2,
+  "answer": "bottom-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s037_d3",
+  "family": "lookalike",
+  "seed": 37,
+  "difficulty": 3,
+  "answer": "top-right",
+  "raw": "The red circle with the blue dot in the center is the one closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s037_d4",
+  "family": "lookalike",
+  "seed": 37,
+  "difficulty": 4,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s037_d5",
+  "family": "lookalike",
+  "seed": 37,
+  "difficulty": 5,
+  "answer": "top-right",
+  "raw": "The blue dot is in the bottom-right corner of the image.",
+  "normalized": "bottom-right",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s038_d0",
+  "family": "lookalike",
+  "seed": 38,
+  "difficulty": 0,
+  "answer": "top-left",
+  "raw": "The blue-centered circle is the smallest one, so it is closest to the bottom-left corner.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s038_d1",
+  "family": "lookalike",
+  "seed": 38,
+  "difficulty": 1,
+  "answer": "top-right",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s038_d2",
+  "family": "lookalike",
+  "seed": 38,
+  "difficulty": 2,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s038_d3",
+  "family": "lookalike",
+  "seed": 38,
+  "difficulty": 3,
+  "answer": "bottom-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s038_d4",
+  "family": "lookalike",
+  "seed": 38,
+  "difficulty": 4,
+  "answer": "bottom-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s038_d5",
+  "family": "lookalike",
+  "seed": 38,
+  "difficulty": 5,
+  "answer": "top-right",
+  "raw": "To find the red circle with the small blue dot in its center, we need to look for the circle that is identical in color and size to the others, but has a distinct blue dot in the center. \n\nUpon close inspection, the",
+  "normalized": null,
+  "correct": false
+ },
+ {
+  "id": "lookalike_s039_d0",
+  "family": "lookalike",
+  "seed": 39,
+  "difficulty": 0,
+  "answer": "top-left",
+  "raw": "The red circle with the blue dot in the center is the one closest to the top-left corner of the image.",
+  "normalized": "top-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s039_d1",
+  "family": "lookalike",
+  "seed": 39,
+  "difficulty": 1,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s039_d2",
+  "family": "lookalike",
+  "seed": 39,
+  "difficulty": 2,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s039_d3",
+  "family": "lookalike",
+  "seed": 39,
+  "difficulty": 3,
+  "answer": "top-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": false
+ },
+ {
+  "id": "lookalike_s039_d4",
+  "family": "lookalike",
+  "seed": 39,
+  "difficulty": 4,
+  "answer": "bottom-left",
+  "raw": "bottom-left",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "lookalike_s039_d5",
+  "family": "lookalike",
+  "seed": 39,
+  "difficulty": 5,
+  "answer": "bottom-left",
+  "raw": "The red circle with the blue dot in the center is closest to the bottom-left corner of the image.",
+  "normalized": "bottom-left",
+  "correct": true
+ },
+ {
+  "id": "nearest_s000_d0",
+  "family": "nearest",
+  "seed": 0,
+  "difficulty": 0,
+  "answer": "cyan",
+  "raw": "turquoise",
+  "normalized": null,
+  "correct": false
+ },
+ {
+  "id": "nearest_s000_d1",
+  "family": "nearest",
+  "seed": 0,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s000_d2",
+  "family": "nearest",
+  "seed": 0,
+  "difficulty": 2,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s000_d3",
+  "family": "nearest",
+  "seed": 0,
+  "difficulty": 3,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s000_d4",
+  "family": "nearest",
+  "seed": 0,
+  "difficulty": 4,
+  "answer": "green",
+  "raw": "green square",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s000_d5",
+  "family": "nearest",
+  "seed": 0,
+  "difficulty": 5,
+  "answer": "magenta",
+  "raw": "green square",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s001_d0",
+  "family": "nearest",
+  "seed": 1,
+  "difficulty": 0,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s001_d1",
+  "family": "nearest",
+  "seed": 1,
+  "difficulty": 1,
+  "answer": "purple",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s001_d2",
+  "family": "nearest",
+  "seed": 1,
+  "difficulty": 2,
+  "answer": "cyan",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": false
+ },
+ {
+  "id": "nearest_s001_d3",
+  "family": "nearest",
+  "seed": 1,
+  "difficulty": 3,
+  "answer": "purple",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s001_d4",
+  "family": "nearest",
+  "seed": 1,
+  "difficulty": 4,
+  "answer": "red",
+  "raw": "red triangle",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s001_d5",
+  "family": "nearest",
+  "seed": 1,
+  "difficulty": 5,
+  "answer": "yellow",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s002_d0",
+  "family": "nearest",
+  "seed": 2,
+  "difficulty": 0,
+  "answer": "cyan",
+  "raw": "turquoise",
+  "normalized": null,
+  "correct": false
+ },
+ {
+  "id": "nearest_s002_d1",
+  "family": "nearest",
+  "seed": 2,
+  "difficulty": 1,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "nearest_s002_d2",
+  "family": "nearest",
+  "seed": 2,
+  "difficulty": 2,
+  "answer": "cyan",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s002_d3",
+  "family": "nearest",
+  "seed": 2,
+  "difficulty": 3,
+  "answer": "purple",
+  "raw": "purple square",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "nearest_s002_d4",
+  "family": "nearest",
+  "seed": 2,
+  "difficulty": 4,
+  "answer": "green",
+  "raw": "green square",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s002_d5",
+  "family": "nearest",
+  "seed": 2,
+  "difficulty": 5,
+  "answer": "yellow",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s003_d0",
+  "family": "nearest",
+  "seed": 3,
+  "difficulty": 0,
+  "answer": "cyan",
+  "raw": "turquoise",
+  "normalized": null,
+  "correct": false
+ },
+ {
+  "id": "nearest_s003_d1",
+  "family": "nearest",
+  "seed": 3,
+  "difficulty": 1,
+  "answer": "yellow",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s003_d2",
+  "family": "nearest",
+  "seed": 3,
+  "difficulty": 2,
+  "answer": "yellow",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s003_d3",
+  "family": "nearest",
+  "seed": 3,
+  "difficulty": 3,
+  "answer": "yellow",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s003_d4",
+  "family": "nearest",
+  "seed": 3,
+  "difficulty": 4,
+  "answer": "purple",
+  "raw": "red circle",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s003_d5",
+  "family": "nearest",
+  "seed": 3,
+  "difficulty": 5,
+  "answer": "yellow",
+  "raw": "yellow circle",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "nearest_s004_d0",
+  "family": "nearest",
+  "seed": 4,
+  "difficulty": 0,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s004_d1",
+  "family": "nearest",
+  "seed": 4,
+  "difficulty": 1,
+  "answer": "magenta",
+  "raw": "pink diamond",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s004_d2",
+  "family": "nearest",
+  "seed": 4,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s004_d3",
+  "family": "nearest",
+  "seed": 4,
+  "difficulty": 3,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s004_d4",
+  "family": "nearest",
+  "seed": 4,
+  "difficulty": 4,
+  "answer": "green",
+  "raw": "green square",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s004_d5",
+  "family": "nearest",
+  "seed": 4,
+  "difficulty": 5,
+  "answer": "orange",
+  "raw": "purple square",
+  "normalized": "purple",
+  "correct": false
+ },
+ {
+  "id": "nearest_s005_d0",
+  "family": "nearest",
+  "seed": 5,
+  "difficulty": 0,
+  "answer": "cyan",
+  "raw": "cyan",
+  "normalized": "cyan",
+  "correct": true
+ },
+ {
+  "id": "nearest_s005_d1",
+  "family": "nearest",
+  "seed": 5,
+  "difficulty": 1,
+  "answer": "cyan",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s005_d2",
+  "family": "nearest",
+  "seed": 5,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "pink square",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s005_d3",
+  "family": "nearest",
+  "seed": 5,
+  "difficulty": 3,
+  "answer": "green",
+  "raw": "green square",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s005_d4",
+  "family": "nearest",
+  "seed": 5,
+  "difficulty": 4,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s005_d5",
+  "family": "nearest",
+  "seed": 5,
+  "difficulty": 5,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s006_d0",
+  "family": "nearest",
+  "seed": 6,
+  "difficulty": 0,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s006_d1",
+  "family": "nearest",
+  "seed": 6,
+  "difficulty": 1,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s006_d2",
+  "family": "nearest",
+  "seed": 6,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "pink diamond",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s006_d3",
+  "family": "nearest",
+  "seed": 6,
+  "difficulty": 3,
+  "answer": "purple",
+  "raw": "pink square",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s006_d4",
+  "family": "nearest",
+  "seed": 6,
+  "difficulty": 4,
+  "answer": "magenta",
+  "raw": "pink square",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s006_d5",
+  "family": "nearest",
+  "seed": 6,
+  "difficulty": 5,
+  "answer": "green",
+  "raw": "green square",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s007_d0",
+  "family": "nearest",
+  "seed": 7,
+  "difficulty": 0,
+  "answer": "red",
+  "raw": "Red diamond",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s007_d1",
+  "family": "nearest",
+  "seed": 7,
+  "difficulty": 1,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s007_d2",
+  "family": "nearest",
+  "seed": 7,
+  "difficulty": 2,
+  "answer": "cyan",
+  "raw": "green circle",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s007_d3",
+  "family": "nearest",
+  "seed": 7,
+  "difficulty": 3,
+  "answer": "red",
+  "raw": "red square",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s007_d4",
+  "family": "nearest",
+  "seed": 7,
+  "difficulty": 4,
+  "answer": "cyan",
+  "raw": "red square",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s007_d5",
+  "family": "nearest",
+  "seed": 7,
+  "difficulty": 5,
+  "answer": "purple",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s008_d0",
+  "family": "nearest",
+  "seed": 8,
+  "difficulty": 0,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "nearest_s008_d1",
+  "family": "nearest",
+  "seed": 8,
+  "difficulty": 1,
+  "answer": "purple",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": false
+ },
+ {
+  "id": "nearest_s008_d2",
+  "family": "nearest",
+  "seed": 8,
+  "difficulty": 2,
+  "answer": "yellow",
+  "raw": "yellow circle",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "nearest_s008_d3",
+  "family": "nearest",
+  "seed": 8,
+  "difficulty": 3,
+  "answer": "yellow",
+  "raw": "yellow circle",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "nearest_s008_d4",
+  "family": "nearest",
+  "seed": 8,
+  "difficulty": 4,
+  "answer": "cyan",
+  "raw": "pink square",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s008_d5",
+  "family": "nearest",
+  "seed": 8,
+  "difficulty": 5,
+  "answer": "yellow",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s009_d0",
+  "family": "nearest",
+  "seed": 9,
+  "difficulty": 0,
+  "answer": "cyan",
+  "raw": "turquoise",
+  "normalized": null,
+  "correct": false
+ },
+ {
+  "id": "nearest_s009_d1",
+  "family": "nearest",
+  "seed": 9,
+  "difficulty": 1,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "nearest_s009_d2",
+  "family": "nearest",
+  "seed": 9,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "pink square",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s009_d3",
+  "family": "nearest",
+  "seed": 9,
+  "difficulty": 3,
+  "answer": "orange",
+  "raw": "green square",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s009_d4",
+  "family": "nearest",
+  "seed": 9,
+  "difficulty": 4,
+  "answer": "yellow",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s009_d5",
+  "family": "nearest",
+  "seed": 9,
+  "difficulty": 5,
+  "answer": "magenta",
+  "raw": "pink circle",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s010_d0",
+  "family": "nearest",
+  "seed": 10,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s010_d1",
+  "family": "nearest",
+  "seed": 10,
+  "difficulty": 1,
+  "answer": "purple",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s010_d2",
+  "family": "nearest",
+  "seed": 10,
+  "difficulty": 2,
+  "answer": "purple",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s010_d3",
+  "family": "nearest",
+  "seed": 10,
+  "difficulty": 3,
+  "answer": "cyan",
+  "raw": "green",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s010_d4",
+  "family": "nearest",
+  "seed": 10,
+  "difficulty": 4,
+  "answer": "magenta",
+  "raw": "pink diamond",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s010_d5",
+  "family": "nearest",
+  "seed": 10,
+  "difficulty": 5,
+  "answer": "red",
+  "raw": "red square",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s011_d0",
+  "family": "nearest",
+  "seed": 11,
+  "difficulty": 0,
+  "answer": "cyan",
+  "raw": "cyan",
+  "normalized": "cyan",
+  "correct": true
+ },
+ {
+  "id": "nearest_s011_d1",
+  "family": "nearest",
+  "seed": 11,
+  "difficulty": 1,
+  "answer": "cyan",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s011_d2",
+  "family": "nearest",
+  "seed": 11,
+  "difficulty": 2,
+  "answer": "cyan",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s011_d3",
+  "family": "nearest",
+  "seed": 11,
+  "difficulty": 3,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s011_d4",
+  "family": "nearest",
+  "seed": 11,
+  "difficulty": 4,
+  "answer": "yellow",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s011_d5",
+  "family": "nearest",
+  "seed": 11,
+  "difficulty": 5,
+  "answer": "magenta",
+  "raw": "pink circle",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s012_d0",
+  "family": "nearest",
+  "seed": 12,
+  "difficulty": 0,
+  "answer": "yellow",
+  "raw": "yellow circle",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "nearest_s012_d1",
+  "family": "nearest",
+  "seed": 12,
+  "difficulty": 1,
+  "answer": "yellow",
+  "raw": "cyan",
+  "normalized": "cyan",
+  "correct": false
+ },
+ {
+  "id": "nearest_s012_d2",
+  "family": "nearest",
+  "seed": 12,
+  "difficulty": 2,
+  "answer": "red",
+  "raw": "red square",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s012_d3",
+  "family": "nearest",
+  "seed": 12,
+  "difficulty": 3,
+  "answer": "magenta",
+  "raw": "pink circle",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s012_d4",
+  "family": "nearest",
+  "seed": 12,
+  "difficulty": 4,
+  "answer": "red",
+  "raw": "red square",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s012_d5",
+  "family": "nearest",
+  "seed": 12,
+  "difficulty": 5,
+  "answer": "purple",
+  "raw": "green circle",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s013_d0",
+  "family": "nearest",
+  "seed": 13,
+  "difficulty": 0,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s013_d1",
+  "family": "nearest",
+  "seed": 13,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s013_d2",
+  "family": "nearest",
+  "seed": 13,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "green",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s013_d3",
+  "family": "nearest",
+  "seed": 13,
+  "difficulty": 3,
+  "answer": "purple",
+  "raw": "green",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s013_d4",
+  "family": "nearest",
+  "seed": 13,
+  "difficulty": 4,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s013_d5",
+  "family": "nearest",
+  "seed": 13,
+  "difficulty": 5,
+  "answer": "orange",
+  "raw": "green square",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s014_d0",
+  "family": "nearest",
+  "seed": 14,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s014_d1",
+  "family": "nearest",
+  "seed": 14,
+  "difficulty": 1,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "nearest_s014_d2",
+  "family": "nearest",
+  "seed": 14,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s014_d3",
+  "family": "nearest",
+  "seed": 14,
+  "difficulty": 3,
+  "answer": "green",
+  "raw": "green circle",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s014_d4",
+  "family": "nearest",
+  "seed": 14,
+  "difficulty": 4,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s014_d5",
+  "family": "nearest",
+  "seed": 14,
+  "difficulty": 5,
+  "answer": "purple",
+  "raw": "red triangle",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s015_d0",
+  "family": "nearest",
+  "seed": 15,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s015_d1",
+  "family": "nearest",
+  "seed": 15,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s015_d2",
+  "family": "nearest",
+  "seed": 15,
+  "difficulty": 2,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "nearest_s015_d3",
+  "family": "nearest",
+  "seed": 15,
+  "difficulty": 3,
+  "answer": "purple",
+  "raw": "purple circle",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "nearest_s015_d4",
+  "family": "nearest",
+  "seed": 15,
+  "difficulty": 4,
+  "answer": "magenta",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s015_d5",
+  "family": "nearest",
+  "seed": 15,
+  "difficulty": 5,
+  "answer": "green",
+  "raw": "green circle",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s016_d0",
+  "family": "nearest",
+  "seed": 16,
+  "difficulty": 0,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s016_d1",
+  "family": "nearest",
+  "seed": 16,
+  "difficulty": 1,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s016_d2",
+  "family": "nearest",
+  "seed": 16,
+  "difficulty": 2,
+  "answer": "red",
+  "raw": "red square",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s016_d3",
+  "family": "nearest",
+  "seed": 16,
+  "difficulty": 3,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s016_d4",
+  "family": "nearest",
+  "seed": 16,
+  "difficulty": 4,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s016_d5",
+  "family": "nearest",
+  "seed": 16,
+  "difficulty": 5,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s017_d0",
+  "family": "nearest",
+  "seed": 17,
+  "difficulty": 0,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s017_d1",
+  "family": "nearest",
+  "seed": 17,
+  "difficulty": 1,
+  "answer": "yellow",
+  "raw": "green",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s017_d2",
+  "family": "nearest",
+  "seed": 17,
+  "difficulty": 2,
+  "answer": "yellow",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s017_d3",
+  "family": "nearest",
+  "seed": 17,
+  "difficulty": 3,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s017_d4",
+  "family": "nearest",
+  "seed": 17,
+  "difficulty": 4,
+  "answer": "magenta",
+  "raw": "pink square",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s017_d5",
+  "family": "nearest",
+  "seed": 17,
+  "difficulty": 5,
+  "answer": "green",
+  "raw": "green circle",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s018_d0",
+  "family": "nearest",
+  "seed": 18,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s018_d1",
+  "family": "nearest",
+  "seed": 18,
+  "difficulty": 1,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s018_d2",
+  "family": "nearest",
+  "seed": 18,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s018_d3",
+  "family": "nearest",
+  "seed": 18,
+  "difficulty": 3,
+  "answer": "magenta",
+  "raw": "green square",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s018_d4",
+  "family": "nearest",
+  "seed": 18,
+  "difficulty": 4,
+  "answer": "cyan",
+  "raw": "green circle",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s018_d5",
+  "family": "nearest",
+  "seed": 18,
+  "difficulty": 5,
+  "answer": "green",
+  "raw": "green square",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s019_d0",
+  "family": "nearest",
+  "seed": 19,
+  "difficulty": 0,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s019_d1",
+  "family": "nearest",
+  "seed": 19,
+  "difficulty": 1,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s019_d2",
+  "family": "nearest",
+  "seed": 19,
+  "difficulty": 2,
+  "answer": "purple",
+  "raw": "purple diamond",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "nearest_s019_d3",
+  "family": "nearest",
+  "seed": 19,
+  "difficulty": 3,
+  "answer": "magenta",
+  "raw": "pink diamond",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s019_d4",
+  "family": "nearest",
+  "seed": 19,
+  "difficulty": 4,
+  "answer": "magenta",
+  "raw": "green",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s019_d5",
+  "family": "nearest",
+  "seed": 19,
+  "difficulty": 5,
+  "answer": "purple",
+  "raw": "purple square",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "nearest_s020_d0",
+  "family": "nearest",
+  "seed": 20,
+  "difficulty": 0,
+  "answer": "red",
+  "raw": "red diamond",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s020_d1",
+  "family": "nearest",
+  "seed": 20,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s020_d2",
+  "family": "nearest",
+  "seed": 20,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "pink square",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s020_d3",
+  "family": "nearest",
+  "seed": 20,
+  "difficulty": 3,
+  "answer": "orange",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s020_d4",
+  "family": "nearest",
+  "seed": 20,
+  "difficulty": 4,
+  "answer": "magenta",
+  "raw": "green square",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s020_d5",
+  "family": "nearest",
+  "seed": 20,
+  "difficulty": 5,
+  "answer": "magenta",
+  "raw": "red circle",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s021_d0",
+  "family": "nearest",
+  "seed": 21,
+  "difficulty": 0,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s021_d1",
+  "family": "nearest",
+  "seed": 21,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s021_d2",
+  "family": "nearest",
+  "seed": 21,
+  "difficulty": 2,
+  "answer": "yellow",
+  "raw": "yellow diamond",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "nearest_s021_d3",
+  "family": "nearest",
+  "seed": 21,
+  "difficulty": 3,
+  "answer": "cyan",
+  "raw": "red sphere",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s021_d4",
+  "family": "nearest",
+  "seed": 21,
+  "difficulty": 4,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s021_d5",
+  "family": "nearest",
+  "seed": 21,
+  "difficulty": 5,
+  "answer": "green",
+  "raw": "green circle",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s022_d0",
+  "family": "nearest",
+  "seed": 22,
+  "difficulty": 0,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s022_d1",
+  "family": "nearest",
+  "seed": 22,
+  "difficulty": 1,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s022_d2",
+  "family": "nearest",
+  "seed": 22,
+  "difficulty": 2,
+  "answer": "green",
+  "raw": "green circle",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s022_d3",
+  "family": "nearest",
+  "seed": 22,
+  "difficulty": 3,
+  "answer": "orange",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s022_d4",
+  "family": "nearest",
+  "seed": 22,
+  "difficulty": 4,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s022_d5",
+  "family": "nearest",
+  "seed": 22,
+  "difficulty": 5,
+  "answer": "purple",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s023_d0",
+  "family": "nearest",
+  "seed": 23,
+  "difficulty": 0,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s023_d1",
+  "family": "nearest",
+  "seed": 23,
+  "difficulty": 1,
+  "answer": "red",
+  "raw": "red diamond",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s023_d2",
+  "family": "nearest",
+  "seed": 23,
+  "difficulty": 2,
+  "answer": "cyan",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "nearest_s023_d3",
+  "family": "nearest",
+  "seed": 23,
+  "difficulty": 3,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s023_d4",
+  "family": "nearest",
+  "seed": 23,
+  "difficulty": 4,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s023_d5",
+  "family": "nearest",
+  "seed": 23,
+  "difficulty": 5,
+  "answer": "purple",
+  "raw": "closest object is purple, color is purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "nearest_s024_d0",
+  "family": "nearest",
+  "seed": 24,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s024_d1",
+  "family": "nearest",
+  "seed": 24,
+  "difficulty": 1,
+  "answer": "purple",
+  "raw": "Purple circle",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "nearest_s024_d2",
+  "family": "nearest",
+  "seed": 24,
+  "difficulty": 2,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "nearest_s024_d3",
+  "family": "nearest",
+  "seed": 24,
+  "difficulty": 3,
+  "answer": "magenta",
+  "raw": "pink circle",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s024_d4",
+  "family": "nearest",
+  "seed": 24,
+  "difficulty": 4,
+  "answer": "orange",
+  "raw": "green square",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s024_d5",
+  "family": "nearest",
+  "seed": 24,
+  "difficulty": 5,
+  "answer": "red",
+  "raw": "red square",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s025_d0",
+  "family": "nearest",
+  "seed": 25,
+  "difficulty": 0,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s025_d1",
+  "family": "nearest",
+  "seed": 25,
+  "difficulty": 1,
+  "answer": "cyan",
+  "raw": "cyan",
+  "normalized": "cyan",
+  "correct": true
+ },
+ {
+  "id": "nearest_s025_d2",
+  "family": "nearest",
+  "seed": 25,
+  "difficulty": 2,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s025_d3",
+  "family": "nearest",
+  "seed": 25,
+  "difficulty": 3,
+  "answer": "cyan",
+  "raw": "red circle",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s025_d4",
+  "family": "nearest",
+  "seed": 25,
+  "difficulty": 4,
+  "answer": "cyan",
+  "raw": "green circle",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s025_d5",
+  "family": "nearest",
+  "seed": 25,
+  "difficulty": 5,
+  "answer": "red",
+  "raw": "red square",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s026_d0",
+  "family": "nearest",
+  "seed": 26,
+  "difficulty": 0,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "nearest_s026_d1",
+  "family": "nearest",
+  "seed": 26,
+  "difficulty": 1,
+  "answer": "magenta",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "nearest_s026_d2",
+  "family": "nearest",
+  "seed": 26,
+  "difficulty": 2,
+  "answer": "green",
+  "raw": "green circle",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s026_d3",
+  "family": "nearest",
+  "seed": 26,
+  "difficulty": 3,
+  "answer": "red",
+  "raw": "red circle",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s026_d4",
+  "family": "nearest",
+  "seed": 26,
+  "difficulty": 4,
+  "answer": "purple",
+  "raw": "red circle",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s026_d5",
+  "family": "nearest",
+  "seed": 26,
+  "difficulty": 5,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s027_d0",
+  "family": "nearest",
+  "seed": 27,
+  "difficulty": 0,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s027_d1",
+  "family": "nearest",
+  "seed": 27,
+  "difficulty": 1,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s027_d2",
+  "family": "nearest",
+  "seed": 27,
+  "difficulty": 2,
+  "answer": "yellow",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s027_d3",
+  "family": "nearest",
+  "seed": 27,
+  "difficulty": 3,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s027_d4",
+  "family": "nearest",
+  "seed": 27,
+  "difficulty": 4,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "nearest_s027_d5",
+  "family": "nearest",
+  "seed": 27,
+  "difficulty": 5,
+  "answer": "red",
+  "raw": "red square",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s028_d0",
+  "family": "nearest",
+  "seed": 28,
+  "difficulty": 0,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s028_d1",
+  "family": "nearest",
+  "seed": 28,
+  "difficulty": 1,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s028_d2",
+  "family": "nearest",
+  "seed": 28,
+  "difficulty": 2,
+  "answer": "yellow",
+  "raw": "yellow square",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "nearest_s028_d3",
+  "family": "nearest",
+  "seed": 28,
+  "difficulty": 3,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s028_d4",
+  "family": "nearest",
+  "seed": 28,
+  "difficulty": 4,
+  "answer": "cyan",
+  "raw": "green diamond",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s028_d5",
+  "family": "nearest",
+  "seed": 28,
+  "difficulty": 5,
+  "answer": "yellow",
+  "raw": "yellow square",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "nearest_s029_d0",
+  "family": "nearest",
+  "seed": 29,
+  "difficulty": 0,
+  "answer": "magenta",
+  "raw": "Pink square",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s029_d1",
+  "family": "nearest",
+  "seed": 29,
+  "difficulty": 1,
+  "answer": "red",
+  "raw": "red square",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s029_d2",
+  "family": "nearest",
+  "seed": 29,
+  "difficulty": 2,
+  "answer": "yellow",
+  "raw": "yellow square",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "nearest_s029_d3",
+  "family": "nearest",
+  "seed": 29,
+  "difficulty": 3,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s029_d4",
+  "family": "nearest",
+  "seed": 29,
+  "difficulty": 4,
+  "answer": "yellow",
+  "raw": "yellow circle",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "nearest_s029_d5",
+  "family": "nearest",
+  "seed": 29,
+  "difficulty": 5,
+  "answer": "green",
+  "raw": "green circle",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s030_d0",
+  "family": "nearest",
+  "seed": 30,
+  "difficulty": 0,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s030_d1",
+  "family": "nearest",
+  "seed": 30,
+  "difficulty": 1,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s030_d2",
+  "family": "nearest",
+  "seed": 30,
+  "difficulty": 2,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s030_d3",
+  "family": "nearest",
+  "seed": 30,
+  "difficulty": 3,
+  "answer": "magenta",
+  "raw": "pink triangle",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s030_d4",
+  "family": "nearest",
+  "seed": 30,
+  "difficulty": 4,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s030_d5",
+  "family": "nearest",
+  "seed": 30,
+  "difficulty": 5,
+  "answer": "yellow",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s031_d0",
+  "family": "nearest",
+  "seed": 31,
+  "difficulty": 0,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s031_d1",
+  "family": "nearest",
+  "seed": 31,
+  "difficulty": 1,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s031_d2",
+  "family": "nearest",
+  "seed": 31,
+  "difficulty": 2,
+  "answer": "orange",
+  "raw": "orange square",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s031_d3",
+  "family": "nearest",
+  "seed": 31,
+  "difficulty": 3,
+  "answer": "red",
+  "raw": "red square",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s031_d4",
+  "family": "nearest",
+  "seed": 31,
+  "difficulty": 4,
+  "answer": "yellow",
+  "raw": "yellow square",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "nearest_s031_d5",
+  "family": "nearest",
+  "seed": 31,
+  "difficulty": 5,
+  "answer": "magenta",
+  "raw": "red circle",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s032_d0",
+  "family": "nearest",
+  "seed": 32,
+  "difficulty": 0,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s032_d1",
+  "family": "nearest",
+  "seed": 32,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s032_d2",
+  "family": "nearest",
+  "seed": 32,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s032_d3",
+  "family": "nearest",
+  "seed": 32,
+  "difficulty": 3,
+  "answer": "cyan",
+  "raw": "green triangle",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s032_d4",
+  "family": "nearest",
+  "seed": 32,
+  "difficulty": 4,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s032_d5",
+  "family": "nearest",
+  "seed": 32,
+  "difficulty": 5,
+  "answer": "orange",
+  "raw": "blue circle",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s033_d0",
+  "family": "nearest",
+  "seed": 33,
+  "difficulty": 0,
+  "answer": "cyan",
+  "raw": "turquoise",
+  "normalized": null,
+  "correct": false
+ },
+ {
+  "id": "nearest_s033_d1",
+  "family": "nearest",
+  "seed": 33,
+  "difficulty": 1,
+  "answer": "purple",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s033_d2",
+  "family": "nearest",
+  "seed": 33,
+  "difficulty": 2,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "nearest_s033_d3",
+  "family": "nearest",
+  "seed": 33,
+  "difficulty": 3,
+  "answer": "magenta",
+  "raw": "green triangle",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s033_d4",
+  "family": "nearest",
+  "seed": 33,
+  "difficulty": 4,
+  "answer": "red",
+  "raw": "red circle",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s033_d5",
+  "family": "nearest",
+  "seed": 33,
+  "difficulty": 5,
+  "answer": "yellow",
+  "raw": "red triangle",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s034_d0",
+  "family": "nearest",
+  "seed": 34,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s034_d1",
+  "family": "nearest",
+  "seed": 34,
+  "difficulty": 1,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s034_d2",
+  "family": "nearest",
+  "seed": 34,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "green",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s034_d3",
+  "family": "nearest",
+  "seed": 34,
+  "difficulty": 3,
+  "answer": "green",
+  "raw": "green square",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s034_d4",
+  "family": "nearest",
+  "seed": 34,
+  "difficulty": 4,
+  "answer": "cyan",
+  "raw": "pink square",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s034_d5",
+  "family": "nearest",
+  "seed": 34,
+  "difficulty": 5,
+  "answer": "purple",
+  "raw": "green",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s035_d0",
+  "family": "nearest",
+  "seed": 35,
+  "difficulty": 0,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "nearest_s035_d1",
+  "family": "nearest",
+  "seed": 35,
+  "difficulty": 1,
+  "answer": "red",
+  "raw": "red square",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s035_d2",
+  "family": "nearest",
+  "seed": 35,
+  "difficulty": 2,
+  "answer": "green",
+  "raw": "green square",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s035_d3",
+  "family": "nearest",
+  "seed": 35,
+  "difficulty": 3,
+  "answer": "cyan",
+  "raw": "green",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s035_d4",
+  "family": "nearest",
+  "seed": 35,
+  "difficulty": 4,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s035_d5",
+  "family": "nearest",
+  "seed": 35,
+  "difficulty": 5,
+  "answer": "magenta",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s036_d0",
+  "family": "nearest",
+  "seed": 36,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s036_d1",
+  "family": "nearest",
+  "seed": 36,
+  "difficulty": 1,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s036_d2",
+  "family": "nearest",
+  "seed": 36,
+  "difficulty": 2,
+  "answer": "purple",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s036_d3",
+  "family": "nearest",
+  "seed": 36,
+  "difficulty": 3,
+  "answer": "green",
+  "raw": "green square",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s036_d4",
+  "family": "nearest",
+  "seed": 36,
+  "difficulty": 4,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s036_d5",
+  "family": "nearest",
+  "seed": 36,
+  "difficulty": 5,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "nearest_s037_d0",
+  "family": "nearest",
+  "seed": 37,
+  "difficulty": 0,
+  "answer": "purple",
+  "raw": "Purple diamond",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "nearest_s037_d1",
+  "family": "nearest",
+  "seed": 37,
+  "difficulty": 1,
+  "answer": "yellow",
+  "raw": "green",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s037_d2",
+  "family": "nearest",
+  "seed": 37,
+  "difficulty": 2,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s037_d3",
+  "family": "nearest",
+  "seed": 37,
+  "difficulty": 3,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "nearest_s037_d4",
+  "family": "nearest",
+  "seed": 37,
+  "difficulty": 4,
+  "answer": "magenta",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s037_d5",
+  "family": "nearest",
+  "seed": 37,
+  "difficulty": 5,
+  "answer": "cyan",
+  "raw": "green diamond",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s038_d0",
+  "family": "nearest",
+  "seed": 38,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s038_d1",
+  "family": "nearest",
+  "seed": 38,
+  "difficulty": 1,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s038_d2",
+  "family": "nearest",
+  "seed": 38,
+  "difficulty": 2,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "nearest_s038_d3",
+  "family": "nearest",
+  "seed": 38,
+  "difficulty": 3,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "nearest_s038_d4",
+  "family": "nearest",
+  "seed": 38,
+  "difficulty": 4,
+  "answer": "yellow",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s038_d5",
+  "family": "nearest",
+  "seed": 38,
+  "difficulty": 5,
+  "answer": "purple",
+  "raw": "purple circle",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "nearest_s039_d0",
+  "family": "nearest",
+  "seed": 39,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s039_d1",
+  "family": "nearest",
+  "seed": 39,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "nearest_s039_d2",
+  "family": "nearest",
+  "seed": 39,
+  "difficulty": 2,
+  "answer": "cyan",
+  "raw": "blue circle",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "nearest_s039_d3",
+  "family": "nearest",
+  "seed": 39,
+  "difficulty": 3,
+  "answer": "yellow",
+  "raw": "green circle",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "nearest_s039_d4",
+  "family": "nearest",
+  "seed": 39,
+  "difficulty": 4,
+  "answer": "purple",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "nearest_s039_d5",
+  "family": "nearest",
+  "seed": 39,
+  "difficulty": 5,
+  "answer": "magenta",
+  "raw": "pink square",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s000_d0",
+  "family": "occlusion",
+  "seed": 0,
+  "difficulty": 0,
+  "answer": "purple",
+  "raw": "Purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s000_d1",
+  "family": "occlusion",
+  "seed": 0,
+  "difficulty": 1,
+  "answer": "purple",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s000_d2",
+  "family": "occlusion",
+  "seed": 0,
+  "difficulty": 2,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s000_d3",
+  "family": "occlusion",
+  "seed": 0,
+  "difficulty": 3,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s000_d4",
+  "family": "occlusion",
+  "seed": 0,
+  "difficulty": 4,
+  "answer": "green",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s000_d5",
+  "family": "occlusion",
+  "seed": 0,
+  "difficulty": 5,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s001_d0",
+  "family": "occlusion",
+  "seed": 1,
+  "difficulty": 0,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s001_d1",
+  "family": "occlusion",
+  "seed": 1,
+  "difficulty": 1,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s001_d2",
+  "family": "occlusion",
+  "seed": 1,
+  "difficulty": 2,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s001_d3",
+  "family": "occlusion",
+  "seed": 1,
+  "difficulty": 3,
+  "answer": "magenta",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s001_d4",
+  "family": "occlusion",
+  "seed": 1,
+  "difficulty": 4,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s001_d5",
+  "family": "occlusion",
+  "seed": 1,
+  "difficulty": 5,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s002_d0",
+  "family": "occlusion",
+  "seed": 2,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s002_d1",
+  "family": "occlusion",
+  "seed": 2,
+  "difficulty": 1,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s002_d2",
+  "family": "occlusion",
+  "seed": 2,
+  "difficulty": 2,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s002_d3",
+  "family": "occlusion",
+  "seed": 2,
+  "difficulty": 3,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s002_d4",
+  "family": "occlusion",
+  "seed": 2,
+  "difficulty": 4,
+  "answer": "purple",
+  "raw": "Purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s002_d5",
+  "family": "occlusion",
+  "seed": 2,
+  "difficulty": 5,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s003_d0",
+  "family": "occlusion",
+  "seed": 3,
+  "difficulty": 0,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s003_d1",
+  "family": "occlusion",
+  "seed": 3,
+  "difficulty": 1,
+  "answer": "magenta",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s003_d2",
+  "family": "occlusion",
+  "seed": 3,
+  "difficulty": 2,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s003_d3",
+  "family": "occlusion",
+  "seed": 3,
+  "difficulty": 3,
+  "answer": "yellow",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s003_d4",
+  "family": "occlusion",
+  "seed": 3,
+  "difficulty": 4,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s003_d5",
+  "family": "occlusion",
+  "seed": 3,
+  "difficulty": 5,
+  "answer": "purple",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s004_d0",
+  "family": "occlusion",
+  "seed": 4,
+  "difficulty": 0,
+  "answer": "purple",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s004_d1",
+  "family": "occlusion",
+  "seed": 4,
+  "difficulty": 1,
+  "answer": "magenta",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s004_d2",
+  "family": "occlusion",
+  "seed": 4,
+  "difficulty": 2,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s004_d3",
+  "family": "occlusion",
+  "seed": 4,
+  "difficulty": 3,
+  "answer": "magenta",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s004_d4",
+  "family": "occlusion",
+  "seed": 4,
+  "difficulty": 4,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s004_d5",
+  "family": "occlusion",
+  "seed": 4,
+  "difficulty": 5,
+  "answer": "magenta",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s005_d0",
+  "family": "occlusion",
+  "seed": 5,
+  "difficulty": 0,
+  "answer": "purple",
+  "raw": "Purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s005_d1",
+  "family": "occlusion",
+  "seed": 5,
+  "difficulty": 1,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s005_d2",
+  "family": "occlusion",
+  "seed": 5,
+  "difficulty": 2,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s005_d3",
+  "family": "occlusion",
+  "seed": 5,
+  "difficulty": 3,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s005_d4",
+  "family": "occlusion",
+  "seed": 5,
+  "difficulty": 4,
+  "answer": "green",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s005_d5",
+  "family": "occlusion",
+  "seed": 5,
+  "difficulty": 5,
+  "answer": "green",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s006_d0",
+  "family": "occlusion",
+  "seed": 6,
+  "difficulty": 0,
+  "answer": "purple",
+  "raw": "Purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s006_d1",
+  "family": "occlusion",
+  "seed": 6,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s006_d2",
+  "family": "occlusion",
+  "seed": 6,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s006_d3",
+  "family": "occlusion",
+  "seed": 6,
+  "difficulty": 3,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s006_d4",
+  "family": "occlusion",
+  "seed": 6,
+  "difficulty": 4,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s006_d5",
+  "family": "occlusion",
+  "seed": 6,
+  "difficulty": 5,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s007_d0",
+  "family": "occlusion",
+  "seed": 7,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s007_d1",
+  "family": "occlusion",
+  "seed": 7,
+  "difficulty": 1,
+  "answer": "green",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s007_d2",
+  "family": "occlusion",
+  "seed": 7,
+  "difficulty": 2,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s007_d3",
+  "family": "occlusion",
+  "seed": 7,
+  "difficulty": 3,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s007_d4",
+  "family": "occlusion",
+  "seed": 7,
+  "difficulty": 4,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s007_d5",
+  "family": "occlusion",
+  "seed": 7,
+  "difficulty": 5,
+  "answer": "cyan",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s008_d0",
+  "family": "occlusion",
+  "seed": 8,
+  "difficulty": 0,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s008_d1",
+  "family": "occlusion",
+  "seed": 8,
+  "difficulty": 1,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s008_d2",
+  "family": "occlusion",
+  "seed": 8,
+  "difficulty": 2,
+  "answer": "purple",
+  "raw": "Purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s008_d3",
+  "family": "occlusion",
+  "seed": 8,
+  "difficulty": 3,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s008_d4",
+  "family": "occlusion",
+  "seed": 8,
+  "difficulty": 4,
+  "answer": "red",
+  "raw": "green",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s008_d5",
+  "family": "occlusion",
+  "seed": 8,
+  "difficulty": 5,
+  "answer": "yellow",
+  "raw": "green",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s009_d0",
+  "family": "occlusion",
+  "seed": 9,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s009_d1",
+  "family": "occlusion",
+  "seed": 9,
+  "difficulty": 1,
+  "answer": "red",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s009_d2",
+  "family": "occlusion",
+  "seed": 9,
+  "difficulty": 2,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s009_d3",
+  "family": "occlusion",
+  "seed": 9,
+  "difficulty": 3,
+  "answer": "green",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s009_d4",
+  "family": "occlusion",
+  "seed": 9,
+  "difficulty": 4,
+  "answer": "red",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s009_d5",
+  "family": "occlusion",
+  "seed": 9,
+  "difficulty": 5,
+  "answer": "green",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s010_d0",
+  "family": "occlusion",
+  "seed": 10,
+  "difficulty": 0,
+  "answer": "purple",
+  "raw": "Purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s010_d1",
+  "family": "occlusion",
+  "seed": 10,
+  "difficulty": 1,
+  "answer": "green",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s010_d2",
+  "family": "occlusion",
+  "seed": 10,
+  "difficulty": 2,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s010_d3",
+  "family": "occlusion",
+  "seed": 10,
+  "difficulty": 3,
+  "answer": "magenta",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s010_d4",
+  "family": "occlusion",
+  "seed": 10,
+  "difficulty": 4,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s010_d5",
+  "family": "occlusion",
+  "seed": 10,
+  "difficulty": 5,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s011_d0",
+  "family": "occlusion",
+  "seed": 11,
+  "difficulty": 0,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s011_d1",
+  "family": "occlusion",
+  "seed": 11,
+  "difficulty": 1,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s011_d2",
+  "family": "occlusion",
+  "seed": 11,
+  "difficulty": 2,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s011_d3",
+  "family": "occlusion",
+  "seed": 11,
+  "difficulty": 3,
+  "answer": "purple",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s011_d4",
+  "family": "occlusion",
+  "seed": 11,
+  "difficulty": 4,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s011_d5",
+  "family": "occlusion",
+  "seed": 11,
+  "difficulty": 5,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s012_d0",
+  "family": "occlusion",
+  "seed": 12,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s012_d1",
+  "family": "occlusion",
+  "seed": 12,
+  "difficulty": 1,
+  "answer": "purple",
+  "raw": "Purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s012_d2",
+  "family": "occlusion",
+  "seed": 12,
+  "difficulty": 2,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s012_d3",
+  "family": "occlusion",
+  "seed": 12,
+  "difficulty": 3,
+  "answer": "red",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s012_d4",
+  "family": "occlusion",
+  "seed": 12,
+  "difficulty": 4,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s012_d5",
+  "family": "occlusion",
+  "seed": 12,
+  "difficulty": 5,
+  "answer": "purple",
+  "raw": "Purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s013_d0",
+  "family": "occlusion",
+  "seed": 13,
+  "difficulty": 0,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s013_d1",
+  "family": "occlusion",
+  "seed": 13,
+  "difficulty": 1,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s013_d2",
+  "family": "occlusion",
+  "seed": 13,
+  "difficulty": 2,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s013_d3",
+  "family": "occlusion",
+  "seed": 13,
+  "difficulty": 3,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s013_d4",
+  "family": "occlusion",
+  "seed": 13,
+  "difficulty": 4,
+  "answer": "green",
+  "raw": "light blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s013_d5",
+  "family": "occlusion",
+  "seed": 13,
+  "difficulty": 5,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s014_d0",
+  "family": "occlusion",
+  "seed": 14,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s014_d1",
+  "family": "occlusion",
+  "seed": 14,
+  "difficulty": 1,
+  "answer": "purple",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s014_d2",
+  "family": "occlusion",
+  "seed": 14,
+  "difficulty": 2,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s014_d3",
+  "family": "occlusion",
+  "seed": 14,
+  "difficulty": 3,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s014_d4",
+  "family": "occlusion",
+  "seed": 14,
+  "difficulty": 4,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s014_d5",
+  "family": "occlusion",
+  "seed": 14,
+  "difficulty": 5,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s015_d0",
+  "family": "occlusion",
+  "seed": 15,
+  "difficulty": 0,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s015_d1",
+  "family": "occlusion",
+  "seed": 15,
+  "difficulty": 1,
+  "answer": "magenta",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s015_d2",
+  "family": "occlusion",
+  "seed": 15,
+  "difficulty": 2,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s015_d3",
+  "family": "occlusion",
+  "seed": 15,
+  "difficulty": 3,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s015_d4",
+  "family": "occlusion",
+  "seed": 15,
+  "difficulty": 4,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s015_d5",
+  "family": "occlusion",
+  "seed": 15,
+  "difficulty": 5,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s016_d0",
+  "family": "occlusion",
+  "seed": 16,
+  "difficulty": 0,
+  "answer": "magenta",
+  "raw": "Purple",
+  "normalized": "purple",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s016_d1",
+  "family": "occlusion",
+  "seed": 16,
+  "difficulty": 1,
+  "answer": "green",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s016_d2",
+  "family": "occlusion",
+  "seed": 16,
+  "difficulty": 2,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s016_d3",
+  "family": "occlusion",
+  "seed": 16,
+  "difficulty": 3,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s016_d4",
+  "family": "occlusion",
+  "seed": 16,
+  "difficulty": 4,
+  "answer": "purple",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s016_d5",
+  "family": "occlusion",
+  "seed": 16,
+  "difficulty": 5,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s017_d0",
+  "family": "occlusion",
+  "seed": 17,
+  "difficulty": 0,
+  "answer": "yellow",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s017_d1",
+  "family": "occlusion",
+  "seed": 17,
+  "difficulty": 1,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s017_d2",
+  "family": "occlusion",
+  "seed": 17,
+  "difficulty": 2,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s017_d3",
+  "family": "occlusion",
+  "seed": 17,
+  "difficulty": 3,
+  "answer": "green",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s017_d4",
+  "family": "occlusion",
+  "seed": 17,
+  "difficulty": 4,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s017_d5",
+  "family": "occlusion",
+  "seed": 17,
+  "difficulty": 5,
+  "answer": "magenta",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s018_d0",
+  "family": "occlusion",
+  "seed": 18,
+  "difficulty": 0,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s018_d1",
+  "family": "occlusion",
+  "seed": 18,
+  "difficulty": 1,
+  "answer": "purple",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s018_d2",
+  "family": "occlusion",
+  "seed": 18,
+  "difficulty": 2,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s018_d3",
+  "family": "occlusion",
+  "seed": 18,
+  "difficulty": 3,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s018_d4",
+  "family": "occlusion",
+  "seed": 18,
+  "difficulty": 4,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s018_d5",
+  "family": "occlusion",
+  "seed": 18,
+  "difficulty": 5,
+  "answer": "red",
+  "raw": "green",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s019_d0",
+  "family": "occlusion",
+  "seed": 19,
+  "difficulty": 0,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s019_d1",
+  "family": "occlusion",
+  "seed": 19,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s019_d2",
+  "family": "occlusion",
+  "seed": 19,
+  "difficulty": 2,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s019_d3",
+  "family": "occlusion",
+  "seed": 19,
+  "difficulty": 3,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s019_d4",
+  "family": "occlusion",
+  "seed": 19,
+  "difficulty": 4,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s019_d5",
+  "family": "occlusion",
+  "seed": 19,
+  "difficulty": 5,
+  "answer": "yellow",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s020_d0",
+  "family": "occlusion",
+  "seed": 20,
+  "difficulty": 0,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s020_d1",
+  "family": "occlusion",
+  "seed": 20,
+  "difficulty": 1,
+  "answer": "green",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s020_d2",
+  "family": "occlusion",
+  "seed": 20,
+  "difficulty": 2,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s020_d3",
+  "family": "occlusion",
+  "seed": 20,
+  "difficulty": 3,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s020_d4",
+  "family": "occlusion",
+  "seed": 20,
+  "difficulty": 4,
+  "answer": "magenta",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s020_d5",
+  "family": "occlusion",
+  "seed": 20,
+  "difficulty": 5,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s021_d0",
+  "family": "occlusion",
+  "seed": 21,
+  "difficulty": 0,
+  "answer": "magenta",
+  "raw": "Purple",
+  "normalized": "purple",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s021_d1",
+  "family": "occlusion",
+  "seed": 21,
+  "difficulty": 1,
+  "answer": "cyan",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s021_d2",
+  "family": "occlusion",
+  "seed": 21,
+  "difficulty": 2,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s021_d3",
+  "family": "occlusion",
+  "seed": 21,
+  "difficulty": 3,
+  "answer": "green",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s021_d4",
+  "family": "occlusion",
+  "seed": 21,
+  "difficulty": 4,
+  "answer": "orange",
+  "raw": "green",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s021_d5",
+  "family": "occlusion",
+  "seed": 21,
+  "difficulty": 5,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s022_d0",
+  "family": "occlusion",
+  "seed": 22,
+  "difficulty": 0,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s022_d1",
+  "family": "occlusion",
+  "seed": 22,
+  "difficulty": 1,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s022_d2",
+  "family": "occlusion",
+  "seed": 22,
+  "difficulty": 2,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s022_d3",
+  "family": "occlusion",
+  "seed": 22,
+  "difficulty": 3,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s022_d4",
+  "family": "occlusion",
+  "seed": 22,
+  "difficulty": 4,
+  "answer": "magenta",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s022_d5",
+  "family": "occlusion",
+  "seed": 22,
+  "difficulty": 5,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s023_d0",
+  "family": "occlusion",
+  "seed": 23,
+  "difficulty": 0,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s023_d1",
+  "family": "occlusion",
+  "seed": 23,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s023_d2",
+  "family": "occlusion",
+  "seed": 23,
+  "difficulty": 2,
+  "answer": "purple",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s023_d3",
+  "family": "occlusion",
+  "seed": 23,
+  "difficulty": 3,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s023_d4",
+  "family": "occlusion",
+  "seed": 23,
+  "difficulty": 4,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s023_d5",
+  "family": "occlusion",
+  "seed": 23,
+  "difficulty": 5,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s024_d0",
+  "family": "occlusion",
+  "seed": 24,
+  "difficulty": 0,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s024_d1",
+  "family": "occlusion",
+  "seed": 24,
+  "difficulty": 1,
+  "answer": "magenta",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s024_d2",
+  "family": "occlusion",
+  "seed": 24,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s024_d3",
+  "family": "occlusion",
+  "seed": 24,
+  "difficulty": 3,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s024_d4",
+  "family": "occlusion",
+  "seed": 24,
+  "difficulty": 4,
+  "answer": "yellow",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s024_d5",
+  "family": "occlusion",
+  "seed": 24,
+  "difficulty": 5,
+  "answer": "red",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s025_d0",
+  "family": "occlusion",
+  "seed": 25,
+  "difficulty": 0,
+  "answer": "purple",
+  "raw": "Purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s025_d1",
+  "family": "occlusion",
+  "seed": 25,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s025_d2",
+  "family": "occlusion",
+  "seed": 25,
+  "difficulty": 2,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s025_d3",
+  "family": "occlusion",
+  "seed": 25,
+  "difficulty": 3,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s025_d4",
+  "family": "occlusion",
+  "seed": 25,
+  "difficulty": 4,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s025_d5",
+  "family": "occlusion",
+  "seed": 25,
+  "difficulty": 5,
+  "answer": "cyan",
+  "raw": "green",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s026_d0",
+  "family": "occlusion",
+  "seed": 26,
+  "difficulty": 0,
+  "answer": "magenta",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s026_d1",
+  "family": "occlusion",
+  "seed": 26,
+  "difficulty": 1,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s026_d2",
+  "family": "occlusion",
+  "seed": 26,
+  "difficulty": 2,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s026_d3",
+  "family": "occlusion",
+  "seed": 26,
+  "difficulty": 3,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s026_d4",
+  "family": "occlusion",
+  "seed": 26,
+  "difficulty": 4,
+  "answer": "magenta",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s026_d5",
+  "family": "occlusion",
+  "seed": 26,
+  "difficulty": 5,
+  "answer": "yellow",
+  "raw": "green",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s027_d0",
+  "family": "occlusion",
+  "seed": 27,
+  "difficulty": 0,
+  "answer": "magenta",
+  "raw": "Purple",
+  "normalized": "purple",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s027_d1",
+  "family": "occlusion",
+  "seed": 27,
+  "difficulty": 1,
+  "answer": "magenta",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s027_d2",
+  "family": "occlusion",
+  "seed": 27,
+  "difficulty": 2,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s027_d3",
+  "family": "occlusion",
+  "seed": 27,
+  "difficulty": 3,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s027_d4",
+  "family": "occlusion",
+  "seed": 27,
+  "difficulty": 4,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s027_d5",
+  "family": "occlusion",
+  "seed": 27,
+  "difficulty": 5,
+  "answer": "red",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s028_d0",
+  "family": "occlusion",
+  "seed": 28,
+  "difficulty": 0,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s028_d1",
+  "family": "occlusion",
+  "seed": 28,
+  "difficulty": 1,
+  "answer": "green",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s028_d2",
+  "family": "occlusion",
+  "seed": 28,
+  "difficulty": 2,
+  "answer": "green",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s028_d3",
+  "family": "occlusion",
+  "seed": 28,
+  "difficulty": 3,
+  "answer": "green",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s028_d4",
+  "family": "occlusion",
+  "seed": 28,
+  "difficulty": 4,
+  "answer": "yellow",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s028_d5",
+  "family": "occlusion",
+  "seed": 28,
+  "difficulty": 5,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s029_d0",
+  "family": "occlusion",
+  "seed": 29,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s029_d1",
+  "family": "occlusion",
+  "seed": 29,
+  "difficulty": 1,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s029_d2",
+  "family": "occlusion",
+  "seed": 29,
+  "difficulty": 2,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s029_d3",
+  "family": "occlusion",
+  "seed": 29,
+  "difficulty": 3,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s029_d4",
+  "family": "occlusion",
+  "seed": 29,
+  "difficulty": 4,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s029_d5",
+  "family": "occlusion",
+  "seed": 29,
+  "difficulty": 5,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s030_d0",
+  "family": "occlusion",
+  "seed": 30,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s030_d1",
+  "family": "occlusion",
+  "seed": 30,
+  "difficulty": 1,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s030_d2",
+  "family": "occlusion",
+  "seed": 30,
+  "difficulty": 2,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s030_d3",
+  "family": "occlusion",
+  "seed": 30,
+  "difficulty": 3,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s030_d4",
+  "family": "occlusion",
+  "seed": 30,
+  "difficulty": 4,
+  "answer": "purple",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s030_d5",
+  "family": "occlusion",
+  "seed": 30,
+  "difficulty": 5,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s031_d0",
+  "family": "occlusion",
+  "seed": 31,
+  "difficulty": 0,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s031_d1",
+  "family": "occlusion",
+  "seed": 31,
+  "difficulty": 1,
+  "answer": "green",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s031_d2",
+  "family": "occlusion",
+  "seed": 31,
+  "difficulty": 2,
+  "answer": "yellow",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s031_d3",
+  "family": "occlusion",
+  "seed": 31,
+  "difficulty": 3,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s031_d4",
+  "family": "occlusion",
+  "seed": 31,
+  "difficulty": 4,
+  "answer": "purple",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s031_d5",
+  "family": "occlusion",
+  "seed": 31,
+  "difficulty": 5,
+  "answer": "yellow",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s032_d0",
+  "family": "occlusion",
+  "seed": 32,
+  "difficulty": 0,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s032_d1",
+  "family": "occlusion",
+  "seed": 32,
+  "difficulty": 1,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s032_d2",
+  "family": "occlusion",
+  "seed": 32,
+  "difficulty": 2,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s032_d3",
+  "family": "occlusion",
+  "seed": 32,
+  "difficulty": 3,
+  "answer": "magenta",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s032_d4",
+  "family": "occlusion",
+  "seed": 32,
+  "difficulty": 4,
+  "answer": "red",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s032_d5",
+  "family": "occlusion",
+  "seed": 32,
+  "difficulty": 5,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s033_d0",
+  "family": "occlusion",
+  "seed": 33,
+  "difficulty": 0,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s033_d1",
+  "family": "occlusion",
+  "seed": 33,
+  "difficulty": 1,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s033_d2",
+  "family": "occlusion",
+  "seed": 33,
+  "difficulty": 2,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s033_d3",
+  "family": "occlusion",
+  "seed": 33,
+  "difficulty": 3,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s033_d4",
+  "family": "occlusion",
+  "seed": 33,
+  "difficulty": 4,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s033_d5",
+  "family": "occlusion",
+  "seed": 33,
+  "difficulty": 5,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s034_d0",
+  "family": "occlusion",
+  "seed": 34,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s034_d1",
+  "family": "occlusion",
+  "seed": 34,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s034_d2",
+  "family": "occlusion",
+  "seed": 34,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s034_d3",
+  "family": "occlusion",
+  "seed": 34,
+  "difficulty": 3,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s034_d4",
+  "family": "occlusion",
+  "seed": 34,
+  "difficulty": 4,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s034_d5",
+  "family": "occlusion",
+  "seed": 34,
+  "difficulty": 5,
+  "answer": "green",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s035_d0",
+  "family": "occlusion",
+  "seed": 35,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s035_d1",
+  "family": "occlusion",
+  "seed": 35,
+  "difficulty": 1,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s035_d2",
+  "family": "occlusion",
+  "seed": 35,
+  "difficulty": 2,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s035_d3",
+  "family": "occlusion",
+  "seed": 35,
+  "difficulty": 3,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s035_d4",
+  "family": "occlusion",
+  "seed": 35,
+  "difficulty": 4,
+  "answer": "orange",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s035_d5",
+  "family": "occlusion",
+  "seed": 35,
+  "difficulty": 5,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s036_d0",
+  "family": "occlusion",
+  "seed": 36,
+  "difficulty": 0,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s036_d1",
+  "family": "occlusion",
+  "seed": 36,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s036_d2",
+  "family": "occlusion",
+  "seed": 36,
+  "difficulty": 2,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s036_d3",
+  "family": "occlusion",
+  "seed": 36,
+  "difficulty": 3,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s036_d4",
+  "family": "occlusion",
+  "seed": 36,
+  "difficulty": 4,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s036_d5",
+  "family": "occlusion",
+  "seed": 36,
+  "difficulty": 5,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s037_d0",
+  "family": "occlusion",
+  "seed": 37,
+  "difficulty": 0,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s037_d1",
+  "family": "occlusion",
+  "seed": 37,
+  "difficulty": 1,
+  "answer": "purple",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s037_d2",
+  "family": "occlusion",
+  "seed": 37,
+  "difficulty": 2,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s037_d3",
+  "family": "occlusion",
+  "seed": 37,
+  "difficulty": 3,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s037_d4",
+  "family": "occlusion",
+  "seed": 37,
+  "difficulty": 4,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s037_d5",
+  "family": "occlusion",
+  "seed": 37,
+  "difficulty": 5,
+  "answer": "yellow",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s038_d0",
+  "family": "occlusion",
+  "seed": 38,
+  "difficulty": 0,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s038_d1",
+  "family": "occlusion",
+  "seed": 38,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s038_d2",
+  "family": "occlusion",
+  "seed": 38,
+  "difficulty": 2,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s038_d3",
+  "family": "occlusion",
+  "seed": 38,
+  "difficulty": 3,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s038_d4",
+  "family": "occlusion",
+  "seed": 38,
+  "difficulty": 4,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s038_d5",
+  "family": "occlusion",
+  "seed": 38,
+  "difficulty": 5,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s039_d0",
+  "family": "occlusion",
+  "seed": 39,
+  "difficulty": 0,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s039_d1",
+  "family": "occlusion",
+  "seed": 39,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "occlusion_s039_d2",
+  "family": "occlusion",
+  "seed": 39,
+  "difficulty": 2,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s039_d3",
+  "family": "occlusion",
+  "seed": 39,
+  "difficulty": 3,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s039_d4",
+  "family": "occlusion",
+  "seed": 39,
+  "difficulty": 4,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "occlusion_s039_d5",
+  "family": "occlusion",
+  "seed": 39,
+  "difficulty": 5,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s000_d0",
+  "family": "relpos",
+  "seed": 0,
+  "difficulty": 0,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "relpos_s000_d1",
+  "family": "relpos",
+  "seed": 0,
+  "difficulty": 1,
+  "answer": "yellow",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s000_d2",
+  "family": "relpos",
+  "seed": 0,
+  "difficulty": 2,
+  "answer": "cyan",
+  "raw": "green",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "relpos_s000_d3",
+  "family": "relpos",
+  "seed": 0,
+  "difficulty": 3,
+  "answer": "yellow",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s000_d4",
+  "family": "relpos",
+  "seed": 0,
+  "difficulty": 4,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s000_d5",
+  "family": "relpos",
+  "seed": 0,
+  "difficulty": 5,
+  "answer": "purple",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s001_d0",
+  "family": "relpos",
+  "seed": 1,
+  "difficulty": 0,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s001_d1",
+  "family": "relpos",
+  "seed": 1,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s001_d2",
+  "family": "relpos",
+  "seed": 1,
+  "difficulty": 2,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s001_d3",
+  "family": "relpos",
+  "seed": 1,
+  "difficulty": 3,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s001_d4",
+  "family": "relpos",
+  "seed": 1,
+  "difficulty": 4,
+  "answer": "yellow",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "relpos_s001_d5",
+  "family": "relpos",
+  "seed": 1,
+  "difficulty": 5,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s002_d0",
+  "family": "relpos",
+  "seed": 2,
+  "difficulty": 0,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "relpos_s002_d1",
+  "family": "relpos",
+  "seed": 2,
+  "difficulty": 1,
+  "answer": "cyan",
+  "raw": "green",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "relpos_s002_d2",
+  "family": "relpos",
+  "seed": 2,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s002_d3",
+  "family": "relpos",
+  "seed": 2,
+  "difficulty": 3,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s002_d4",
+  "family": "relpos",
+  "seed": 2,
+  "difficulty": 4,
+  "answer": "green",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s002_d5",
+  "family": "relpos",
+  "seed": 2,
+  "difficulty": 5,
+  "answer": "orange",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s003_d0",
+  "family": "relpos",
+  "seed": 3,
+  "difficulty": 0,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "relpos_s003_d1",
+  "family": "relpos",
+  "seed": 3,
+  "difficulty": 1,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s003_d2",
+  "family": "relpos",
+  "seed": 3,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s003_d3",
+  "family": "relpos",
+  "seed": 3,
+  "difficulty": 3,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s003_d4",
+  "family": "relpos",
+  "seed": 3,
+  "difficulty": 4,
+  "answer": "green",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s003_d5",
+  "family": "relpos",
+  "seed": 3,
+  "difficulty": 5,
+  "answer": "yellow",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s004_d0",
+  "family": "relpos",
+  "seed": 4,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s004_d1",
+  "family": "relpos",
+  "seed": 4,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s004_d2",
+  "family": "relpos",
+  "seed": 4,
+  "difficulty": 2,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s004_d3",
+  "family": "relpos",
+  "seed": 4,
+  "difficulty": 3,
+  "answer": "red",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s004_d4",
+  "family": "relpos",
+  "seed": 4,
+  "difficulty": 4,
+  "answer": "magenta",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s004_d5",
+  "family": "relpos",
+  "seed": 4,
+  "difficulty": 5,
+  "answer": "red",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s005_d0",
+  "family": "relpos",
+  "seed": 5,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s005_d1",
+  "family": "relpos",
+  "seed": 5,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s005_d2",
+  "family": "relpos",
+  "seed": 5,
+  "difficulty": 2,
+  "answer": "purple",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": false
+ },
+ {
+  "id": "relpos_s005_d3",
+  "family": "relpos",
+  "seed": 5,
+  "difficulty": 3,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s005_d4",
+  "family": "relpos",
+  "seed": 5,
+  "difficulty": 4,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "relpos_s005_d5",
+  "family": "relpos",
+  "seed": 5,
+  "difficulty": 5,
+  "answer": "magenta",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": false
+ },
+ {
+  "id": "relpos_s006_d0",
+  "family": "relpos",
+  "seed": 6,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s006_d1",
+  "family": "relpos",
+  "seed": 6,
+  "difficulty": 1,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "relpos_s006_d2",
+  "family": "relpos",
+  "seed": 6,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s006_d3",
+  "family": "relpos",
+  "seed": 6,
+  "difficulty": 3,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s006_d4",
+  "family": "relpos",
+  "seed": 6,
+  "difficulty": 4,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s006_d5",
+  "family": "relpos",
+  "seed": 6,
+  "difficulty": 5,
+  "answer": "yellow",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s007_d0",
+  "family": "relpos",
+  "seed": 7,
+  "difficulty": 0,
+  "answer": "cyan",
+  "raw": "cyan",
+  "normalized": "cyan",
+  "correct": true
+ },
+ {
+  "id": "relpos_s007_d1",
+  "family": "relpos",
+  "seed": 7,
+  "difficulty": 1,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s007_d2",
+  "family": "relpos",
+  "seed": 7,
+  "difficulty": 2,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "relpos_s007_d3",
+  "family": "relpos",
+  "seed": 7,
+  "difficulty": 3,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s007_d4",
+  "family": "relpos",
+  "seed": 7,
+  "difficulty": 4,
+  "answer": "red",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s007_d5",
+  "family": "relpos",
+  "seed": 7,
+  "difficulty": 5,
+  "answer": "yellow",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s008_d0",
+  "family": "relpos",
+  "seed": 8,
+  "difficulty": 0,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "relpos_s008_d1",
+  "family": "relpos",
+  "seed": 8,
+  "difficulty": 1,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "relpos_s008_d2",
+  "family": "relpos",
+  "seed": 8,
+  "difficulty": 2,
+  "answer": "cyan",
+  "raw": "green",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "relpos_s008_d3",
+  "family": "relpos",
+  "seed": 8,
+  "difficulty": 3,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "relpos_s008_d4",
+  "family": "relpos",
+  "seed": 8,
+  "difficulty": 4,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s008_d5",
+  "family": "relpos",
+  "seed": 8,
+  "difficulty": 5,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s009_d0",
+  "family": "relpos",
+  "seed": 9,
+  "difficulty": 0,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "relpos_s009_d1",
+  "family": "relpos",
+  "seed": 9,
+  "difficulty": 1,
+  "answer": "yellow",
+  "raw": "green",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "relpos_s009_d2",
+  "family": "relpos",
+  "seed": 9,
+  "difficulty": 2,
+  "answer": "cyan",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s009_d3",
+  "family": "relpos",
+  "seed": 9,
+  "difficulty": 3,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "relpos_s009_d4",
+  "family": "relpos",
+  "seed": 9,
+  "difficulty": 4,
+  "answer": "orange",
+  "raw": "green",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "relpos_s009_d5",
+  "family": "relpos",
+  "seed": 9,
+  "difficulty": 5,
+  "answer": "purple",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s010_d0",
+  "family": "relpos",
+  "seed": 10,
+  "difficulty": 0,
+  "answer": "cyan",
+  "raw": "Purple",
+  "normalized": "purple",
+  "correct": false
+ },
+ {
+  "id": "relpos_s010_d1",
+  "family": "relpos",
+  "seed": 10,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s010_d2",
+  "family": "relpos",
+  "seed": 10,
+  "difficulty": 2,
+  "answer": "purple",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s010_d3",
+  "family": "relpos",
+  "seed": 10,
+  "difficulty": 3,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s010_d4",
+  "family": "relpos",
+  "seed": 10,
+  "difficulty": 4,
+  "answer": "purple",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s010_d5",
+  "family": "relpos",
+  "seed": 10,
+  "difficulty": 5,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s011_d0",
+  "family": "relpos",
+  "seed": 11,
+  "difficulty": 0,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "relpos_s011_d1",
+  "family": "relpos",
+  "seed": 11,
+  "difficulty": 1,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s011_d2",
+  "family": "relpos",
+  "seed": 11,
+  "difficulty": 2,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s011_d3",
+  "family": "relpos",
+  "seed": 11,
+  "difficulty": 3,
+  "answer": "cyan",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s011_d4",
+  "family": "relpos",
+  "seed": 11,
+  "difficulty": 4,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "relpos_s011_d5",
+  "family": "relpos",
+  "seed": 11,
+  "difficulty": 5,
+  "answer": "purple",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s012_d0",
+  "family": "relpos",
+  "seed": 12,
+  "difficulty": 0,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "relpos_s012_d1",
+  "family": "relpos",
+  "seed": 12,
+  "difficulty": 1,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s012_d2",
+  "family": "relpos",
+  "seed": 12,
+  "difficulty": 2,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s012_d3",
+  "family": "relpos",
+  "seed": 12,
+  "difficulty": 3,
+  "answer": "purple",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s012_d4",
+  "family": "relpos",
+  "seed": 12,
+  "difficulty": 4,
+  "answer": "purple",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s012_d5",
+  "family": "relpos",
+  "seed": 12,
+  "difficulty": 5,
+  "answer": "purple",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s013_d0",
+  "family": "relpos",
+  "seed": 13,
+  "difficulty": 0,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "relpos_s013_d1",
+  "family": "relpos",
+  "seed": 13,
+  "difficulty": 1,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "relpos_s013_d2",
+  "family": "relpos",
+  "seed": 13,
+  "difficulty": 2,
+  "answer": "green",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "relpos_s013_d3",
+  "family": "relpos",
+  "seed": 13,
+  "difficulty": 3,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "relpos_s013_d4",
+  "family": "relpos",
+  "seed": 13,
+  "difficulty": 4,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s013_d5",
+  "family": "relpos",
+  "seed": 13,
+  "difficulty": 5,
+  "answer": "yellow",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s014_d0",
+  "family": "relpos",
+  "seed": 14,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s014_d1",
+  "family": "relpos",
+  "seed": 14,
+  "difficulty": 1,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "relpos_s014_d2",
+  "family": "relpos",
+  "seed": 14,
+  "difficulty": 2,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "relpos_s014_d3",
+  "family": "relpos",
+  "seed": 14,
+  "difficulty": 3,
+  "answer": "green",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s014_d4",
+  "family": "relpos",
+  "seed": 14,
+  "difficulty": 4,
+  "answer": "cyan",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s014_d5",
+  "family": "relpos",
+  "seed": 14,
+  "difficulty": 5,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s015_d0",
+  "family": "relpos",
+  "seed": 15,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s015_d1",
+  "family": "relpos",
+  "seed": 15,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s015_d2",
+  "family": "relpos",
+  "seed": 15,
+  "difficulty": 2,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "relpos_s015_d3",
+  "family": "relpos",
+  "seed": 15,
+  "difficulty": 3,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s015_d4",
+  "family": "relpos",
+  "seed": 15,
+  "difficulty": 4,
+  "answer": "yellow",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s015_d5",
+  "family": "relpos",
+  "seed": 15,
+  "difficulty": 5,
+  "answer": "green",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s016_d0",
+  "family": "relpos",
+  "seed": 16,
+  "difficulty": 0,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "relpos_s016_d1",
+  "family": "relpos",
+  "seed": 16,
+  "difficulty": 1,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s016_d2",
+  "family": "relpos",
+  "seed": 16,
+  "difficulty": 2,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "relpos_s016_d3",
+  "family": "relpos",
+  "seed": 16,
+  "difficulty": 3,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s016_d4",
+  "family": "relpos",
+  "seed": 16,
+  "difficulty": 4,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s016_d5",
+  "family": "relpos",
+  "seed": 16,
+  "difficulty": 5,
+  "answer": "orange",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s017_d0",
+  "family": "relpos",
+  "seed": 17,
+  "difficulty": 0,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s017_d1",
+  "family": "relpos",
+  "seed": 17,
+  "difficulty": 1,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "relpos_s017_d2",
+  "family": "relpos",
+  "seed": 17,
+  "difficulty": 2,
+  "answer": "red",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s017_d3",
+  "family": "relpos",
+  "seed": 17,
+  "difficulty": 3,
+  "answer": "yellow",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s017_d4",
+  "family": "relpos",
+  "seed": 17,
+  "difficulty": 4,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s017_d5",
+  "family": "relpos",
+  "seed": 17,
+  "difficulty": 5,
+  "answer": "magenta",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s018_d0",
+  "family": "relpos",
+  "seed": 18,
+  "difficulty": 0,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "relpos_s018_d1",
+  "family": "relpos",
+  "seed": 18,
+  "difficulty": 1,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "relpos_s018_d2",
+  "family": "relpos",
+  "seed": 18,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": false
+ },
+ {
+  "id": "relpos_s018_d3",
+  "family": "relpos",
+  "seed": 18,
+  "difficulty": 3,
+  "answer": "purple",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s018_d4",
+  "family": "relpos",
+  "seed": 18,
+  "difficulty": 4,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "relpos_s018_d5",
+  "family": "relpos",
+  "seed": 18,
+  "difficulty": 5,
+  "answer": "yellow",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s019_d0",
+  "family": "relpos",
+  "seed": 19,
+  "difficulty": 0,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s019_d1",
+  "family": "relpos",
+  "seed": 19,
+  "difficulty": 1,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s019_d2",
+  "family": "relpos",
+  "seed": 19,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s019_d3",
+  "family": "relpos",
+  "seed": 19,
+  "difficulty": 3,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s019_d4",
+  "family": "relpos",
+  "seed": 19,
+  "difficulty": 4,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "relpos_s019_d5",
+  "family": "relpos",
+  "seed": 19,
+  "difficulty": 5,
+  "answer": "purple",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s020_d0",
+  "family": "relpos",
+  "seed": 20,
+  "difficulty": 0,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "relpos_s020_d1",
+  "family": "relpos",
+  "seed": 20,
+  "difficulty": 1,
+  "answer": "cyan",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s020_d2",
+  "family": "relpos",
+  "seed": 20,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s020_d3",
+  "family": "relpos",
+  "seed": 20,
+  "difficulty": 3,
+  "answer": "yellow",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s020_d4",
+  "family": "relpos",
+  "seed": 20,
+  "difficulty": 4,
+  "answer": "purple",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s020_d5",
+  "family": "relpos",
+  "seed": 20,
+  "difficulty": 5,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "relpos_s021_d0",
+  "family": "relpos",
+  "seed": 21,
+  "difficulty": 0,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "relpos_s021_d1",
+  "family": "relpos",
+  "seed": 21,
+  "difficulty": 1,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "relpos_s021_d2",
+  "family": "relpos",
+  "seed": 21,
+  "difficulty": 2,
+  "answer": "cyan",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "relpos_s021_d3",
+  "family": "relpos",
+  "seed": 21,
+  "difficulty": 3,
+  "answer": "yellow",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": false
+ },
+ {
+  "id": "relpos_s021_d4",
+  "family": "relpos",
+  "seed": 21,
+  "difficulty": 4,
+  "answer": "yellow",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s021_d5",
+  "family": "relpos",
+  "seed": 21,
+  "difficulty": 5,
+  "answer": "cyan",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s022_d0",
+  "family": "relpos",
+  "seed": 22,
+  "difficulty": 0,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "relpos_s022_d1",
+  "family": "relpos",
+  "seed": 22,
+  "difficulty": 1,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "relpos_s022_d2",
+  "family": "relpos",
+  "seed": 22,
+  "difficulty": 2,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "relpos_s022_d3",
+  "family": "relpos",
+  "seed": 22,
+  "difficulty": 3,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s022_d4",
+  "family": "relpos",
+  "seed": 22,
+  "difficulty": 4,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s022_d5",
+  "family": "relpos",
+  "seed": 22,
+  "difficulty": 5,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s023_d0",
+  "family": "relpos",
+  "seed": 23,
+  "difficulty": 0,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "relpos_s023_d1",
+  "family": "relpos",
+  "seed": 23,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s023_d2",
+  "family": "relpos",
+  "seed": 23,
+  "difficulty": 2,
+  "answer": "green",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s023_d3",
+  "family": "relpos",
+  "seed": 23,
+  "difficulty": 3,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s023_d4",
+  "family": "relpos",
+  "seed": 23,
+  "difficulty": 4,
+  "answer": "yellow",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s023_d5",
+  "family": "relpos",
+  "seed": 23,
+  "difficulty": 5,
+  "answer": "yellow",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s024_d0",
+  "family": "relpos",
+  "seed": 24,
+  "difficulty": 0,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "relpos_s024_d1",
+  "family": "relpos",
+  "seed": 24,
+  "difficulty": 1,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "relpos_s024_d2",
+  "family": "relpos",
+  "seed": 24,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s024_d3",
+  "family": "relpos",
+  "seed": 24,
+  "difficulty": 3,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s024_d4",
+  "family": "relpos",
+  "seed": 24,
+  "difficulty": 4,
+  "answer": "green",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s024_d5",
+  "family": "relpos",
+  "seed": 24,
+  "difficulty": 5,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s025_d0",
+  "family": "relpos",
+  "seed": 25,
+  "difficulty": 0,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "relpos_s025_d1",
+  "family": "relpos",
+  "seed": 25,
+  "difficulty": 1,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s025_d2",
+  "family": "relpos",
+  "seed": 25,
+  "difficulty": 2,
+  "answer": "yellow",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s025_d3",
+  "family": "relpos",
+  "seed": 25,
+  "difficulty": 3,
+  "answer": "cyan",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "relpos_s025_d4",
+  "family": "relpos",
+  "seed": 25,
+  "difficulty": 4,
+  "answer": "purple",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s025_d5",
+  "family": "relpos",
+  "seed": 25,
+  "difficulty": 5,
+  "answer": "red",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s026_d0",
+  "family": "relpos",
+  "seed": 26,
+  "difficulty": 0,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "relpos_s026_d1",
+  "family": "relpos",
+  "seed": 26,
+  "difficulty": 1,
+  "answer": "cyan",
+  "raw": "green",
+  "normalized": "green",
+  "correct": false
+ },
+ {
+  "id": "relpos_s026_d2",
+  "family": "relpos",
+  "seed": 26,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s026_d3",
+  "family": "relpos",
+  "seed": 26,
+  "difficulty": 3,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s026_d4",
+  "family": "relpos",
+  "seed": 26,
+  "difficulty": 4,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s026_d5",
+  "family": "relpos",
+  "seed": 26,
+  "difficulty": 5,
+  "answer": "purple",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s027_d0",
+  "family": "relpos",
+  "seed": 27,
+  "difficulty": 0,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "relpos_s027_d1",
+  "family": "relpos",
+  "seed": 27,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s027_d2",
+  "family": "relpos",
+  "seed": 27,
+  "difficulty": 2,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s027_d3",
+  "family": "relpos",
+  "seed": 27,
+  "difficulty": 3,
+  "answer": "purple",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "relpos_s027_d4",
+  "family": "relpos",
+  "seed": 27,
+  "difficulty": 4,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s027_d5",
+  "family": "relpos",
+  "seed": 27,
+  "difficulty": 5,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s028_d0",
+  "family": "relpos",
+  "seed": 28,
+  "difficulty": 0,
+  "answer": "purple",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s028_d1",
+  "family": "relpos",
+  "seed": 28,
+  "difficulty": 1,
+  "answer": "cyan",
+  "raw": "turquoise",
+  "normalized": null,
+  "correct": false
+ },
+ {
+  "id": "relpos_s028_d2",
+  "family": "relpos",
+  "seed": 28,
+  "difficulty": 2,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s028_d3",
+  "family": "relpos",
+  "seed": 28,
+  "difficulty": 3,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s028_d4",
+  "family": "relpos",
+  "seed": 28,
+  "difficulty": 4,
+  "answer": "yellow",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s028_d5",
+  "family": "relpos",
+  "seed": 28,
+  "difficulty": 5,
+  "answer": "green",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": false
+ },
+ {
+  "id": "relpos_s029_d0",
+  "family": "relpos",
+  "seed": 29,
+  "difficulty": 0,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "relpos_s029_d1",
+  "family": "relpos",
+  "seed": 29,
+  "difficulty": 1,
+  "answer": "purple",
+  "raw": "left",
+  "normalized": null,
+  "correct": false
+ },
+ {
+  "id": "relpos_s029_d2",
+  "family": "relpos",
+  "seed": 29,
+  "difficulty": 2,
+  "answer": "cyan",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": false
+ },
+ {
+  "id": "relpos_s029_d3",
+  "family": "relpos",
+  "seed": 29,
+  "difficulty": 3,
+  "answer": "magenta",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s029_d4",
+  "family": "relpos",
+  "seed": 29,
+  "difficulty": 4,
+  "answer": "purple",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s029_d5",
+  "family": "relpos",
+  "seed": 29,
+  "difficulty": 5,
+  "answer": "cyan",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s030_d0",
+  "family": "relpos",
+  "seed": 30,
+  "difficulty": 0,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s030_d1",
+  "family": "relpos",
+  "seed": 30,
+  "difficulty": 1,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s030_d2",
+  "family": "relpos",
+  "seed": 30,
+  "difficulty": 2,
+  "answer": "purple",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s030_d3",
+  "family": "relpos",
+  "seed": 30,
+  "difficulty": 3,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "relpos_s030_d4",
+  "family": "relpos",
+  "seed": 30,
+  "difficulty": 4,
+  "answer": "purple",
+  "raw": "blue",
+  "normalized": "blue",
+  "correct": false
+ },
+ {
+  "id": "relpos_s030_d5",
+  "family": "relpos",
+  "seed": 30,
+  "difficulty": 5,
+  "answer": "red",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s031_d0",
+  "family": "relpos",
+  "seed": 31,
+  "difficulty": 0,
+  "answer": "cyan",
+  "raw": "Cyan",
+  "normalized": "cyan",
+  "correct": true
+ },
+ {
+  "id": "relpos_s031_d1",
+  "family": "relpos",
+  "seed": 31,
+  "difficulty": 1,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s031_d2",
+  "family": "relpos",
+  "seed": 31,
+  "difficulty": 2,
+  "answer": "yellow",
+  "raw": "white",
+  "normalized": "white",
+  "correct": false
+ },
+ {
+  "id": "relpos_s031_d3",
+  "family": "relpos",
+  "seed": 31,
+  "difficulty": 3,
+  "answer": "red",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s031_d4",
+  "family": "relpos",
+  "seed": 31,
+  "difficulty": 4,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s031_d5",
+  "family": "relpos",
+  "seed": 31,
+  "difficulty": 5,
+  "answer": "green",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s032_d0",
+  "family": "relpos",
+  "seed": 32,
+  "difficulty": 0,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s032_d1",
+  "family": "relpos",
+  "seed": 32,
+  "difficulty": 1,
+  "answer": "cyan",
+  "raw": "left",
+  "normalized": null,
+  "correct": false
+ },
+ {
+  "id": "relpos_s032_d2",
+  "family": "relpos",
+  "seed": 32,
+  "difficulty": 2,
+  "answer": "cyan",
+  "raw": "teal",
+  "normalized": "teal",
+  "correct": false
+ },
+ {
+  "id": "relpos_s032_d3",
+  "family": "relpos",
+  "seed": 32,
+  "difficulty": 3,
+  "answer": "purple",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s032_d4",
+  "family": "relpos",
+  "seed": 32,
+  "difficulty": 4,
+  "answer": "green",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s032_d5",
+  "family": "relpos",
+  "seed": 32,
+  "difficulty": 5,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s033_d0",
+  "family": "relpos",
+  "seed": 33,
+  "difficulty": 0,
+  "answer": "cyan",
+  "raw": "cyan",
+  "normalized": "cyan",
+  "correct": true
+ },
+ {
+  "id": "relpos_s033_d1",
+  "family": "relpos",
+  "seed": 33,
+  "difficulty": 1,
+  "answer": "yellow",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s033_d2",
+  "family": "relpos",
+  "seed": 33,
+  "difficulty": 2,
+  "answer": "yellow",
+  "raw": "yellow",
+  "normalized": "yellow",
+  "correct": true
+ },
+ {
+  "id": "relpos_s033_d3",
+  "family": "relpos",
+  "seed": 33,
+  "difficulty": 3,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s033_d4",
+  "family": "relpos",
+  "seed": 33,
+  "difficulty": 4,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s033_d5",
+  "family": "relpos",
+  "seed": 33,
+  "difficulty": 5,
+  "answer": "cyan",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s034_d0",
+  "family": "relpos",
+  "seed": 34,
+  "difficulty": 0,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s034_d1",
+  "family": "relpos",
+  "seed": 34,
+  "difficulty": 1,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s034_d2",
+  "family": "relpos",
+  "seed": 34,
+  "difficulty": 2,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s034_d3",
+  "family": "relpos",
+  "seed": 34,
+  "difficulty": 3,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s034_d4",
+  "family": "relpos",
+  "seed": 34,
+  "difficulty": 4,
+  "answer": "purple",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s034_d5",
+  "family": "relpos",
+  "seed": 34,
+  "difficulty": 5,
+  "answer": "purple",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s035_d0",
+  "family": "relpos",
+  "seed": 35,
+  "difficulty": 0,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s035_d1",
+  "family": "relpos",
+  "seed": 35,
+  "difficulty": 1,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s035_d2",
+  "family": "relpos",
+  "seed": 35,
+  "difficulty": 2,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "relpos_s035_d3",
+  "family": "relpos",
+  "seed": 35,
+  "difficulty": 3,
+  "answer": "purple",
+  "raw": "purple",
+  "normalized": "purple",
+  "correct": true
+ },
+ {
+  "id": "relpos_s035_d4",
+  "family": "relpos",
+  "seed": 35,
+  "difficulty": 4,
+  "answer": "red",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s035_d5",
+  "family": "relpos",
+  "seed": 35,
+  "difficulty": 5,
+  "answer": "green",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s036_d0",
+  "family": "relpos",
+  "seed": 36,
+  "difficulty": 0,
+  "answer": "cyan",
+  "raw": "cyan",
+  "normalized": "cyan",
+  "correct": true
+ },
+ {
+  "id": "relpos_s036_d1",
+  "family": "relpos",
+  "seed": 36,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s036_d2",
+  "family": "relpos",
+  "seed": 36,
+  "difficulty": 2,
+  "answer": "cyan",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s036_d3",
+  "family": "relpos",
+  "seed": 36,
+  "difficulty": 3,
+  "answer": "magenta",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s036_d4",
+  "family": "relpos",
+  "seed": 36,
+  "difficulty": 4,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s036_d5",
+  "family": "relpos",
+  "seed": 36,
+  "difficulty": 5,
+  "answer": "yellow",
+  "raw": "white",
+  "normalized": "white",
+  "correct": false
+ },
+ {
+  "id": "relpos_s037_d0",
+  "family": "relpos",
+  "seed": 37,
+  "difficulty": 0,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s037_d1",
+  "family": "relpos",
+  "seed": 37,
+  "difficulty": 1,
+  "answer": "cyan",
+  "raw": "turquoise",
+  "normalized": null,
+  "correct": false
+ },
+ {
+  "id": "relpos_s037_d2",
+  "family": "relpos",
+  "seed": 37,
+  "difficulty": 2,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s037_d3",
+  "family": "relpos",
+  "seed": 37,
+  "difficulty": 3,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s037_d4",
+  "family": "relpos",
+  "seed": 37,
+  "difficulty": 4,
+  "answer": "red",
+  "raw": "red",
+  "normalized": "red",
+  "correct": true
+ },
+ {
+  "id": "relpos_s037_d5",
+  "family": "relpos",
+  "seed": 37,
+  "difficulty": 5,
+  "answer": "red",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ },
+ {
+  "id": "relpos_s038_d0",
+  "family": "relpos",
+  "seed": 38,
+  "difficulty": 0,
+  "answer": "cyan",
+  "raw": "turquoise",
+  "normalized": null,
+  "correct": false
+ },
+ {
+  "id": "relpos_s038_d1",
+  "family": "relpos",
+  "seed": 38,
+  "difficulty": 1,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s038_d2",
+  "family": "relpos",
+  "seed": 38,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s038_d3",
+  "family": "relpos",
+  "seed": 38,
+  "difficulty": 3,
+  "answer": "yellow",
+  "raw": "gray",
+  "normalized": "gray",
+  "correct": false
+ },
+ {
+  "id": "relpos_s038_d4",
+  "family": "relpos",
+  "seed": 38,
+  "difficulty": 4,
+  "answer": "yellow",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s038_d5",
+  "family": "relpos",
+  "seed": 38,
+  "difficulty": 5,
+  "answer": "purple",
+  "raw": "red",
+  "normalized": "red",
+  "correct": false
+ },
+ {
+  "id": "relpos_s039_d0",
+  "family": "relpos",
+  "seed": 39,
+  "difficulty": 0,
+  "answer": "cyan",
+  "raw": "cyan",
+  "normalized": "cyan",
+  "correct": true
+ },
+ {
+  "id": "relpos_s039_d1",
+  "family": "relpos",
+  "seed": 39,
+  "difficulty": 1,
+  "answer": "green",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s039_d2",
+  "family": "relpos",
+  "seed": 39,
+  "difficulty": 2,
+  "answer": "magenta",
+  "raw": "pink",
+  "normalized": "pink",
+  "correct": false
+ },
+ {
+  "id": "relpos_s039_d3",
+  "family": "relpos",
+  "seed": 39,
+  "difficulty": 3,
+  "answer": "green",
+  "raw": "green",
+  "normalized": "green",
+  "correct": true
+ },
+ {
+  "id": "relpos_s039_d4",
+  "family": "relpos",
+  "seed": 39,
+  "difficulty": 4,
+  "answer": "orange",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": true
+ },
+ {
+  "id": "relpos_s039_d5",
+  "family": "relpos",
+  "seed": 39,
+  "difficulty": 5,
+  "answer": "cyan",
+  "raw": "orange",
+  "normalized": "orange",
+  "correct": false
+ }
+]

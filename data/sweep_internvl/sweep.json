@@ -1,0 +1,213 @@
+{
+ "by_family": {
+  "lookalike": [
+   {
+    "family": "lookalike",
+    "difficulty": 0,
+    "label": "d0",
+    "complexity": 0.0,
+    "correct": 18,
+    "total": 40
+   },
+   {
+    "family": "lookalike",
+    "difficulty": 1,
+    "label": "d1",
+    "complexity": 0.2,
+    "correct": 10,
+    "total": 40
+   },
+   {
+    "family": "lookalike",
+    "difficulty": 2,
+    "label": "d2",
+    "complexity": 0.4,
+    "correct": 13,
+    "total": 40
+   },
+   {
+    "family": "lookalike",
+    "difficulty": 3,
+    "label": "d3",
+    "complexity": 0.6,
+    "correct": 8,
+    "total": 40
+   },
+   {
+    "family": "lookalike",
+    "difficulty": 4,
+    "label": "d4",
+    "complexity": 0.8,
+    "correct": 8,
+    "total": 40
+   },
+   {
+    "family": "lookalike",
+    "difficulty": 5,
+    "label": "d5",
+    "complexity": 1.0,
+    "correct": 10,
+    "total": 40
+   }
+  ],
+  "nearest": [
+   {
+    "family": "nearest",
+    "difficulty": 0,
+    "label": "d0",
+    "complexity": 0.0,
+    "correct": 28,
+    "total": 40
+   },
+   {
+    "family": "nearest",
+    "difficulty": 1,
+    "label": "d1",
+    "complexity": 0.2,
+    "correct": 21,
+    "total": 40
+   },
+   {
+    "family": "nearest",
+    "difficulty": 2,
+    "label": "d2",
+    "complexity": 0.4,
+    "correct": 19,
+    "total": 40
+   },
+   {
+    "family": "nearest",
+    "difficulty": 3,
+    "label": "d3",
+    "complexity": 0.6,
+    "correct": 15,
+    "total": 40
+   },
+   {
+    "family": "nearest",
+    "difficulty": 4,
+    "label": "d4",
+    "complexity": 0.8,
+    "correct": 12,
+    "total": 40
+   },
+   {
+    "family": "nearest",
+    "difficulty": 5,
+    "label": "d5",
+    "complexity": 1.0,
+    "correct": 17,
+    "total": 40
+   }
+  ],
+  "occlusion": [
+   {
+    "family": "occlusion",
+    "difficulty": 0,
+    "label": "d0",
+    "complexity": 0.0,
+    "correct": 29,
+    "total": 40
+   },
+   {
+    "family": "occlusion",
+    "difficulty": 1,
+    "label": "d1",
+    "complexity": 0.2,
+    "correct": 19,
+    "total": 40
+   },
+   {
+    "family": "occlusion",
+    "difficulty": 2,
+    "label": "d2",
+    "complexity": 0.4,
+    "correct": 30,
+    "total": 40
+   },
+   {
+    "family": "occlusion",
+    "difficulty": 3,
+    "label": "d3",
+    "complexity": 0.6,
+    "correct": 19,
+    "total": 40
+   },
+   {
+    "family": "occlusion",
+    "difficulty": 4,
+    "label": "d4",
+    "complexity": 0.8,
+    "correct": 16,
+    "total": 40
+   },
+   {
+    "family": "occlusion",
+    "difficulty": 5,
+    "label": "d5",
+    "complexity": 1.0,
+    "correct": 17,
+    "total": 40
+   }
+  ],
+  "relpos": [
+   {
+    "family": "relpos",
+    "difficulty": 0,
+    "label": "d0",
+    "complexity": 0.0,
+    "correct": 34,
+    "total": 40
+   },
+   {
+    "family": "relpos",
+    "difficulty": 1,
+    "label": "d1",
+    "complexity": 0.2,
+    "correct": 21,
+    "total": 40
+   },
+   {
+    "family": "relpos",
+    "difficulty": 2,
+    "label": "d2",
+    "complexity": 0.4,
+    "correct": 15,
+    "total": 40
+   },
+   {
+    "family": "relpos",
+    "difficulty": 3,
+    "label": "d3",
+    "complexity": 0.6,
+    "correct": 20,
+    "total": 40
+   },
+   {
+    "family": "relpos",
+    "difficulty": 4,
+    "label": "d4",
+    "complexity": 0.8,
+    "correct": 16,
+    "total": 40
+   },
+   {
+    "family": "relpos",
+    "difficulty": 5,
+    "label": "d5",
+    "complexity": 1.0,
+    "correct": 6,
+    "total": 40
+   }
+  ]
+ },
+ "norm_axis": {
+  "0": 0.0,
+  "1": 0.2,
+  "2": 0.4,
+  "3": 0.6,
+  "4": 0.8,
+  "5": 1.0
+ },
+ "n_scenes": 960
+}

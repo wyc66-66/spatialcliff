@@ -27,9 +27,11 @@ replaced by gradual decay (trend r as low as −0.86 for occlusion) and one
 genuine mechanism boundary (`lookalike` binding) with a strong bottom-quadrant
 attribution bias (77% of reported corners are bottom-half).
 
-**Scale:** 4 mechanisms × 6 complexity levels × 40 seeds = **960 scenes**, each
-with a ground-truth answer computed from the layout itself; every raw model
-response is archived for audit (`data/sweep/responses.json`).
+**Scale:** 4 mechanisms × 6 complexity levels × 40 seeds = **960 scenes**,
+each with a ground-truth answer computed from the layout itself, evaluated
+on **two architecturally distinct open VLMs** (Qwen2.5-VL-3B and
+InternVL2.5-2B = **1,920 scene evals**); every raw model response is archived
+for audit (`data/sweep/responses.json`, `data/sweep_internvl/responses.json`).
 
 ## Research question
 
@@ -58,8 +60,10 @@ measured curves are the joint effect of scene density on that mechanism.
 2. **Shortcut audit.** In the color-bearing families the answer color is
    sampled per scene and ≥1 same-colored distractor object is placed; a model
    that reports "the rare color" now scores at chance.
-3. **Model under test.** An open 3B-class vision-language model (Qwen2.5-VL)
-   in a strict zero-shot QA protocol; every raw response is saved for audit.
+3. **Model under test.** Two open VLMs — Qwen2.5-VL-3B (a 3B-class dense
+   model) and, for audit transfer, InternVL2.5-2B (an architecturally
+   distinct InternViT + InternLM2 family) — in a strict zero-shot QA
+   protocol; every raw response is saved for audit.
 4. **Analysis.** Per (family, difficulty) accuracy with Wilson 95% CIs; a
    *cliff* is a difficulty step where accuracy drops ≥15 points in one step
    and ≥20 points below the simplest configuration. A *trend* r (Pearson) also
@@ -70,7 +74,11 @@ measured curves are the joint effect of scene density on that mechanism.
 ```bash
 pip install -e .[gpu,paper,ui]
 python scripts/build_scenes.py --seeds 40 --out data/scenes
-python scripts/run_sweep.py --scenes data/scenes --out data/sweep   # GPU
+python scripts/run_sweep.py --scenes data/scenes --out data/sweep                    # GPU
+python scripts/run_sweep.py --scenes data/scenes --out data/sweep_internvl \
+    --engine internvl --model OpenGVLab/InternVL2_5-2B                                # audit transfer
+python scripts/cross_model_facts.py --qwen data/sweep/sweep.json \
+    --internvl data/sweep_internvl/sweep.json                                        # -> cross_model.json
 python scripts/paper_facts.py --sweep data/sweep/sweep.json
 python scripts/failure_analysis.py --responses data/sweep/responses.json
 python scripts/render_figures.py --sweep data/sweep/sweep.json   # -> docs/paper/spatialcliff/figures/

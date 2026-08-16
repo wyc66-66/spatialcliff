@@ -27,6 +27,16 @@ from PIL import Image
 from spatialcliff.check import is_correct, normalize  # noqa: E402
 from spatialcliff.engine import QwenVLEngine  # noqa: E402
 
+_ENGINES = {"qwen": QwenVLEngine}
+
+
+def _load_engine(name: str, model: str):
+    if name == "internvl":
+        from spatialcliff.engine_internvl import InternVLEngine
+
+        _ENGINES[name] = InternVLEngine
+    return _ENGINES[name](model)
+
 DIFFICULTIES = (0, 1, 2, 3, 4, 5)
 # normalized complexity of each difficulty level (shared across families)
 NORM = {0: 0.0, 1: 0.2, 2: 0.4, 3: 0.6, 4: 0.8, 5: 1.0}
@@ -37,6 +47,8 @@ def main() -> None:
     ap.add_argument("--scenes", default="data/scenes", type=Path)
     ap.add_argument("--out", default="data/sweep", type=Path)
     ap.add_argument("--model", default="Qwen/Qwen2.5-VL-3B-Instruct")
+    ap.add_argument("--engine", choices=["qwen", "internvl"], default="qwen",
+                    help="qwen = Qwen2.5-VL (transformers native), internvl = InternVL2.5")
     ap.add_argument("--families", type=str, nargs="*", default=None)
     ap.add_argument("--difficulties", type=int, nargs="*", default=None)
     args = ap.parse_args()
@@ -47,7 +59,7 @@ def main() -> None:
     if args.difficulties:
         manifest = [s for s in manifest if s["difficulty"] in args.difficulties]
 
-    engine = QwenVLEngine(args.model)
+    engine = _load_engine(args.engine, args.model)
     args.out.mkdir(parents=True, exist_ok=True)
 
     rows: dict[str, list[dict]] = {}
