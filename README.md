@@ -25,7 +25,9 @@ spatial reasoning. After randomizing answer colors and adding same-colored
 distractors, the dramatic "cliffs" of the first sweep largely disappeared —
 replaced by gradual decay (trend r as low as −0.86 for occlusion) and one
 genuine mechanism boundary (`lookalike` binding) with a strong bottom-quadrant
-attribution bias (77% of reported corners are bottom-half).
+attribution bias: 77% of reported corners are bottom-half on Qwen2.5-VL-3B,
+rising to 87% on the second, architecturally distinct model (InternVL2.5-2B) —
+so the bias is a property of this model class, not of one checkpoint.
 
 **Scale:** 4 mechanisms × 6 complexity levels × 40 seeds = **960 scenes**,
 each with a ground-truth answer computed from the layout itself, evaluated
