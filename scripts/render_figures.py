@@ -83,6 +83,8 @@ def fig_sensitivity(result: SweepResult, out: Path) -> None:
         ax.text(r + 0.01, i, f"{r:.2f}", va="center", fontsize=9)
     ax.axvline(0.15, color="r", ls=":", alpha=0.6)
     ax.text(0.16, len(fams) - 0.4, "falloff threshold (0.15)", fontsize=8, color="r")
+    ax.set_title("Simplest-minus-hardest accuracy, audited sweep (Qwen2.5-VL-3B; §3.6 for InternVL)",
+                 fontsize=11)
     fig.tight_layout()
     fig.savefig(out, dpi=160)
     plt.close(fig)
